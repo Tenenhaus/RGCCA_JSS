@@ -137,14 +137,14 @@ statistical methods and dedicated softwares able to cope with these multiple
 highly multivariate datasets constitute key issues for effective analysis 
 leading to valuable knowledge. Regularized Generalized Canonical Correlation 
 Analysis is a unified and flexible framework for multiblock 
-component methods. The RGCCA package implements this framework and its 
+component methods. The RGCCA package implements this framework, and its 
 usefulness is illustrated in this paper.
 
 # Optimization background
 
-The goal of this section is to present the optimization framework under which 
+This section aims to present the optimization framework under which 
 most of the algorithms proposed in the RGCCA framework were designed. The RGCCA 
-framework gathers several algorithm that has already been presented in 
+framework gathers several algorithms that have already been presented in 
 [@Tenenhaus2011, @Tenenhaus2014, @Tenenhaus2015, @Tenenhaus2017]. It is recalled 
 here for a broader class of constraints.
 
@@ -160,16 +160,16 @@ This general optimization problem can be formulated as follows:
 \label{master_optim}
 \end{align}
 
-For such function defined over a set of parameter vectors $(\ma a_1, \ldots,\ma a_J)$, 
+For such a function defined over a set of parameter vectors $(\ma a_1, \ldots,\ma a_J)$, 
 we make no difference between the notations $f(\ma a_1, \ldots,\ma a_J)$ and 
 $f(\ma a)$, where $\ma a$ is the column vector $\ma a = \left( \ma a_1^\top, \ldots, \ma a_J^\top\right)^\top$ 
-of size $p = \sum_{j=1}^{J}p_j$. Moreover, the vertical concatenation of 
-column vectors is denoted $\ma a = \left( \ma a_1; \ldots; \ma a_J \right)$ 
+of size $p = \sum_{j=1}^{J}p_j$. Moreover, the vertical concatenation of a 
+column vector is denoted $\ma a = \left( \ma a_1; \ldots; \ma a_J \right)$ 
 for the sake of simplification of notation. 
 
 ## Algorithm
 
-A simple, monotonically and globally convergent algorithm is presented for 
+A simple, monotonically, and globally convergent algorithm is presented for 
 solving optimization problem (\ref{master_optim}). The maximization 
 of the function $f$ defined over different parameter vectors 
 ($\ma a_1, \ldots,\ma a_J$), is approached by updating each of the parameter 
@@ -284,8 +284,8 @@ Let $\ma a_j = (a_{j1}, \ldots, a_{jp_j})^\top$ be a non-random $p_j$-dimensiona
 column vector. A composite variable $\eta_j$ is defined as the linear combination 
 of the elements of $\boldsymbol x_j$: $\eta_j = \ma a_j^\top \boldsymbol x_j$.
 Therefore the covariance between two composite variables is 
-$\mathbf{a}_j^\top \ma \Sigma_{jk} \mathbf{a}_k$. The RGCCA framework aims at 
-extracting the information which is shared by the $J$ random composite variables 
+$\mathbf{a}_j^\top \ma \Sigma_{jk} \mathbf{a}_k$. The RGCCA framework aims to 
+extract the information shared by the $J$ random composite variables, 
 taking into account an undirected graph of connections between them. 
 The RGCCA framework is defined by the optimization problem (\ref{opti_theo}) and 
 consists in maximizing the sum of convex functions of the covariances between 
@@ -312,16 +312,16 @@ the covariances), the square function (factorial scheme, thereby maximizing the
 sum of squared covariances), or, more generally, for any even integer $m$, 
 $g(x) = x^m$ (m-scheme, maximizing the power of $m$ of the sum of covariances). 
 The horst scheme penalizes structural negative correlation between block 
-components while both the centroid scheme and the m-scheme enable two 
+components, while both the centroid scheme and the m-scheme enable two 
 components to be negatively correlated. 
 
 \item The design matrix $\ma C = \lbrace c_{jk}\rbrace$ is a symmetric 
 $J \times J$ matrix of non-negative elements describing the network of 
 connections between blocks that the user wants to take into account. 
-Usually $c_{jk} = 1$ to two connected blocks and $0$ otherwise. 
+Usually, $c_{jk} = 1$ to two connected blocks and $0$ otherwise. 
 \end{itemize}
 
-When the diagonal of $\ma{C}$ is null, the convexity and continuous 
+When the diagonal of $\ma{C}$ is null, the convexity and the continuous 
 differentiability of the function g imply that the objective function $f$ 
 itself is multi-convex continuously differentiable. When at least one element 
 of the diagonal of $\ma{C}$ is different from $0$, additional conditions have 
@@ -353,7 +353,7 @@ problem (\ref{opti_theo}) boils down to:
 \end{equation}
 
 Algorithm \ref{master_algo} can be used to solve the optimization problem 
-(\ref{RGCCA_optim_pop}). This is done by updating each of the parameter vectors 
+(\ref{RGCCA_optim_pop}). This is done by updating each of the parameter vectors, 
 in turn, keeping the others fixed. Hence, we want to find an update 
 $\hat{\mathbf{a}}_j\in \Omega_j=\left\lbrace \mathbf a_j \in \mathbb{R}^{p_j}; \mathbf{a}_j^\top \mathbf M_j \mathbf{a}_j = 1 \right\rbrace$ 
 such that $f(\mathbf{a})\leq f(\mathbf{a}_1, \ldots, \mathbf{a}_{j-1}, \hat{\mathbf{a}}_j, \mathbf{a}_{j+1}, \ldots, \mathbf{a}_J)$. 
@@ -365,7 +365,7 @@ the RGCCA update is obtained by considering the following optimization problem:
 \end{equation}
 where the partial gradient $\ma \nabla_j f(\ma a)$ of 
 $f(\ma a)$ with respect to $\ma a_j$ is a $p_j$-dimensional 
-column vector given by:
+column vector is given by:
 
 \begin{equation}
 \ma \nabla_j f(\ma a)=2\sum_{k=1}^{J}c_{jk}g'\left(\ma a_j^\top \ma \Sigma_{jk} \ma a_k \right) \ma \Sigma_{jk} \ma a_k
@@ -375,8 +375,8 @@ column vector given by:
 A sample-based optimization problem related to (\ref{RGCCA_optim_pop}) is 
 derived by considering a column partition $\X = [\X_1, \ldots, \X_j, \ldots, \X_J]$. 
 In this case, each $n \times p_j$ data matrix $\X_j$ is called a block and 
-represents a set of $p_j$ variables observed on $n$ individuals. The number and 
-the nature of the variables may differ from one block to another, but the 
+represents a set of $p_j$ variables observed on $n$ individuals. 
+The variables' number and nature may differ from one block to another, but the 
 individuals must be the same across blocks. We assume that all variables are 
 centered. The most recent formulation of RGCCA [@Tenenhaus2017] subsumes fifty 
 years of multiblock component methods. It provides improvements to the initial 
@@ -403,7 +403,7 @@ $\widehat{\mathbf{\Sigma}}_{jj} = \tau_j\mathbf{I} + (1-\tau_j)\mathbf{S}_{jj}$
 with $\tau_j \in [0,1]$ (shrinkage estimator of $\mathbf{\Sigma}_{jj}$). This 
 plug-in approach leads to the RGCCA optimization problem [@Tenenhaus2011]. 
 It is worth pointing out that for each block $j$, an appropriate shrinkage 
-parameter $\tau_j$ can be obtained using various analytical formulae (see for 
+parameter $\tau_j$ can be obtained using various analytical formulae (see, for 
 instance [@Ledoit2004, @Schafer2005, @Chen2011]). As $\mathbf{M}_j$ must be 
 positive definite, $\tau_j = 0$ can only be selected for a full rank data matrix 
 $\mathbf{X}_j$.
@@ -440,7 +440,7 @@ correlation.
 \item   $\tau_j=0$ is recommended when the user wants to maximize correlations 
 between connected components. This option can yield unstable solutions in case 
 of multi-collinearity and cannot be used when a data block is rank deficient 
-(e.g. $n<p_j$).
+(e.g., $n<p_j$).
 
 \item   $0<\tau_j<1$ is a good compromise between variance and correlation: the 
 block components are simultaneously stable and as well correlated as possible 
@@ -458,18 +458,18 @@ acronym of RGCCA embraces at least four notions. The first one relates to the
 generalization of two-block methods - including Canonical Correlation Analysis 
 [@Hotelling1936] Interbattery Factor Analysis [@Tucker1958] and Redundancy 
 Analysis [@Wollenberg1977] - to three or more sets of variables. The second one 
-relates to the ability of taking into account some hypotheses on between-block 
+relates to the ability to take into account some hypotheses on between-block 
 connections: the user decides which blocks are connected and which ones are not. 
 The third one relies on the choices of the shrinkage parameters allowing to 
-capture both correlation or covariance-based criteria. The fourth one relates 
-to the function $g$ that enables to consider different functions of the 
+capture of both correlation or covariance-based criteria. The fourth one relates 
+to the function $g$ that enables considering different functions of the 
 covariance. This generalization is embodied by a triplet of parameters: 
 (g, $\tau_j, \mathbf C$) and by the fact that an arbitrary number of blocks can 
-be handled. This triplet of parameters offers a flexibility to RGCCA and allows 
-to encompass a large number of multiblock component methods that were published 
+be handled. This triplet of parameters offers flexibility and allows RGCCA 
+to encompass a large number of multiblock component methods that have been published 
 for fifty years. Table \ref{twoblock_methods}-\ref{multiblock_hierarchical} 
 gives the correspondences between the triplet (g, $\tau_j, \mathbf C$) and the 
-multiblock component methods. For a complete overview see [@Tenenhaus2017]. 
+multiblock component methods. For a complete overview, see [@Tenenhaus2017]. 
 
 ### Special cases 
 
@@ -525,9 +525,9 @@ by \citep{Borga1997} and \citep{Burnham1996} and is reported in Table
 Table: two-block component methods. \label{twoblock_methods}
 
 In the multiblock data analysis literature, all blocks $\X_j ,j = 
-1,\ldots,J$ are assumed to be connected and many criteria were proposed in the 
-literature with the objective of finding block components satisfying some kind 
-of covariance or correlation based optimality. Most of them are special cases of 
+1,\ldots,J$ are assumed to be connected, and many criteria were proposed to 
+find block components satisfying some kind 
+of covariance or correlation-based optimality. Most of them are special cases of 
 optimization problem (\ref{optim_RGCCA}). These multiblock component methods are 
 listed in Table \ref{multiblock_methods}. PLS path modeling is also mentioned 
 in this table. The great flexibility of PLS path modeling lies in the possibility 
@@ -554,7 +554,7 @@ The goal of many multiblock component methods is to find simultaneously block
 components and a global component. For that purpose, we consider $J$ blocks, 
 $\ma X_1, \ldots, \ma X_J$ connected to a $(J + 1)$th block defined as the 
 concatenation of the blocks, $\ma X_{J+1} = [\ma X_1 , \ma X_2, \ldots, \ma X_J ]$. 
-Several criteria were introduced in the literature and many of them 
+Several criteria were introduced in the literature, and many of them 
 are listed below.
 
 | **Methods**                         |  $g(x)$   | $\tau_j$                       | $\mathbf{C}$                   |
@@ -585,18 +585,18 @@ the RGCCA optimization problem are available. A primal formulation described in
 [@Tenenhaus2011, @Tenenhaus2017] requires the handling of matrices of dimension 
 $p_j \times p_j$. A dual formulation described in [@Tenenhaus2015] requires the 
 handling of matrices of dimension $n \times n$ . Therefore, the primal 
-formulation of the RGCCA algorithm will be preferred when $n>p_j$ and the dual 
+formulation of the RGCCA algorithm will be preferred when $n>p_j$, and the dual 
 form will be used when $n \le p_j$.  The `rgcca()` function of the RGCCA package 
-implements these two formulations and selects automatically the best one.  
+implements these two formulations and automatically selects the best one.  
 
-RGCCA is a component-based approach which aims to study the relationships 
+RGCCA is a component-based approach that aims to study the relationships 
 between several sets of variables. The quality and interpretability of the 
 RGCCA components are likely to be affected by the usefulness and relevance of 
 the variables in each block.  Therefore, it is an important issue to identify 
 within each block which subsets of significant variables are active in the
 relationships between blocks. For instance, biomedical data are known to be 
 measurements of intrinsically parsimonious processes. In order to account for 
-this parsimony and to improve the interpretability, RGCCA has been extended to 
+this parsimony and to improve interpretability, RGCCA has been extended to 
 address the issue of variable selection. Specifically, Sparse GCCA (SGCCA) is
 proposed to combine RGCCA with an $\ell_1$-penalty promoting sparsity. 
 
@@ -616,7 +616,7 @@ optimization problem is defined as follows:
 \label{optim_SGCCA}
 \end{equation}
 
-where $s_j$ is a user defined positive constant that determines the amount of 
+where $s_j$ is a user-defined positive constant that determines the amount of 
 sparsity for $\mathbf{a}_j, j=1, \ldots,J$. The smaller the $s_j$, the larger 
 the degree of sparsity for $\mathbf{a}_j$. The sparsity parameter $s_j$ is 
 usually set by cross-validation or permutation procedures. Alternatively, 
@@ -658,7 +658,7 @@ When applied on a vector $\x\in\mathbb{R}^p$, this operator is defined as:
 \end{equation}
 
 We made the assumption that the $\ell_2$-ball of radius $1$ is not included in 
-the $\ell_1$-ball of radius $s_j$ and the other way round. Otherwise 
+the $\ell_1$-ball of radius $s_j$ and the other way round. Otherwise, 
 systematically, only one of the two constraints is active. This assumption is 
 true when the corresponding spheres intersect. This assumption can be translated 
 into conditions on $s_j$.
@@ -672,13 +672,13 @@ formulated as the following inequality:
 \end{equation}
 
 This can be converted into a condition on $s_j$: $1 \leq s_j \leq \sqrt{p_j}$. 
-When such condition is fulfilled, the $\ell_2$-sphere of radius $1$ and the 
+When such a condition is fulfilled, the $\ell_2$-sphere of radius $1$ and the 
 $\ell_1$-sphere of radius $s_j$ necessarily intersect. Within the RGCCA package, 
 for consistency with the value of $\tau_j \in [0, 1]$, the level of sparsity for 
 $\ma a_j$ is controlled with $1/s_j \in [1/\sqrt{p_j}, 1]$.
 
-Several strategies such as Binary Search or the Projection On Convex Set algorithm 
-(POCS), also known as alternating projection method [@Boyd2003], can be 
+Several strategies, such as Binary Search or the Projection On Convex Set algorithm 
+(POCS), also known as the alternating projection method [@Boyd2003], can be 
 used to determine the optimal $\lambda_j$ verifying the $\ell_1$-norm constraint. 
 Here, a much faster approach described in [@Gloaguen2017] is implemented within 
 the RGCCA package.
@@ -692,13 +692,13 @@ found to be not sensitive to the starting point and usually reaches convergence
 
 In many applications, several components per block need to be identified. 
 The traditional approach consists of incorporating the single-unit RGCCA
-algorithm in a deflation scheme, and computing the desired number of 
+algorithm in a deflation scheme and computing the desired number of 
 components sequentially. More precisely, the RGCCA optimization problem 
 returns a set of $J$ optimal block-weight vectors. denoted here 
 $\ma a_j^{(1)}, ~ j = 1, \ldots, J$. Let 
 $\y_j^{(1)} = \X_j\ma a_j^{(1)}, ~ j = 1, \ldots, J$ be the corresponding block 
 components. Two strategies to determine higher-level weight vectors are 
-presented. The first one yields orthogonal block components and the second one 
+presented. The first one yields orthogonal block components, and the second one 
 yields orthogonal weight vectors. Deflation is the most straightforward way to 
 add orthogonality constraints. This deflation procedure is sequential and 
 consists in replacing within the RGCCA optimization problem the data matrix 
@@ -737,7 +737,7 @@ meaning that any block component $\y_j^{(2)}$ belonging to the range space of
 $\X_j^{(1)}$ can also be expressed in term of the original block $\X_j$: that 
 is, it exists ${\ma a_j^{(2)}}^\star$ such that 
 $\y_j^{(2)} = \X_j^{(1)}\ma a_j^{(2)} = \X_j{\ma a_j^{(2)}}^\star$.
-It implies that whatever the choice of the mode of delfation the block component
+It implies that whatever the choice of the mode of deflation, the block component
 can always be expressed in terms of the original variable.
 
 
