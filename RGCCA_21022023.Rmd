@@ -233,11 +233,11 @@ We need to introduce some extra notations to present the convergence
 properties of Algorithm  \ref{master_optim}: 
 $\Omega = \Omega_1 \times \ldots \times \Omega_J$, 
 $\ma a = \left(\ma a_1; \ldots;\ma a_J\right) \in \Omega$, 
-$c_j~:~\Omega\mapsto\Omega$ is an operator defined as 
-$c_j(\ma a) = \left(\ma a_1; \ldots; \ma a_{j-1} ; r_j(\ma a) ; \ma a_{j+1} ; \ldots; \ma a_J\right)$ 
+$c_l~:~\Omega\mapsto\Omega$ is an operator defined as 
+$c_l(\ma a) = \left(\ma a_1; \ldots; \ma a_{j-1} ; r_j(\ma a) ; \ma a_{j+1} ; \ldots; \ma a_J\right)$ 
 with $r_j(\ma a)$ introduced in equation (\ref{core_update}) and 
 $c~:~\Omega\mapsto\Omega$ is defined as 
-$c = c_J\circ c_{J-1}\circ ... \circ c_1$, where $\circ$ stands for the 
+$c = c_L\circ c_{L-1}\circ ... \circ c_1$, where $\circ$ stands for the 
 composition operator. Using the operator $c$, 
 the \guillemotleft for loop\guillemotright{} inside Algorithm 
 \ref{master_optim} can be replaced by the following recurrence 
@@ -667,7 +667,7 @@ The norm equivalence between $\Vert . \Vert_1$ and $\Vert . \Vert_2$ can be
 formulated as the following inequality:
 
 \begin{equation}
-	\forall \x \in \mathbb{R}^{p_j}, ~ \Vert \x \Vert_2 \leq \Vert \x \Vert_1 \leq \sqrt{p_j}\Vert \x \Vert_2.
+	\forall \x \in \mathbb{R}^{J_l}, ~ \Vert \x \Vert_2 \leq \Vert \x \Vert_1 \leq \sqrt{p_j}\Vert \x \Vert_2.
 \label{existence_conditions}
 \end{equation}
 
