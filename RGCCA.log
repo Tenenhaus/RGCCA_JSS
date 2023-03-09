@@ -1,0 +1,1811 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.15)  20 FEB 2023 15:15
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**RGCCA.tex
+(./RGCCA.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-07> (./jss.cls
+Document Class: jss 2021/05/23 3.3 jss class by Achim Zeileis
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ae/ae.sty
+Package: ae 2001/02/12 1.3 Almost European Computer Modern
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
+\FV@CodeLineNo=\count193
+\FV@InFile=\read2
+\FV@TabBox=\box51
+\c@FancyVerbLine=\count194
+\FV@StepNumber=\count195
+\FV@OutFile=\write3
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+aer on input line 112.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip50
+\bibsep=\skip51
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count196
+)
+\footerskip=\skip52
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count197
+)
+\@linkdim=\dimen143
+\Hy@linkcounter=\count198
+\Hy@pagecounter=\count199
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count266
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count267
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen144
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count268
+\Field@Width=\dimen145
+\Fld@charsize=\dimen146
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count269
+\c@Item=\count270
+\c@Hfootnote=\count271
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count272
+\c@bookmark@seq@number=\count273
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip53
+)
+\preXLskip=\skip54
+\preLskip=\skip55
+\preMskip=\skip56
+\preSskip=\skip57
+\postMskip=\skip58
+\postSskip=\skip59
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 447.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 447.
+Package hyperref Info: Option `linktocpage' set `true' on input line 447.
+Package hyperref Info: Option `plainpages' set `false' on input line 447.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/orcidlink/orcidlink.sty
+Package: orcidlink 2021/06/11 v1.0.4 Linked ORCiD logo macro package
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks17
+\pgfutil@tempdima=\dimen147
+\pgfutil@tempdimb=\dimen148
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box52
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks18
+\pgfkeys@temptoks=\toks19
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks20
+))
+\pgf@x=\dimen149
+\pgf@y=\dimen150
+\pgf@xa=\dimen151
+\pgf@ya=\dimen152
+\pgf@xb=\dimen153
+\pgf@yb=\dimen154
+\pgf@xc=\dimen155
+\pgf@yc=\dimen156
+\pgf@xd=\dimen157
+\pgf@yd=\dimen158
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count274
+\c@pgf@countb=\count275
+\c@pgf@countc=\count276
+\c@pgf@countd=\count277
+\t@pgf@toka=\toks21
+\t@pgf@tokb=\toks22
+\t@pgf@tokc=\toks23
+\pgf@sys@id@count=\count278
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count279
+\pgfsyssoftpath@bigbuffer@items=\count280
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen159
+\pgfmath@count=\count281
+\pgfmath@box=\box53
+\pgfmath@toks=\toks24
+\pgfmath@stack@operand=\toks25
+\pgfmath@stack@operation=\toks26
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count282
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen160
+\pgf@picmaxx=\dimen161
+\pgf@picminy=\dimen162
+\pgf@picmaxy=\dimen163
+\pgf@pathminx=\dimen164
+\pgf@pathmaxx=\dimen165
+\pgf@pathminy=\dimen166
+\pgf@pathmaxy=\dimen167
+\pgf@xx=\dimen168
+\pgf@xy=\dimen169
+\pgf@yx=\dimen170
+\pgf@yy=\dimen171
+\pgf@zx=\dimen172
+\pgf@zy=\dimen173
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen174
+\pgf@path@lasty=\dimen175
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen176
+\pgf@shorten@start@additional=\dimen177
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count283
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen178
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen179
+\pgf@pt@y=\dimen180
+\pgf@pt@temp=\dimen181
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen182
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen183
+\pgf@sys@shading@range@num=\count284
+\pgf@shadingcount=\count285
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box57
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box58
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen184
+\pgf@nodesepend=\dimen185
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen186
+\pgffor@skip=\dimen187
+\pgffor@stack=\toks27
+\pgffor@toks=\toks28
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count286
+\pgfplotmarksize=\dimen188
+)
+\tikz@lastx=\dimen189
+\tikz@lasty=\dimen190
+\tikz@lastxsaved=\dimen191
+\tikz@lastysaved=\dimen192
+\tikz@lastmovetox=\dimen193
+\tikz@lastmovetoy=\dimen194
+\tikzleveldistance=\dimen195
+\tikzsiblingdistance=\dimen196
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count287
+\tikznumberofchildren=\count288
+\tikznumberofcurrentchild=\count289
+\tikz@fig@count=\count290
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count291
+\pgfmatrixcurrentcolumn=\count292
+\pgf@matrix@numberofcolumns=\count293
+)
+\tikz@expandcount=\count294
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarysvg.path.code.tex
+File: tikzlibrarysvg.path.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibrarysvg.path.code.tex
+File: pgflibrarysvg.path.code.tex 2023-01-15 v3.1.10 (3.1.10)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleparser.code.tex
+File: pgfmoduleparser.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfparserdef@arg@count=\count295
+)
+\pgf@lib@svg@last@x=\dimen197
+\pgf@lib@svg@last@y=\dimen198
+\pgf@lib@svg@last@c@x=\dimen199
+\pgf@lib@svg@last@c@y=\dimen256
+\pgf@lib@svg@count=\count296
+\pgf@lib@svg@max@num=\count297
+))
+\@curXheight=\skip60
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/thumbpdf/thumbpdf.sty
+Package: thumbpdf 2018/09/07 v3.17 Inclusion of thumbnails (HO)
+THUMBPDF: Compressed PDF objects of PDF 1.5 are not supported
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
+\LTchunksize=\count298
+\LTcapwidth=\dimen257
+\LT@head=\box63
+\LT@firsthead=\box64
+\LT@foot=\box65
+\LT@lastfoot=\box66
+\LT@gbox=\box67
+\LT@cols=\count299
+\LT@rows=\count300
+\c@LT@tables=\count301
+\c@LT@chunks=\count302
+\LT@p@ftn=\toks31
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen258
+\lightrulewidth=\dimen259
+\cmidrulewidth=\dimen260
+\belowrulesep=\dimen261
+\belowbottomsep=\dimen262
+\aboverulesep=\dimen263
+\abovetopsep=\dimen264
+\cmidrulesep=\dimen265
+\cmidrulekern=\dimen266
+\defaultaddspace=\dimen267
+\@cmidla=\count303
+\@cmidlb=\count304
+\@aboverulesep=\dimen268
+\@belowrulesep=\dimen269
+\@thisruleclass=\count305
+\@lastruleclass=\count306
+\@thisrulewidth=\dimen270
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen271
+\ar@mcellbox=\box68
+\extrarowheight=\dimen272
+\NC@list=\toks32
+\extratabsurround=\skip65
+\backup@length=\skip66
+\ar@cellbox=\box69
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen273
+\calc@Bdimen=\dimen274
+\calc@Askip=\skip67
+\calc@Bskip=\skip68
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count309
+\calc@Cskip=\skip69
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count310
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box70
+\fn@width=\dimen275
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip70
+For additional information on amsmath, use the `?' option.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks33
+\ex@=\dimen276
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen277
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count311
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count312
+\leftroot@=\count313
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count314
+\DOTSCASE@=\count315
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box71
+\strutbox@=\box72
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen278
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count316
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count317
+\dotsspace@=\muskip17
+\c@parentequation=\count318
+\dspbrk@lvl=\count319
+\tag@help=\toks34
+\row@=\count320
+\column@=\count321
+\maxfields@=\count322
+\andhelp@=\toks35
+\eqnshift@=\dimen279
+\alignsep@=\dimen280
+\tagshift@=\dimen281
+\tagwidth@=\dimen282
+\totwidth@=\dimen283
+\lineht@=\dimen284
+\@envbody=\toks36
+\multlinegap=\skip71
+\multlinetaggap=\skip72
+\mathdisplay@stack=\toks37
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/lmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks38
+\SOUL@lasttoken=\toks39
+\SOUL@cmds=\toks40
+\SOUL@buffer=\toks41
+\SOUL@token=\toks42
+\SOUL@spaceskip=\skip73
+\SOUL@ttwidth=\dimen285
+\SOUL@uldp=\dimen286
+\SOUL@ulht=\dimen287
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen288
+\epsfysize=\dimen289
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count323
+\float@exts=\toks43
+\float@box=\box73
+\@float@everytoks=\toks44
+\@floatcapt=\box74
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psfrag/psfrag.sty
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count324
+\pfg@scount=\count325
+\pfg@temp=\write5
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip74
+\multirow@cntb=\count326
+\multirow@dima=\skip75
+\bigstrutjot=\dimen290
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legacy)
+Package grffile Info: This package is an empty stub for compatibility on input line 40.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks45
+\thm@bodyfont=\toks46
+\thm@headfont=\toks47
+\thm@notefont=\toks48
+\thm@headpunct=\toks49
+\thm@preskip=\skip76
+\thm@postskip=\skip77
+\thm@headsep=\skip78
+\dth@everypar=\toks50
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks51
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip79
+\enit@outerparindent=\dimen291
+\enit@toks=\toks52
+\enit@inbox=\box75
+\enit@count@id=\count327
+\enitdp@description=\count328
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip80
+\subfigcapskip=\skip81
+\subfigcaptopadj=\dimen292
+\subfigbottomskip=\skip82
+\subfigcapmargin=\dimen293
+\subfiglabelskip=\skip83
+\c@subfigure=\count329
+\c@lofdepth=\count330
+\c@subtable=\count331
+\c@lotdepth=\count332
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip84
+\subfig@bottom=\skip85
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen294
+\ESO@tempdimb=\dimen295
+)
+\AM@pagewidth=\dimen296
+\AM@pageheight=\dimen297
+\AM@fboxrule=\dimen298
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count333
+\AM@pagebox=\box76
+\AM@global@opts=\toks53
+\AM@pagecnt=\count334
+\AM@toc@title=\toks54
+\AM@lof@heading=\toks55
+\c@AM@survey=\count335
+\AM@templatesizebox=\box77
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/euscript.sty
+Package: euscript 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 112.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ifsym/ifsym.sty
+Package: ifsym 2000/04/18 I.Kloeckl
+\c@ifsymcnt=\count336
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
+\symwasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen299
+\captionmargin=\dimen300
+\caption@leftmargin=\dimen301
+\caption@rightmargin=\dimen302
+\caption@width=\dimen303
+\caption@indent=\dimen304
+\caption@parindent=\dimen305
+\caption@hangindent=\dimen306
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count337
+\c@continuedfloat=\count338
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: subfigure package is loaded.
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count339
+\c@ALC@line=\count340
+\c@ALC@rem=\count341
+\c@ALC@depth=\count342
+\ALC@tlm=\skip86
+\algorithmicindent=\skip87
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+\@float@every@algorithm=\toks56
+\c@algorithm=\count343
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count344
+\l__pdf_internal_box=\box78
+) (./RGCCA.aux
+
+LaTeX Warning: Label `sandwich_ineq' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_2_General_Optim_Problem_constr' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_2_minorizing_ineq' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_2_core_updtae' multiply defined.
+
+
+LaTeX Warning: Label `algo:Chapter_2_Global_Algo' multiply defined.
+
+
+LaTeX Warning: Label `prop:Chapter_2_prop1' multiply defined.
+
+
+LaTeX Warning: Label `lemma:Chapter_2_lemma_1' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_3_demo_monotony' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_3_demo_point3_end' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_3_optim_RGCCA_comp_1' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_3_optim_RGCCA_one_comp_VARCHANGED' multiply defined.
+
+
+LaTeX Warning: Label `eq:Chapter_3_optim_RGCCA_one_comp_VARCHANGED_constr' multiply defined.
+
+
+LaTeX Warning: Label `optim_SGCCA' multiply defined.
+
+)
+\openout1 = `RGCCA.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring ON on input line 77.
+(./RGCCA.out) (./RGCCA.out)
+\@outlinefile=\write6
+\openout6 = `RGCCA.out'.
+
+<jsslogo.jpg, id=95, 540.0175pt x 393.47pt>
+File: jsslogo.jpg Graphic file (type jpg)
+<use jsslogo.jpg>
+Package pdftex.def Info: jsslogo.jpg  used on input line 77.
+(pdftex.def)             Requested size: 89.80768pt x 65.43607pt.
+LaTeX Font Info:    Trying to load font information for T1+pzc on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pzc.fd
+File: t1pzc.fd 2020/03/25 font definitions for T1/pzc.
+)
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <28> not available
+(Font)              Font shape `T1/pzc/m/it' tried instead on input line 77.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 77.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 77.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 77.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+) (c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\c@theorem=\count345
+[1
+Non-PDF special ignored!
+<special> header=psfrag.pro
+
+{c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./jsslogo.jpg>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 223.
+
+LaTeX Warning: Reference `eq:Chapter_2_General_Optim_Problem' on page 2 undefined on input line 225.
+
+
+Overfull \hbox (16.76794pt too wide) in paragraph at lines 240--257
+\OT1/lmr/bx/n/10.95 a \OT1/lmr/m/n/10.95 = [] \OMS/lmsy/m/n/10.95 2 \OT1/lmr/m/n/10.95 
+$\T1/ptm/m/n/10.95 , $\OML/lmm/m/it/10.95 c[] [] \OT1/lmr/m/n/10.95 :  []
+ \OMS/lmsy/m/n/10.95 7! \OT1/lmr/m/n/10.95 
+$ \T1/ptm/m/n/10.95 is an op-er-a-tor de-fined as $\OML/lmm/m/it/10.95 c[]\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 a\OT1/lmr/m/n/10.95 ) = []$
+ []
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 2 []
+ []
+
+[2]
+
+LaTeX Warning: Reference `eq:Chapter_2_General_Optim_Problem' on page 3 undefined on input line 264.
+
+
+LaTeX Warning: Reference `eq:Chapter_2_General_Optim_Problem' on page 3 undefined on input line 267.
+
+
+Overfull \hbox (34.89824pt too wide) in paragraph at lines 267--268
+[]\T1/ptm/m/it/10.95 The se-quence $[]$, $\OML/lmm/m/it/10.95 l \OT1/lmr/m/n/10.95 = 1\OML/lmm/m/it/10.95 ; [] ; L$\T1/ptm/m/it/10.95 , is asymp-tot-i-cally reg-u-lar: $[][] \OT1/lmr/m/n/10.95 =
+ []
+
+
+Package natbib Warning: Citation `Berge1966' on page 3 undefined on input line 296.
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 3
+ []
+
+[3]
+
+Package natbib Warning: Citation `Fessler2004' on page 4 undefined on input line 345.
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 4 []
+ []
+
+[4]
+Overfull \hbox (5.7051pt too wide) in paragraph at lines 352--360
+[]\T1/ptm/m/n/10.95 Let $\OT1/lmr/bx/n/10.95 X[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 X[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 X[]$ \T1/ptm/m/n/10.95 be a col-lec-tion of $\OML/lmm/m/it/10.95 L$ \T1/ptm/m/n/10.95 data ma-tri-ces. Each $\OML/lmm/m/it/10.95 I \OMS/lmsy/m/n/10.95 ^^B \OML/lmm/m/it/10.95 J[]$ \T1/ptm/m/n/10.95 data ma-trix $\OT1/lmr/bx/n/10.95 X[] \OT1/lmr/m/n/10.95 = [\OT1/lmr/bx/n/10.95 x[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 x[]\OT1/lmr/m/n/10.95 ]$
+ []
+
+
+LaTeX Warning: Reference `chap:Chapter_2' on page 5 undefined on input line 372.
+
+
+LaTeX Warning: Reference `subsec:Chapter_2_RGCCA' on page 5 undefined on input line 372.
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 5
+ []
+
+[5]
+
+LaTeX Warning: Reference `alg:BR' on page 6 undefined on input line 479.
+
+
+LaTeX Warning: Reference `MMalgo' on page 6 undefined on input line 507.
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 6 []
+ []
+
+[6]
+
+LaTeX Warning: Reference `alg:BR' on page 7 undefined on input line 517.
+
+
+LaTeX Warning: Reference `alg:BR' on page 7 undefined on input line 524.
+
+
+LaTeX Warning: Reference `alg:BR' on page 7 undefined on input line 541.
+
+
+LaTeX Warning: Reference `alg:BR' on page 7 undefined on input line 547.
+
+
+LaTeX Warning: Reference `alg:BR' on page 7 undefined on input line 563.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--594
+
+ []
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 7
+ []
+
+[7]
+
+LaTeX Warning: Reference `alg:BR' on page 8 undefined on input line 615.
+
+
+Package natbib Warning: Citation `Tenenhaus2015a' on page 8 undefined on input line 619.
+
+
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 8 []
+ []
+
+[8]
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 9
+ []
+
+[9]
+
+LaTeX Warning: Reference `alg:RGCCAMaj1' on page 10 undefined on input line 765.
+
+
+LaTeX Warning: Reference `alg:KGCCA' on page 10 undefined on input line 769.
+
+
+Overfull \hbox (3.99449pt too wide) in paragraph at lines 761--770
+[]\T1/ptm/m/n/10.95 and fits op-ti-miza-tion prob-lem ([][]13[][]) by set-ting $\OT1/lmr/bx/n/10.95 Q[] \OT1/lmr/m/n/10.95 = \OML/lmm/m/it/10.95 n[][]$ \T1/ptm/m/n/10.95 and $\OT1/lmr/bx/n/10.95 M[] \OT1/lmr/m/n/10.95 = [] []$\T1/ptm/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 10 []
+ []
+
+[10]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 11
+ []
+
+[11]
+Overfull \hbox (39.63762pt too wide) in paragraph at lines 919--925
+[]$\OT1/lmr/bx/n/10.95 a[] \OT1/lmr/m/n/10.95 = []\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 n[]\OT1/lmr/bx/n/10.95 X[]z[]\OML/lmm/m/it/10.95 ; ^^U[]\OT1/lmr/m/n/10.95 )$ \T1/ptm/m/n/10.95 where $\OML/lmm/m/it/10.95 S$ \T1/ptm/m/n/10.95 is the soft-thresholding op-er-a-tor de-fined by $\OML/lmm/m/it/10.95 S\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 a; ^^U\OT1/lmr/m/n/10.95 ) = [](\OML/lmm/m/it/10.95 a\OT1/lmr/m/n/10.95 )[](0\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 j\OML/lmm/m/it/10.95 a\OMS/lmsy/m/n/10.95 j ^^@
+ []
+
+
+LaTeX Warning: Reference `alg:SGCCA' on page 12 undefined on input line 947.
+
+
+LaTeX Warning: Reference `alg:BR' on page 12 undefined on input line 951.
+
+
+LaTeX Warning: Reference `alg:SGCCA' on page 12 undefined on input line 952.
+
+
+LaTeX Warning: Reference `alg:SGCCA' on page 12 undefined on input line 952.
+
+
+LaTeX Warning: Reference `alg:SGCCA' on page 12 undefined on input line 955.
+
+
+LaTeX Warning: Reference `tab:stability' on page 12 undefined on input line 971.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 12 []
+ []
+
+[12]
+
+Package natbib Warning: Citation `Van1984' on page 13 undefined on input line 986.
+
+
+Package natbib Warning: Citation `TenBerg1988' on page 13 undefined on input line 986.
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1016.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 13
+ []
+
+[13]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 14 []
+ []
+
+[14]
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1154.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1157.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1161.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1171.
+
+
+LaTeX Warning: Reference `update_general' on page 15 undefined on input line 1172.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1173.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1182.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1197.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1215.
+
+
+LaTeX Warning: Reference `algo_general' on page 15 undefined on input line 1216.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 15
+ []
+
+[15]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 16 []
+ []
+
+[16]
+
+Package natbib Warning: Citation `Fessler2004' on page 17 undefined on input line 1342.
+
+
+LaTeX Warning: Reference `algo_general' on page 17 undefined on input line 1350.
+
+
+LaTeX Warning: Reference `algo_general_v' on page 17 undefined on input line 1361.
+
+
+LaTeX Warning: Reference `algo_general' on page 17 undefined on input line 1362.
+
+
+LaTeX Warning: Reference `algo_general_v' on page 17 undefined on input line 1367.
+
+
+LaTeX Warning: Reference `algo_general_a' on page 17 undefined on input line 1368.
+
+
+LaTeX Warning: Reference `algo_general_a' on page 17 undefined on input line 1372.
+
+
+LaTeX Warning: Reference `algo_general_v' on page 17 undefined on input line 1373.
+
+
+LaTeX Warning: Reference `update_algoRGCCA_v' on page 17 undefined on input line 1374.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 17
+ []
+
+[17]
+
+LaTeX Warning: Reference `algo_general_a' on page 18 undefined on input line 1403.
+
+
+Overfull \hbox (16.306pt too wide) in paragraph at lines 1408--1417
+[]\T1/ptm/m/n/10.95 We con-sider in this sec-tion se-quen-tial RGCCA where the first stage block com-pos-ites $\OML/lmm/m/it/10.95 y[] \OT1/lmr/m/n/10.95 = [][]\OML/lmm/b/it/10.95 x[]\OML/lmm/m/it/10.95 ; j \OT1/lmr/m/n/10.95 =
+ []
+
+
+Overfull \hbox (5.397pt too wide) detected at line 1421
+[][][][] [] \OML/lmm/m/it/10.95 c[][] [] []\OT1/lmr/bx/n/10.95 a[]M[]a[] \OT1/lmr/m/n/10.95 = 1[][] [] = 0\OML/lmm/m/it/10.95 ; j \OT1/lmr/m/n/10.95 = 1\OML/lmm/m/it/10.95 ; [] ; J:
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 18 []
+ []
+
+[18]
+
+LaTeX Warning: Reference `eq:Chapter_2_General_Optim_Problem' on page 19 undefined on input line 1537.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 19
+ []
+
+[19]
+
+LaTeX Warning: Reference `eq:Chapter_2_General_Optim_Problem' on page 20 undefined on input line 1598.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 20 []
+ []
+
+[20]
+
+LaTeX Warning: Reference `eq:Chapter_2_General_Optim_Problem' on page 21 undefined on input line 1640.
+
+
+LaTeX Warning: Reference `eq:Chapter_2_General_Optim_Problem' on page 21 undefined on input line 1643.
+
+
+Overfull \hbox (34.89824pt too wide) in paragraph at lines 1643--1644
+[]\T1/ptm/m/it/10.95 The se-quence $[]$, $\OML/lmm/m/it/10.95 l \OT1/lmr/m/n/10.95 = 1\OML/lmm/m/it/10.95 ; [] ; L$\T1/ptm/m/it/10.95 , is asymp-tot-i-cally reg-u-lar: $[][] \OT1/lmr/m/n/10.95 =
+ []
+
+
+Package natbib Warning: Citation `Berge1966' on page 21 undefined on input line 1672.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 21
+ []
+
+[21]
+
+Package natbib Warning: Citation `Fessler2004' on page 22 undefined on input line 1721.
+
+
+Overfull \hbox (5.7051pt too wide) in paragraph at lines 1728--1736
+[]\T1/ptm/m/n/10.95 Let $\OT1/lmr/bx/n/10.95 X[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 X[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 X[]$ \T1/ptm/m/n/10.95 be a col-lec-tion of $\OML/lmm/m/it/10.95 L$ \T1/ptm/m/n/10.95 data ma-tri-ces. Each $\OML/lmm/m/it/10.95 I \OMS/lmsy/m/n/10.95 ^^B \OML/lmm/m/it/10.95 J[]$ \T1/ptm/m/n/10.95 data ma-trix $\OT1/lmr/bx/n/10.95 X[] \OT1/lmr/m/n/10.95 = [\OT1/lmr/bx/n/10.95 x[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 x[]\OT1/lmr/m/n/10.95 ]$
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 22 []
+ []
+
+[22]
+
+LaTeX Warning: Reference `chap:Chapter_2' on page 23 undefined on input line 1748.
+
+
+LaTeX Warning: Reference `subsec:Chapter_2_RGCCA' on page 23 undefined on input line 1748.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 1766.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 1766.
+
+LaTeX Warning: Reference `sec:Chapter_2_Optimization_Framework' on page 23 undefined on input line 1771.
+
+
+LaTeX Warning: Reference `subsec:Chapter_2_Optimization_Algorithm' on page 23 undefined on input line 1781.
+
+
+LaTeX Warning: Reference `algo:Chapter_3_RGCCA_algo_one_comp' on page 23 undefined on input line 1801.
+
+
+LaTeX Warning: Reference `algo:Chapter_3_RGCCA_algo_one_comp' on page 23 undefined on input line 1803.
+
+
+LaTeX Warning: Reference `algo:Chapter_3_RGCCA_algo_one_comp' on page 23 undefined on input line 1808.
+
+
+LaTeX Warning: Reference `algo:Chapter_3_RGCCA_algo_one_comp' on page 23 undefined on input line 1819.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 23
+ []
+
+[23]
+Overfull \hbox (8.09077pt too wide) in paragraph at lines 1826--1827
+[]$[]$ $\OT1/lmr/m/n/10.95 
+[] = []$ \T1/ptm/m/n/10.95 is the $\OML/lmm/m/it/10.95 `[]$\T1/ptm/m/n/10.95 -sphere
+ []
+
+
+LaTeX Warning: Reference `chap:Chapter_2' on page 24 undefined on input line 1830.
+
+
+LaTeX Warning: Reference `subsec:Chapter_2_Optimization_Algorithm' on page 24 undefined on input line 1830.
+
+
+LaTeX Warning: Reference `chap:Chapter_2' on page 24 undefined on input line 1832.
+
+
+LaTeX Warning: Reference `algo:Chapter_3_RGCCA_algo_one_comp' on page 24 undefined on input line 1840.
+
+
+Overfull \hbox (11.91891pt too wide) in paragraph at lines 1873--1883
+\T1/ptm/m/n/10.95 This pro-ce-dure con-sists in re-plac-ing a block $\OT1/lmr/bx/n/10.95 X[]$ \T1/ptm/m/n/10.95 by the resid-ual $\OT1/lmr/bx/n/10.95 X[] \OT1/lmr/m/n/10.95 = \OT1/lmr/bx/n/10.95 X[] \OMS/lmsy/m/n/10.95 ^^@ \OT1/lmr/bx/n/10.95 y[] [][] y[]X[]$
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 24 []
+ []
+
+[24]
+
+Package natbib Warning: Citation `Boyd2004' on page 25 undefined on input line 1944.
+
+
+Package natbib Warning: Citation `Tenenhaus2014a' on page 25 undefined on input line 1948.
+
+
+LaTeX Warning: Reference `sec:Chapter_5_SGCCA_update' on page 25 undefined on input line 1950.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 25
+ []
+
+[25]
+
+Package natbib Warning: Citation `Tenenhaus2014a' on page 26 undefined on input line 1965.
+
+
+LaTeX Warning: Reference `chap:Chapter_3' on page 26 undefined on input line 1981.
+
+
+LaTeX Warning: Reference `subsec:Chapter_3_RGCCA_optim_first_level' on page 26 undefined on input line 1982.
+
+
+LaTeX Warning: Reference `fig:Chapter_5_existence_solution_1' on page 26 undefined on input line 2007.
+
+
+LaTeX Warning: Reference `fig:Chapter_5_existence_solution_2' on page 26 undefined on input line 2020.
+
+
+LaTeX Warning: Reference `sec:Chapter_2_Optimization_Framework' on page 26 undefined on input line 2027.
+
+
+Package natbib Warning: Citation `Witten2009' on page 26 undefined on input line 2045.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 26 []
+ []
+
+[26]
+
+LaTeX Warning: Reference `fig:Chapter_5_soft_tresholding' on page 27 undefined on input line 2068.
+
+
+LaTeX Warning: Reference `algo:Chapter_5_SGCCA_algo' on page 27 undefined on input line 2072.
+
+
+Package natbib Warning: Citation `Boyd2003' on page 27 undefined on input line 2102.
+
+
+Package natbib Warning: Citation `vandenBerg2008' on page 27 undefined on input line 2104.
+
+
+LaTeX Warning: Reference `appendix:proj_demo' on page 27 undefined on input line 2106.
+
+
+LaTeX Warning: Reference `appendix:proj_demo_assumption' on page 27 undefined on input line 2107.
+
+
+Overfull \hbox (8.47945pt too wide) in paragraph at lines 2120--2130
+[]\T1/ptm/m/n/10.95 Let us con-sider $\OML/lmm/m/it/10.95 J$ \T1/ptm/m/n/10.95 ran-dom $\OML/lmm/m/it/10.95 p[]$\T1/ptm/m/n/10.95 -dimensional cen-tered col-umn vec-tors $\OML/lmm/b/it/10.95 x[]$ \T1/ptm/m/n/10.95 and $\OML/lmm/m/it/10.95 J$ \T1/ptm/m/n/10.95 non ran-dom $\OML/lmm/m/it/10.95 p[]$\T1/ptm/m/n/10.95 -dimensional
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 27
+ []
+
+[27]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 28 []
+ []
+
+[28]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 29
+ []
+
+[29]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 30 []
+ []
+
+[30]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 31
+ []
+
+[31]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 32 []
+ []
+
+[32]
+
+LaTeX Warning: Reference `alg:BR' on page 33 undefined on input line 2447.
+
+
+LaTeX Warning: Reference `alg:RGCCAMaj1' on page 33 undefined on input line 2454.
+
+
+LaTeX Warning: Reference `alg:RGCCAMaj1' on page 33 undefined on input line 2459.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 2460.
+(c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+
+Package natbib Warning: Citation `Tenenhaus2015b' on page 33 undefined on input line 2466.
+
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 33
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2482--2486
+
+ []
+
+
+Underfull \hbox (badness 4441) in paragraph at lines 2527--2527
+[]|\T1/ptm/b/n/10.95 Interbattery Fac-tor Anal-y-sis \T1/ptm/m/n/10.95 ([][]Tucker[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2527--2527
+[][]\T1/ptm/m/n/10.95 1958[][]) (or \T1/ptm/b/n/10.95 PLS Re-gres-sion \T1/ptm/m/n/10.95 ([][]Wold,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2529--2529
+[]|\T1/ptm/b/n/10.95 Canonical Cor-re-la-tion Anal-y-sis
+ []
+
+
+Underfull \hbox (badness 6559) in paragraph at lines 2573--2573
+[]|\T1/ptm/b/n/10.95 SUMCOV \T1/ptm/m/n/10.95 ( = one-component MAX-BET)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2577--2577
+[]|\T1/ptm/b/n/10.95 SSQCOV \T1/ptm/m/n/10.95 (one-component MAX-BET B)
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 34 []
+ []
+
+[34]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 35
+ []
+
+[35]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 36 []
+ []
+
+[36]
+Overfull \hbox (204.89651pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 37
+ []
+
+[37
+
+]
+
+LaTeX Warning: Reference `alg:RGCCAMaj1' on page 38 undefined on input line 2662.
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 38 []
+ []
+
+[38
+
+]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 39
+ []
+
+[39]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 40 []
+ []
+
+[40]
+<RGCCA_files/figure-latex/unnamed-chunk-7-1.pdf, id=1122, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-7-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 2975.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 41
+ []
+
+[41 <./RGCCA_files/figure-latex/unnamed-chunk-7-1.pdf>]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 42 []
+ []
+
+[42]
+<RGCCA_files/figure-latex/unnamed-chunk-10-1.pdf, id=1138, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-10-1.pdf  used on input line 3069.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+<RGCCA_files/figure-latex/unnamed-chunk-11-1.pdf, id=1139, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-11-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-11-1.pdf  used on input line 3097.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 43
+ []
+
+[43 <./RGCCA_files/figure-latex/unnamed-chunk-10-1.pdf>]
+<RGCCA_files/figure-latex/unnamed-chunk-12-1.pdf, id=1152, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 3160.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (7.78194pt too wide) in paragraph at lines 3173--3180
+\T1/ptm/m/n/10.95 Inertia Anal-y-sis [][]Hanafi and Kiers[][] ([][]2006[][]) with $\OT1/lmr/m/n/10.95 2$ \T1/ptm/m/n/10.95 com-po-nents per block. See \T1/pcr/m/n/10.95 available_methods()
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 44 []
+ []
+
+[44 <./RGCCA_files/figure-latex/unnamed-chunk-11-1.pdf>]
+<RGCCA_files/figure-latex/unnamed-chunk-14-1.pdf, id=1170, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 3205.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+<RGCCA_files/figure-latex/unnamed-chunk-15-1.pdf, id=1171, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-15-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-15-1.pdf  used on input line 3228.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+<RGCCA_files/figure-latex/unnamed-chunk-16-1.pdf, id=1172, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-16-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-16-1.pdf  used on input line 3256.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+<RGCCA_files/figure-latex/unnamed-chunk-17-1.pdf, id=1173, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-17-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-17-1.pdf  used on input line 3278.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 45
+ []
+
+[45 <./RGCCA_files/figure-latex/unnamed-chunk-12-1.pdf>]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 46 []
+ []
+
+[46 <./RGCCA_files/figure-latex/unnamed-chunk-14-1.pdf> <./RGCCA_files/figure-latex/unnamed-chunk-15-1.pdf>]
+<RGCCA_files/figure-latex/unnamed-chunk-19-1.pdf, id=1203, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-19-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-19-1.pdf  used on input line 3305.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 47
+ []
+
+[47 <./RGCCA_files/figure-latex/unnamed-chunk-16-1.pdf> <./RGCCA_files/figure-latex/unnamed-chunk-17-1.pdf>]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 48 []
+ []
+
+[48 <./RGCCA_files/figure-latex/unnamed-chunk-19-1.pdf>]
+Overfull \hbox (4.03244pt too wide) in paragraph at lines 3380--3383
+[]\T1/ptm/m/n/10.95 S/RGCCA is run on the orig-i-nal data $\OT1/lmr/bx/n/10.95 X[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 X[]$ \T1/ptm/m/n/10.95 to ob-tain the block weight vec-tors $\OT1/lmr/bx/n/10.95 w[]\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/bx/n/10.95 w[]$\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 49
+ []
+
+[49]
+<RGCCA_files/figure-latex/unnamed-chunk-24-1.pdf, id=1247, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-24-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-24-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-24-1.pdf  used on input line 3472.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 50 []
+ []
+
+[50 <./RGCCA_files/figure-latex/unnamed-chunk-24-1.pdf>]
+Overfull \hbox (30.1328pt too wide) in paragraph at lines 3529--3534
+[]\T1/ptm/m/n/10.95 For Clas-si-fi-ca-tion: \T1/pcr/m/n/10.95 Accuracy\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Kappa\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 F1\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Sensitivity\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Specificity\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Pos_Pred_Value\T1/ptm/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (1.45593pt too wide) in paragraph at lines 3529--3534
+\T1/pcr/m/n/10.95 Neg_Pred_Value\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Precision\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Recall\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Detection_Rate\T1/ptm/m/n/10.95 , \T1/pcr/m/n/10.95 Balanced_Accuracy\T1/ptm/m/n/10.95 . 
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 51
+ []
+
+[51]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 52 []
+ []
+
+[52]
+<RGCCA_files/figure-latex/unnamed-chunk-30-1.pdf, id=1267, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-30-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-30-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-30-1.pdf  used on input line 3640.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 53
+ []
+
+[53 <./RGCCA_files/figure-latex/unnamed-chunk-30-1.pdf>]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 54 []
+ []
+
+[54]
+<RGCCA_files/figure-latex/unnamed-chunk-40-1.pdf, id=1290, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-40-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-40-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-40-1.pdf  used on input line 3881.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 55
+ []
+
+[55]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 56 []
+ []
+
+[56 <./RGCCA_files/figure-latex/unnamed-chunk-40-1.pdf>]
+<RGCCA_files/figure-latex/unnamed-chunk-43-1.pdf, id=1310, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-43-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-43-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-43-1.pdf  used on input line 4002.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Underfull \vbox (badness 4254) has occurred while \output is active []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 57
+ []
+
+[57]
+<RGCCA_files/figure-latex/unnamed-chunk-46-1.pdf, id=1315, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-46-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-46-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-46-1.pdf  used on input line 4054.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 58 []
+ []
+
+[58 <./RGCCA_files/figure-latex/unnamed-chunk-43-1.pdf>]
+<RGCCA_files/figure-latex/unnamed-chunk-50-1.pdf, id=1327, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-50-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-50-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-50-1.pdf  used on input line 4111.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 59
+ []
+
+[59 <./RGCCA_files/figure-latex/unnamed-chunk-46-1.pdf>]
+<RGCCA_files/figure-latex/unnamed-chunk-51-1.pdf, id=1340, 1300.86pt x 867.24pt>
+File: RGCCA_files/figure-latex/unnamed-chunk-51-1.pdf Graphic file (type pdf)
+<use RGCCA_files/figure-latex/unnamed-chunk-51-1.pdf>
+Package pdftex.def Info: RGCCA_files/figure-latex/unnamed-chunk-51-1.pdf  used on input line 4133.
+(pdftex.def)             Requested size: 354.12434pt x 236.07672pt.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 60 []
+ []
+
+[60 <./RGCCA_files/figure-latex/unnamed-chunk-51-1.pdf> <./RGCCA_files/figure-latex/unnamed-chunk-50-1.pdf>]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 61
+ []
+
+[61] (./RGCCA.bbl
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 62 []
+ []
+
+[62]
+Underfull \hbox (badness 4595) in paragraph at lines 114--123
+[]\T1/ptm/m/n/10.95 Gloaguen A, Philippe C, Frouin V, Gen-nari G, Dehaene-Lambertz G, Le Brus-quet L,
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 114--123
+\T1/ptm/m/n/10.95 Tenen-haus A (2020).  ``Mul-ti-way gen-er-al-ized canon-i-cal cor-re-la-tion anal-y-sis.''  \T1/ptm/m/it/10.95 Bio-statis-
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 114--123
+\T1/ptm/m/it/10.95 tics\T1/ptm/m/n/10.95 .  ISSN 1465-4644.  [][]\T1/pcr/m/n/10.95 doi:$10 . 1093 / biostatistics / kxaa010$[][]\T1/ptm/m/n/10.95 .  Kxaa010,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--123
+[][]$\T1/pcr/m/n/10.95 https : / / academic . oup . com / biostatistics / advance-[]article-[]pdf /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--123
+\T1/pcr/m/n/10.95 doi / 10 . 1093 / biostatistics / kxaa010 / 33294277 / kxaa010 . pdf$[][]\T1/ptm/m/n/10.95 , URL
+ []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 63
+ []
+
+[63]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 64 []
+ []
+
+[64]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 65
+ []
+
+[65])
+
+Package natbib Warning: There were undefined citations.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4189--4189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4189--4189
+
+ []
+
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/m/it' tried instead on input line 4189.
+
+Underfull \vbox (badness 2707) has occurred while \output is active []
+
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/ptm/m/n/10.95 66 []
+ []
+
+[66]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/ptm/m/n/10.95 67
+ []
+
+[67] (./RGCCA.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `RGCCA.out' has not changed.
+(rerunfilecheck)             Checksum: 658B7BCB871628CF3C8EFD7BBA542867;5814.
+ ) 
+Here is how much of TeX's memory you used:
+ 27277 strings out of 477989
+ 515458 string characters out of 5837889
+ 1884340 words of memory out of 5000000
+ 46490 multiletter control sequences out of 15000+600000
+ 601687 words of font info for 128 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 99i,20n,94p,1389b,848s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+{c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb><c:/Users/arthu/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on RGCCA.pdf (67 pages, 732405 bytes).
+PDF statistics:
+ 1604 PDF objects out of 1728 (max. 8388607)
+ 1435 compressed objects within 15 object streams
+ 383 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+
