@@ -659,7 +659,7 @@ The norm equivalence between $\Vert . \Vert_1$ and $\Vert . \Vert_2$ can be
 formulated as the following inequality:
 
 \begin{equation}
-	\forall \x \in \mathbb{R}^{J_l}, ~ \Vert \x \Vert_2 \leq \Vert \x \Vert_1 \leq \sqrt{p_j}\Vert \x \Vert_2.
+	\forall \x \in \mathbb{R}^{p_j}, ~ \Vert \x \Vert_2 \leq \Vert \x \Vert_1 \leq \sqrt{p_j}\Vert \x \Vert_2.
 \label{existence_conditions}
 \end{equation}
 
@@ -667,7 +667,7 @@ This can be converted into a condition on $s_j$: $1 \leq s_j \leq \sqrt{p_j}$.
 When such a condition is fulfilled, the $\ell_2$-sphere of radius $1$ and the 
 $\ell_1$-sphere of radius $s_j$ necessarily intersect. Within the RGCCA package, 
 for consistency with the value of $\tau_j \in [0, 1]$, the level of sparsity for 
-$\ma a_j$ is controlled with $1/s_j \in [1/\sqrt{p_j}, 1]$.
+$\ma a_j$ is controlled with $s_j/p_j \in [1/\sqrt{p_j}, 1]$.
 
 Several strategies, such as Binary Search or the Projection On Convex Set algorithm 
 (POCS), also known as the alternating projection method [@Boyd2003], can be 
