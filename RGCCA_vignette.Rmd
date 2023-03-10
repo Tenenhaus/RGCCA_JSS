@@ -250,7 +250,7 @@ relation: $\ma a^{s+1} = c(\ma a^s)$. The convergence properties of Algorithm
 	$\ma a^0\in\Omega$. Then, the following properties hold:
 	\begin{enumerate}[topsep=0pt,itemsep=-0.75ex,partopsep=1ex,parsep=1ex, label = {(\alph*)}]
 		\item  \label{prop_pt1} The sequence $\left\lbrace f(\ma a^s)\right\rbrace $ is monotonically increasing and therefore convergent as $f$ is bounded on $\Omega$. This result implies the monotonic convergence of Algorithm \ref{master_algo}.
-		\item  \label{prop_pt2} If the infinite sequence $\left\lbrace f(\ma a^s)\right\rbrace $ involves a finite number of distinct terms, then the last distinct point satisfies $c(\ma a^s) = \ma a^s$ and therefore is a stationary point of problem \ref{master_algo} 
+		\item  \label{prop_pt2} If the infinite sequence $\left\lbrace f(\ma a^s)\right\rbrace $ involves a finite number of distinct terms, then the last distinct point satisfies $c(\ma a^s) = \ma a^s$ and therefore is a stationary point of problem \ref{master_algo}. 
     \item  \label{prop_pt3} $\underset{s\xrightarrow[]{}\infty}\lim{f(\ma a^s) = f(\ma{a})}$, where $\ma a$ is a fixed point of $c$.
 		\item  \label{prop_pt4} The limit of any convergent subsequence of $\left\lbrace \ma a^s\right\rbrace $ is a fixed point of $c$.
 		\item  \label{prop_pt5} The sequence $\left\lbrace \ma a^s \right\rbrace $ is asymptotically regular: $\underset{s\xrightarrow[]{}\infty}\lim{\sum_{j=1}^{J} \Vert \ma a_j^{s+1} - \ma a_j^s \Vert} = 0$. This result implies that if the threshold $\varepsilon$ for the stopping criterion in Algorithm \ref{master_algo} is made sufficiently small, the output of Algorithm \ref{master_algo} will be as close as wanted to a stationary point of \ref{master_optim}. 
@@ -344,7 +344,7 @@ general optimization framework presented in Section \ref{master_algo}.
 
 Several instantiations of the RGCCA framework were proposed in [@Tenenhaus2011, 
 @Tenenhaus2015, @Tenenhaus2017] with $\Omega_j=\left\lbrace \mathbf a_j \in \mathbb{R}^{p_j}; \mathbf{a}_j^\top \mathbf M_j \mathbf{a}_j = 1 \right\rbrace$ where 
-$\mathbf{M}_j$ is positive definite matrix of order $p_j$. The optimization 
+$\mathbf{M}_j$ is a symmetric positive definite matrix of order $p_j$. The optimization 
 problem (\ref{opti_theo}) boils down to: 
 
 \begin{equation}
@@ -420,7 +420,7 @@ $\ma y_j = \ma X_j \ma a_j, j = 1, \ldots, J$ (where $\ma a_j$ is a block weight
 vector of size $p_j$) summarizing the relevant information between and within 
 the blocks. The $\tau_j$s are called shrinkage parameters ranging from $0$ to 
 $1$ and interpolate smoothly between maximizing the covariance and maximizing 
-the correlation. Setting the $\tau_j$ to 0 will force the block components to 
+the correlation. Setting $\tau_j$ to 0 will force the block components to 
 unit variance ($\mathrm{var}(\mathbf{X}_j\mathbf{a}_j) = 1$), in which case the 
 covariance criterion boils down to the correlation. Setting $\tau_j$ to 1 will 
 normalize the block weight vectors ($\mathbf{a}_j^\top\mathbf{a}_j = 1$ ), which 
@@ -482,12 +482,12 @@ blocks in many ways:
 
 - Main contributions for generalized canonical correlation
 analysis (GCCA) are found in [@Horst1961, @Carroll1968a, @Kettenring1971, 
-@Wold1982, @Wold1985, @Hanafi2007].\\
+@Wold1982, @Wold1985, @Hanafi2007].
 
 - Main contributions for extending Tucker's method to more
 than two blocks come from [@Carroll1968b, @Chessel1996, @Hanafi2006,
 @Hanafi2010, @Hanafi2011, @Hanafi2006, @Kramer2007, @Smilde2003, @TenBerge1988, 
-@VandeGeer1984, @Westerhuis1998, @Wold1982, @Wold1985].\\
+@VandeGeer1984, @Westerhuis1998, @Wold1982, @Wold1985].
 
 - [@Carroll1968b] proposed the "mixed" correlation and
 covariance criterion. [@Wollenberg1977] combined
@@ -570,7 +570,7 @@ The list of pre-specified multiblock component methods than can be used within
 the RGCCA package are reported below: 
 
 ```{r}
-RGCCA:::available_methods()
+RGCCA::available_methods()
 ```
 
 It is quite remarkable that the single optimization problem (\ref{optim_RGCCA}) 
@@ -767,11 +767,11 @@ section.
 
 ## RGCCA for the Russett dataset.
 
-In this section, we propose to reproduce some of the results presented in 
+In this section, we reproduce some of the results presented in 
 [@Tenenhaus2011] from the Russett data. The Russett dataset is available within 
-the RGCCA package. The Russett data set [@Russett1964] are studied in [@Gifi1990]. 
+the RGCCA package. The Russett dataset [@Russett1964] is studied in [@Gifi1990]. 
 Russett collected this data to study relationships between Agricultural 
-Inequality, Industrial Development and Political Instability.
+Inequality, Industrial Development, and Political Instability.
 
 ```{r}
 library(RGCCA)
@@ -802,20 +802,21 @@ block have been defined according to the nature of the variables.
 The different blocks of variables $\X_1, \ldots, \X_J$ are arranged in the list format.
 
 ```{r}
-A = list(Agric = Russett[,c("gini","farm","rent")], 
-         Ind = Russett[,c("gnpr","labo")], 
-         Polit = Russett[ , c("inst", "ecks",  "death", "demostab", "dictator")])
+A <- list(
+  Agric = Russett[, c("gini", "farm", "rent")],
+  Ind = Russett[, c("gnpr", "labo")],
+  Polit = Russett[, c("inst", "ecks",  "death", "demostab", "dictator")])
 
-lab = factor(apply(Russett[, 9:11], 1, which.max),
-             labels = c("demost", 
-                        "demoinst", 
-                        "dict"))
+lab <- factor(
+  apply(Russett[, 9:11], 1, which.max),
+  labels = c("demost", "demoinst", "dict")
+)
 ```
 
 **Preprocessing.** In general, and especially for the covariance-based 
 criterion, the data blocks might be pre-processed to ensure comparability 
 between variables and blocks. In order to ensure comparability between 
-variables standardization is applied (zero mean and unit variance). Such a 
+variables, standardization is applied (zero mean and unit variance). Such a 
 preprocessing is reached by setting the `scale` argument to `TRUE` (default 
 value) in the `rgcca()` function. To make blocks comparable, a possible 
 strategy is to standardize the variables and then to divide each block by 
@@ -842,9 +843,9 @@ is:
 
 ```{r}
 #Define the design matrix C.
-C = matrix(c(0, 0, 1,
-             0, 0, 1,
-             1, 1, 0), 3, 3)
+C <- matrix(c(0, 0, 1,
+              0, 0, 1,
+              1, 1, 0), 3, 3)
 
 C
 ```
@@ -852,16 +853,20 @@ C
 **Choice of the scheme function g**. Typical choices of scheme functions are $g(x) = x, x^2$, or $\vert x \vert$.  According to [@VandeGeer1984], a fair model is a model where all blocks contribute equally to the solution in opposition to a model dominated by only a few of the $J$ sets. If fairness is a major objective, the user must choose $m=1$. $m>1$ is preferable if the user wants to discriminate between blocks. In practice, $m$ is equal to $1$, $2$ or $4$. The higher the value of $m$ the more the method acts as block selector [@Tenenhaus2017].
 
 RGCCA using the pre-defined design matrix $\mathbf{C}$, 
-the factorial scheme ($g(x) = x^2$), $\tau = 1$ for all blocks (full covariance criterion) and a number of (orthogonal) components equal to $2$ for all blocks is obtained by specifying appropriately  the arguments `connection`, `scheme`, `tau`, `ncomp`, `comp_orth` in `rgcca()`. `verbose` (default value = `TRUE`) indicates that the progress will be reported while computing and that a plot representing the convergence of the algorithm will be returned.
+the factorial scheme ($g(x) = x^2$), $\tau = 1$ for all blocks (full covariance criterion) 
+and a number of (orthogonal) components equal to $2$ for all blocks is obtained by specifying 
+appropriately  the arguments `connection`, `scheme`, `tau`, `ncomp`, `comp_orth` in 
+`rgcca()`. `verbose` (default value = `TRUE`) indicates that the progress will be reported 
+while computing and that a plot illustrating the convergence of the algorithm will be displayed.
 
 ```{r}
-fit = rgcca(blocks = A, connection = C, 
-            tau = 1, ncomp = 2,
-            scheme = "factorial",  
-            scale = TRUE, 
-            scale_block = FALSE,
-            comp_orth = TRUE,
-            verbose = FALSE)
+fit <- rgcca(blocks = A, connection = C,
+             tau = 1, ncomp = 2,
+             scheme = "factorial",
+             scale = TRUE,
+             scale_block = FALSE,
+             comp_orth = TRUE,
+             verbose = FALSE)
 ```
 
 the `print()` function allows summarizing the RGCCA analysis.
@@ -874,14 +879,17 @@ The block-weight vectors solution of the optimization problem (\ref{optim_RGCCA}
 are available as output of the `rgcca()` function in `fit$a` and correspond exactly to the weight vectors reported in [@Tenenhaus2011, see Figure 5]. It is possible to display specific block-weight vector(s) (`type = "weight"`) block-loadings vector(s) (`type = "loadings"`) using the generic `plot()` function and specifying the arguments `block` and `component` accordingly. 
 
 ```{r, fig.height = 12, fig.width=18, fig.cap = 'block weight vectors', fig.pos = "H"}
-plot(fit, type = "weight", block = 1:3, comp = 1, 
+plot(fit, type = "weight", block = 1:3, comp = 1,
      display_order = FALSE, cex = 1.3)
 ```
 
 As component-based method, the RGCCA package provides block components as output 
 of the `rgcca()` function in `fit$Y` and graphical representations, including 
 factor plot (`type = "sample"`), correlation circle (`type = "cor_circle"`) or 
-biplot (`type = "biplot"`).  This graphical displays allows visualizing the sources of variability within blocks, the relationships between variables within and between blocks and the amount of correlation between blocks. The graphical display of the countries obtained by crossing $\X_1 \ma a_1$ = Agricultural Inequality and $\X_2 \ma a_2$ = Industrial Development and marked with their political regime in 1960 is shown in below.
+biplot (`type = "biplot"`).  This graphical displays allows visualizing the sources of variability within blocks, 
+the relationships between variables within and between blocks and the amount of correlation between blocks. 
+The graphical display of the countries obtained by crossing $\X_1 \ma a_1$ = Agricultural Inequality 
+and $\X_2 \ma a_2$ = Industrial Development and marked with their political regime in 1960 is shown below.
 
 ```{r, fig.align='center', fig.cap = 'graphical display of the countries obtained by crossing y11 and y21 and labeled according to their political regime', fig.height = 12, fig.width=18}
 plot(fit, type = "sample",
@@ -936,14 +944,14 @@ plot(fit, type = "cor_circle", block = 1, comp = 1:2, display_blocks = 1:3)
 ```
 
 By default all the variables are displayed on the correlation circle. However, 
-it is possible to choose the block(s) to display (`display_blocks`)in the 
+it is possible to choose the block(s) to display (`display_blocks`) in the 
 correlation_circle. 
 
 
 ```{r, fig.align='center', fig.cap = 'biplot associated with the two first components of Ariculture', fig.height = 12, fig.width=18}
-plot(fit, type = "biplot", block = 1, 
-     comp = 1:2, repel = TRUE, 
-     resp = lab, 
+plot(fit, type = "biplot", block = 1,
+     comp = 1:2, repel = TRUE,
+     resp = lab,
      show_arrow = TRUE)
 ```
 
@@ -970,7 +978,7 @@ function is available using the `rgcca_bootstrap()` function of the RGCCA
 package.
 
 ```{r, cache = TRUE, message = FALSE}
-boot_out = rgcca_bootstrap(fit, n_boot = 500, n_cores = 1)
+boot_out <- rgcca_bootstrap(fit, n_boot = 500, n_cores = 1)
 ```
 
 The bootstrap results are detailed using the `print()` function.
@@ -982,8 +990,8 @@ print(boot_out, block = 1:3, ncomp = 1)
 and displayed using the `plot()`function.
 
 ```{r, fig.height = 12, fig.width=18}
-plot(boot_out, type = "weight", 
-     block = 1:3, comp = 1, 
+plot(boot_out, type = "weight",
+     block = 1:3, comp = 1,
      display_order = FALSE, cex = 1.3,
      show_stars = TRUE)
 ```
@@ -1001,7 +1009,7 @@ See `available_methods()` for a list of pre-specified
 multiblock component methods. 
 
 ```{r}
-fit.mcoa = rgcca(blocks=A, method = "mcoa", ncomp = 2)
+fit.mcoa <- rgcca(blocks = A, method = "mcoa", ncomp = 2)
 ```
 
 the `print()` function allows summarizing the RGCCA analysis.
@@ -1020,15 +1028,15 @@ components. The biplot representation associated with this consensus space
 is given below.
 
 ```{r, fig.align='center', fig.cap = 'A biplot graphical display of the countries obtained by crossing the two first components of the superblock. Individuals are labeled according to their political regime and variables according to their block membership.', fig.height = 12, fig.width=18}
-plot(fit.mcoa, type = "biplot", 
-     block = 4, comp = 1:2, 
-     response = lab, 
+plot(fit.mcoa, type = "biplot",
+     block = 4, comp = 1:2,
+     response = lab,
      repel = TRUE, cex = 1.3)
 ```
 
 As previously, this model can be easily bootstrapped using the 
 `rgcca_bootstrap()` function and the bootstrap confidence intervals are still 
-available using the `print()/plot()` functions.
+available using the `print()` and `plot()` functions.
 
 ## Choice of the shrinkage parameters
 
@@ -1041,8 +1049,8 @@ analytical formula [@Schafer2005] by setting the `tau` argument of the `rgcca()`
 function to `"optimal"`.
 
 ```{r}
-fit = rgcca(blocks = A, connection=C, response=3,
-            tau = "optimal", scheme = "factorial")
+fit <- rgcca(blocks = A, connection = C, response = 3,
+             tau = "optimal", scheme = "factorial")
 ```
 
 The optimal shrinkage parameters are given by:
@@ -1087,18 +1095,18 @@ Then choose the set of tuning parameters that yields the smallest value in step
 
 ```{r, cache = TRUE}
 set.seed(123)
-perm_out = rgcca_permutation(blocks = A, connection=C, 
-                             par_type = "tau",
-                             par_value = c(.51, .13, 0),
-                             par_length = 10,
-                             n_cores = 1,
-                             n_perms = 10)
+perm_out <- rgcca_permutation(blocks = A, connection = C,
+                              par_type = "tau",
+                              par_value = c(.51, .13, 0),
+                              par_length = 10,
+                              n_cores = 1,
+                              n_perms = 10)
 ```
 
 By default, the `rgcca_permutation()` function takes 10 sets of tuning 
 parameters between min values (0 for RGCCA and $1/sqrt(ncol)$ for SGCCA) and 1. 
 Results of the permutation procedure are summarized/displayed using the generic 
-`print()/plot()` function
+`print()` and `plot()` functions.
 
 ```{r, width=30}
 print(perm_out)
@@ -1114,7 +1122,7 @@ The fitted permutation object, `perm_out`, can be directly provided as output
 of `rgcca()` and visualized/bootstrapped as usual.
 
 ```{r}
-fit = rgcca(perm_out)
+fit <- rgcca(perm_out)
 ```
 
 Of course, it is  possible to define explicitly the combination of 
@@ -1123,13 +1131,15 @@ $K \times J$ is required. Each row of this matrix corresponds to one set of
 tuning parameters.
 
 ```{r, cache = TRUE}
-fit.perm = rgcca_permutation(A, connection = C,
-                             par_type = "tau",
-                             par_value = rbind(rep(1, 3),
-                                               seq(0, 1, l=3),
-                                               rep(0, 3),
-                                               sapply(A, RGCCA:::tau.estimate)),
-                             n_cores = 1, n_perms = 5)
+fit.perm <- rgcca_permutation(A, connection = C,
+                              par_type = "tau",
+                              par_value = rbind(
+                                rep(1, 3),
+                                seq(0, 1, l = 3),
+                                rep(0, 3),
+                                sapply(A, RGCCA:::tau.estimate)
+                              ),
+                              n_cores = 1, n_perms = 5)
 ```
 
 Alternatively a numeric vector of length $J$ indicating the range of values to 
@@ -1137,10 +1147,10 @@ be tested: from the minimum values (0 for RGCCA and $1/sqrt(ncol)$ for SGCCA) to
 the maximum values specified by the user with `par_value`.
 
 ```{r, cache = TRUE}
-fit.perm = rgcca_permutation(A, connection = C,
-                             par_type = "tau",
-                             par_value = seq(0, 1, l=3),
-                             n_cores = 1, n_perms = 5)
+fit.perm <- rgcca_permutation(A, connection = C,
+                              par_type = "tau",
+                              par_value = seq(0, 1, l = 3),
+                              n_cores = 1, n_perms = 5)
 ```
 
 **Cross-validation strategy.** The 
@@ -1154,40 +1164,38 @@ different indicators of quality, namely:
 - For regression: `RMSE` and `MAE`.
 
 This cross-validation protocol is made available through the 
-`rgcca_cv()` functionand is used here for predicting the 
+`rgcca_cv()` function and is used here for predicting the 
 qualitative variable political regime from the two blocks 
 `Agriculture inequality` and `Industrial development`.
 
 ```{r, cache = TRUE}
-blocks <- 
-  list(agriculture = Russett[, seq(3)],
-       industry = Russett[, 4:5],
-       lab = as.matrix(factor(apply(Russett[, 9:11], 1, which.max),
-                       labels = c("Stable", 
-                                  "Unstable",
-                                  "Dictator")))
-               )
+blocks <- list(
+  agriculture = Russett[, seq(3)],
+  industry = Russett[, 4:5],
+  lab = as.matrix(factor(
+    apply(Russett[, 9:11], 1, which.max),
+    labels = c("Stable", "Unstable", "Dictator")
+  ))
+)
 
 set.seed(27) #my favorite number
-inTraining <- caret:::createDataPartition(blocks[[3]], 
-                                  p = .75, list = FALSE)
-training <- lapply(blocks, 
-                   function(x) x[inTraining, , drop = FALSE])
+inTraining <- caret::createDataPartition(
+  blocks[[3]], p = .75, list = FALSE
+)
+training <- lapply(blocks, function(x) x[inTraining, , drop = FALSE])
+testing  <- lapply(blocks, function(x) x[-inTraining, , drop = FALSE])
 
-testing  <- lapply(blocks, 
-                   function(x) x[-inTraining, , drop = FALSE])
-
-cv_out = rgcca_cv(blocks = training, response = 3, 
-                  par_type = "tau", 
-                  prediction_model = "lda", 
-                  n_run = 10, k = 3,
-                  validation = "kfold", 
-                  ncomp = 1, metric = "Accuracy")
+cv_out <- rgcca_cv(blocks = training, response = 3,
+                   par_type = "tau",
+                   prediction_model = "lda",
+                   n_run = 10, k = 3,
+                   validation = "kfold",
+                   ncomp = 1, metric = "Accuracy")
 ```
 
 `rgcca_cv()` relies on the `caret` package. As direct consequence an astonishing 
 large number of models are made available (see `caret::modelLookup()`). Results 
-of the cross validation procedure are reported/displayed using the generic 
+of the cross-validation procedure are reported/displayed using the generic 
 `print()/plot()` function
 
 ```{r}
@@ -1204,13 +1212,13 @@ The fitted cval object can be provided as output of `rgcca()` and
 the resulting optimal model can be visualized/bootstrapped as usual.
 
 ```{r}
-fit = rgcca(cv_out)
+fit <- rgcca(cv_out)
 ```
 
 At last, `rgcca_predict()` can be used for predicting new blocks.
 
 ```{r}
-perf = rgcca_predict(fit, blocks_test = testing, prediction_model = "lda")
+perf <- rgcca_predict(fit, blocks_test = testing, prediction_model = "lda")
 ```
 
 and a `caret` summary of the performances be reported
@@ -1249,6 +1257,11 @@ others.
 ```{r}
 # Download the dataset's package at http://biodev.cea.fr/sgcca/.
 # --> gliomaData_0.4.tar.gz
+if (!("gliomaData" %in% rownames(installed.packages()))) {
+  destfile <- tempfile()
+  download.file("http://biodev.cea.fr/sgcca/gliomaData_0.4.tar.gz", destfile)
+  install.packages(destfile, repos = NULL, type = "source")
+}
 
 require(gliomaData)
 data(ge_cgh_locIGR)
@@ -1256,7 +1269,7 @@ data(ge_cgh_locIGR)
 blocks <- ge_cgh_locIGR$multiblocks
 Loc <- factor(ge_cgh_locIGR$y)
 levels(Loc) <- colnames(ge_cgh_locIGR$multiblocks$y)
-blocks[[3]] = Loc
+blocks[[3]] <- Loc
 
 # check dimensions of the blocks
 sapply(blocks, NCOL)
@@ -1268,7 +1281,7 @@ prediction of the location. The argument `response=3` of the `rgcca()` function
 encodes this design. 
 
 ```{r}
-fit.rgcca = rgcca(blocks = blocks, response = 3, ncomp = 2, verbose = TRUE)
+fit.rgcca <- rgcca(blocks = blocks, response = 3, ncomp = 2, verbose = TRUE)
 ```
 
 When the response variable is qualitative, two steps are implicitly performed: 
@@ -1304,7 +1317,7 @@ possible to readily determine which components capture the discriminant
 information.
 
 ```{r, fig.align='center', fig.height = 12, fig.width=18}
-plot(fit.rgcca, type = "sample", block=1:2,
+plot(fit.rgcca, type = "sample", block = 1:2,
      comp = 1, response = Loc)
 ```
 
@@ -1341,9 +1354,9 @@ The algorithm associated with the optimization problem
 argument `method="sgcca"`. 
 
 ```{r}
-fit.sgcca = rgcca(blocks = blocks, response = 3, ncomp = 2, 
-                  sparsity = c(0.0710, 0.2000, 1),
-                  verbose = TRUE)
+fit.sgcca <- rgcca(blocks = blocks, response = 3, ncomp = 2,
+                   sparsity = c(0.0710, 0.2000, 1),
+                   verbose = TRUE)
 ```
 
 the `print()` function allows summarizing the SGCCA analysis.
@@ -1365,10 +1378,10 @@ sparsity.
 
 ```{r, cache = TRUE}
 set.seed(27) #my favorite number
-cv_out <- rgcca_cv(blocks, response = 3, 
+cv_out <- rgcca_cv(blocks, response = 3,
                    par_type = "sparsity",
-                   par_value = c(.2, .2, 0), 
-                   par_length = 10, 
+                   par_value = c(.2, .2, 0),
+                   par_length = 10,
                    prediction_model = "lda",
                    validation = "kfold",
                    k = 3, n_run = 10, metric = "Accuracy",
@@ -1388,7 +1401,7 @@ plot(cv_out)
 ```
 
 ```{r}
-fit = rgcca(cv_out)
+fit <- rgcca(cv_out)
 ```
 
 Notice that the sparsity parameter associated with $\mathbf{X}_3$ switches 
@@ -1401,24 +1414,24 @@ Also it is possible to stabilize the selected variables using the
 `rgcca_stability()` function.  
 
 ```{r, cache = TRUE, message = FALSE}
-fit_stab = rgcca_stability(fit, 
-                           keep = sapply(fit$a, 
-                                         function(x) mean(x!=0)),
-                           n_boot = 100, verbose = TRUE, n_cores = 15)
+fit_stab <- rgcca_stability(fit,
+                            keep = sapply(fit$a,
+                                         function(x) mean(x != 0)),
+                            n_boot = 100, verbose = TRUE, n_cores = 15)
 ```
   
 and then apply the bootstrap procedure on the most stable variables.
 
 ```{r, cache = TRUE}
-boot_out = rgcca_bootstrap(fit_stab, n_boot = 500)
+boot_out <- rgcca_bootstrap(fit_stab, n_boot = 500)
 ```
   
 The bootstrap results can be visualized using the generic `plot()` function.
 
 ```{r, fig.height = 12, fig.width=18}
-plot(boot_out, block = 1:2, 
-     display_order = FALSE, 
-     n_mark = 2000, cex = 1.3, 
+plot(boot_out, block = 1:2,
+     display_order = FALSE,
+     n_mark = 2000, cex = 1.3,
      show_star = FALSE)
 ```
 
@@ -1428,16 +1441,16 @@ This is made possible by setting the `par_type` argument to `"sparsity"` (instea
 
 ```{r, cache = TRUE}
 set.seed(123456) # -> very sparse model
-perm_out = rgcca_permutation(blocks, connection = C, response = 3,
+perm_out <- rgcca_permutation(blocks, connection = C, response = 3,
                                 par_type = "sparsity",
-                                par_value = 
-                                  matrix(c(0.1, 0.25, 1, 
-                                           0.0710, 0.2000, 1,
-                                           0.0552, 0.1571, 1, 
-                                           0.0395, 0.1143, 1,
-                                           0.0237, 0.0714, 1, 
-                                           0.0080, 0.029, 1), 6, 3, 
-                                         byrow = TRUE),
+                                par_value = matrix(c(
+                                          0.1,    0.25,   1,
+                                          0.0710, 0.2000, 1,
+                                          0.0552, 0.1571, 1,
+                                          0.0395, 0.1143, 1,
+                                          0.0237, 0.0714, 1,
+                                          0.0080, 0.029,  1
+                                        ), 6, 3, byrow = TRUE),
                                 n_perms = 5, n_cores = 10)
 ```
 
@@ -1448,28 +1461,28 @@ plot(perm_out, cex = 1.3)
 and then directly used the optimal sparsity parameters as previously:
     
 ```{r}
-rgcca_opt = rgcca(perm_out)
+rgcca_opt <- rgcca(perm_out)
 ```
   
 
 ```{r, cache = TRUE}
-fit_stab = rgcca_stability(rgcca_opt, 
-                           keep = sapply(rgcca_opt$a, 
-                                         function(x) mean(x!=0)),
-                           n_boot = 100, verbose = TRUE, n_cores = 15)
+fit_stab <- rgcca_stability(rgcca_opt,
+                            keep = sapply(rgcca_opt$a,
+                                          function(x) mean(x != 0)),
+                            n_boot = 100, verbose = TRUE, n_cores = 15)
 ```
   
 and then apply the bootstrap procedure on the most stable variables.
 
 ```{r, cache = TRUE}
-boot_out = rgcca_bootstrap(fit_stab, n_boot = 500)
+boot_out <- rgcca_bootstrap(fit_stab, n_boot = 500)
 ```
   
 The bootstrap results can be visualized using the generic `plot()` function.
 
 ```{r, fig.height = 12, fig.width=18}
-plot(boot_out, block = 1:2, 
-     display_order = FALSE, 
+plot(boot_out, block = 1:2,
+     display_order = FALSE,
      n_mark = 2000, cex = 1.3)
 ```
   
@@ -1478,8 +1491,8 @@ $\mathbf{X}_2$), and the graphical display of the tumors obtained by crossing
 GE1 and CGH1 and labeled according to their location is shown below.
   
 ```{r, fig.height = 12, fig.width=18, fig.align='center', fig.cap = 'graphical display of the tumors obtained by crossing GE1 and CGH1 and labeled according to their location.'}
-plot(fit_stab, type = "sample", block=1:2, 
-     comp=1, resp = as.character(Loc), 
+plot(fit_stab, type = "sample", block = 1:2,
+     comp = 1, resp = as.character(Loc),
      cex = 1.3
      )
 ```
