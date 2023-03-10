@@ -290,7 +290,7 @@ taking into account an undirected graph of connections between them.
 The RGCCA framework is defined by the optimization problem (\ref{opti_theo}) and 
 consists in maximizing the sum of convex functions of the covariances between 
 "connected" composites $y_j$ and $y_k$ subject to specific constraints on 
-the weights $\ma a_j$ for $j \in \{1, \ldots, J\}.
+the weights $\ma a_j$ for $j \in \{1, \ldots, J\}$.
 
 \begin{equation}
 \underset{\mathbf{a}_1, \mathbf{a}_2, \ldots,\mathbf{a}_J}{\text{max~}}  f(\ma a_1, \ldots \ma a_J) = \displaystyle  \sum_{j, k = 1}^J c_{jk} \text{
@@ -939,7 +939,7 @@ plot(fit, type = "ave", cex = 1.3)
 The strength of the relations between each block component and each variable 
 can be visualized using correlation circle or biplot representations.
 
-```{r, fig.align='center', fig.cap = 'correlation circle associated with the two first components of Ariculture', fig.height = 12, fig.width=18, fig.pos = "H"}
+```{r, fig.align='center', fig.cap = 'correlation circle associated with the two first components of Agriculture', fig.height = 12, fig.width=18, fig.pos = "H"}
 plot(fit, type = "cor_circle", block = 1, comp = 1:2, display_blocks = 1:3)
 ```
 
@@ -949,7 +949,7 @@ correlation_circle.
 
 
 
-```{r, fig.align='center', fig.cap = 'biplot associated with the two first components of Ariculture', fig.height = 12, fig.width=18, fig.pos = "H"}
+```{r, fig.align='center', fig.cap = 'biplot associated with the two first components of Agriculture', fig.height = 12, fig.width=18, fig.pos = "H"}
 plot(fit, type = "biplot", block = 1, 
      comp = 1:2, repel = TRUE, 
      resp = lab, 
@@ -1075,32 +1075,27 @@ through the `rgcca_permutation()` function. This function is used to select
 automatically the regularization parameters for R/SGCCA.
 
 For each set of regularization parameters (generally this will be a 
-$J$-dimensional vector), repeat the following `n_perm` times, for (`n_perm` 
-large):
+$J$-dimensional vector), the following steps are performed:
 
-\begin{enumerate}
-\item [\label{p1}] The rows of $\mathbf X_1, \ldots, \mathbf X_J$ are
-randomly permuted to obtained permuted data sets $\mathbf X_1^*, \ldots, \mathbf X_J^*$.
-
-\item [\label{p2}] S/RGCCA is run on the permuted data set
-$\mathbf X_1^*, \ldots, \mathbf X_J^*$ and we record the value of the 
-objective function, denoted $t^*$.
-
-\item [\label{p3}]  S/RGCCA is run on the original data 
+- S/RGCCA is run on the original data 
 $\mathbf X_1, \ldots, \mathbf X_J$ and we record the value of the objective 
 function, denoted $t$.
 
-\item [\label{p4}]  The resulting p-value is given by the fraction of permuted
+- `n_perm` times, the rows of $\mathbf X_1, \ldots, \mathbf X_J$ are
+randomly permuted to obtained permuted data sets $\mathbf X_1^*, \ldots, \mathbf X_J^*$.
+S/RGCCA is then run on these permuted data sets and we record the value of the objective
+function, denoted $t^*$.
+
+- The resulting p-value is given by the fraction of permuted
 $t*$ that exceed the real $t$t obtained from the non-permuted blocks.
-\end{enumerate}
-Then choose the set of tuning parameters that yields the smallest value in step 
-(\ref{p4}). This procedure is available though the `rgcca_permutation()` function.
+
+The best set of tuning parameters is then the set that that yields the smallest
+p-value. This procedure is available though the `rgcca_permutation()` function.
 
 ```{r, cache = TRUE}
 set.seed(123)
 perm_out <- rgcca_permutation(blocks = A, connection = C,
                               par_type = "tau",
-                              par_value = c(.51, .13, 0),
                               par_length = 10,
                               n_cores = 1,
                               n_perms = 10)
@@ -1388,7 +1383,7 @@ cv_out <- rgcca_cv(blocks, response = 3,
                    prediction_model = "lda",
                    validation = "kfold",
                    k = 3, n_run = 10, metric = "Accuracy",
-                   n_cores = 15)
+                   n_cores = 2)
 ```
 
 We can report the results of this cross-validation using the generic 
@@ -1420,7 +1415,7 @@ Also it is possible to stabilize the selected variables using the
 fit_stab <- rgcca_stability(fit,
                             keep = sapply(fit$a,
                                          function(x) mean(x != 0)),
-                            n_boot = 100, verbose = TRUE, n_cores = 15)
+                            n_boot = 100, verbose = TRUE, n_cores = 2)
 ```
   
 and then apply the bootstrap procedure on the most stable variables.
@@ -1454,7 +1449,7 @@ perm_out <- rgcca_permutation(blocks, connection = C, response = 3,
                                           0.0237, 0.0714, 1,
                                           0.0080, 0.029,  1
                                         ), 6, 3, byrow = TRUE),
-                                n_perms = 5, n_cores = 10)
+                                n_perms = 5, n_cores = 2)
 ```
 
 ```{r, fig.height = 12, fig.width=18}
@@ -1472,7 +1467,7 @@ rgcca_opt <- rgcca(perm_out)
 fit_stab <- rgcca_stability(rgcca_opt,
                             keep = sapply(rgcca_opt$a,
                                           function(x) mean(x != 0)),
-                            n_boot = 100, verbose = TRUE, n_cores = 15)
+                            n_boot = 100, verbose = TRUE, n_cores = 2)
 ```
   
 and then apply the bootstrap procedure on the most stable variables.
