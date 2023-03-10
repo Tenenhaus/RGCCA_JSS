@@ -589,27 +589,19 @@ formulation of the RGCCA algorithm will be preferred when $n>p_j$, and the dual
 form will be used when $n \le p_j$.  The `rgcca()` function of the RGCCA package 
 implements these two formulations and automatically selects the best one.  
 
-RGCCA is a component-based approach that aims to study the relationships 
-between several sets of variables. The quality and interpretability of the 
-RGCCA components are likely to be affected by the usefulness and relevance of 
-the variables in each block.  Therefore, it is an important issue to identify 
-within each block which subsets of significant variables are active in the
-relationships between blocks. For instance, biomedical data are known to be 
-measurements of intrinsically parsimonious processes. In order to account for 
-this parsimony and to improve interpretability, RGCCA has been extended to 
-address the issue of variable selection. Specifically, Sparse GCCA (SGCCA) is
-proposed to combine RGCCA with an $\ell_1$-penalty promoting sparsity. 
-
 
 ## Sparse Generalized Canonical Correlation Analysis
 
-The quality and interpretability of the RGCCA block components 
-$\mathbf{y}_j= \mathbf{X}_j \mathbf{a}_j,j=1, \ldots,J$ are likely affected by 
-the usefulness and relevance of the variables of each block. Accordingly, it is 
-an important issue to identify within each block a subset of significant 
-variables which are active in the relationships between blocks. SGCCA extends 
-RGCCA to address this issue of variable selection  [@Tenenhaus2014b]. The SGCCA 
-optimization problem is defined as follows:
+RGCCA is a component-based approach that aims to study the relationships 
+between several sets of variables. The quality and interpretability of the 
+RGCCA block components $\mathbf{y}_j= \mathbf{X}_j \mathbf{a}_j,j=1, \ldots,J$ 
+are likely to be affected by the usefulness and relevance of 
+the variables in each block.  Therefore, it is an important issue to identify 
+within each block which subsets of significant variables are active in the
+relationships between blocks. For instance, biomedical data are known to be 
+measurements of intrinsically parsimonious processes. 
+SGCCA extends RGCCA to address this issue of variable selection [@Tenenhaus2014b]. 
+The SGCCA optimization problem is defined as follows:
 
 \begin{equation}
 \displaystyle \underset{\mathbf{a}_1,\mathbf{a}_2, \ldots,\mathbf{a}_J}{\text{maximize~}} \sum_{j, k = 1}^J c_{jk}g(\mathrm{cov}(\mathbf{X}_j\mathbf{a}_j, \mathbf{X}_k\mathbf{a}_k)) \mathrm{~~s.t.~~} \Vert \mathbf{a}_j \Vert_2 \le 1 \text{~and~} \Vert \mathbf{a}_j \Vert_1 \le s_j, j=1,\ldots,J
