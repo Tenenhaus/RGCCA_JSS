@@ -504,7 +504,7 @@ cov}\left(\X_1\ma a_1, \X_2\ma a_2 \right) \mathrm{~s.t.~} \tau_j
 \end{equation} 
 
 This problem has been introduced under the name of Regularized Canonical 
-Correlation Analysis [@Vinod1976, @Leurgans1993, @Shawe2004]. For various 
+Correlation Analysis [@Vinod1976; @Leurgans1993; @Shawe2004]. For various 
 extreme cases $\tau_1 = 0$ or $1$ and $\tau_2 = 0$ or $1$, optimization problem 
 (\ref{rCCA}) covers a  situation which goes from Tucker's interbattery factor 
 analysis \citep{Tucker1958} to Canonical Correlation Analysis 
@@ -520,7 +520,7 @@ by \citep{Borga1997} and \citep{Burnham1996} and is reported in Table
 | **Interbattery Factor Analysis** [@Tucker1958] or **PLS Regression** [@Wold1983]      | $x$    | $\tau_1 = \tau_2 = 1$  | $\mathbf{C}_1$|
 | **Redundancy Analysis** [@Wollenberg1977]           | $x$    | $\tau_1 = 1$ ; $\tau_2 = 0$ | $\mathbf{C}_1$|
 | **Regularized Redundancy Analysis** [@Takane2007; @Bougeard2008 ; @Qannari2005]           | $x$    | $0 \le \tau_1 \le 1$ ; $\tau_2 = 0$ | $\mathbf{C}_1$|
-| **Regularized Canonical Correlation Analysis** [@Vinod1976, @Leurgans1993, @Shawe2004]           | $x$    | $0 \le \tau_1 \le 1$ ; $0 \le \tau_2 \le 1$ | $\mathbf{C}_1$|
+| **Regularized Canonical Correlation Analysis** [@Vinod1976; @Leurgans1993; @Shawe2004]           | $x$    | $0 \le \tau_1 \le 1$ ; $0 \le \tau_2 \le 1$ | $\mathbf{C}_1$|
 
 Table: two-block component methods. \label{twoblock_methods}
 
@@ -544,7 +544,7 @@ researcher decides which blocks are connected and which are not.
 | **SABSCOV-1** [@Tenenhaus2011 ; @Kramer2007]        | $|x|$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_2$ |
 | **SUMCOV-2** [@VandeGeer1984]                       | $x$    | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_3 = \begin{pmatrix} 0 & 1 & \cdots & 1 \\ 1 & 0 & \ddots & \vdots\\ \vdots & \ddots& \ddots& 1\\ 1 & \cdots & 1 & 0 \end{pmatrix}$ |
 | **SSQCOV-2** [@Hanafi2006]                          | $x^2$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_3$ |
-| **PLS path modeling - mode B** [@Wold1982]          | $|x|$  | $\tau_j = 0, j=1, \ldots, J$ | $c_{jk}=1$ for two connected block and $c_{jk} = 0$ otherwise |
+| **PLS path modeling - mode B** [@Wold1982, @Tenenhaus2005]          | $|x|$  | $\tau_j = 0, j=1, \ldots, J$ | $c_{jk}=1$ for two connected block and $c_{jk} = 0$ otherwise |
 
 Table: Multiblock component methods as special cases of RGCCA.\label{multiblock_methods}
 
@@ -1519,7 +1519,7 @@ parameters estimates of S/RGCCA.
 observation $i$ has missing values on a whole block j and (ii) if an 
 observation i has some missing values on a block j (but not all). For these two 
 situations, it is possible to exploit the algorithmic solution proposed for PLS 
-path modeling to deal with missing data (see [@Tenenhaus2005], page 171).
+path modeling to deal with missing data (see [@Tenenhaus2005]).
 
 \item Special attention has been paid to recover the results of other R packages 
 of the literature including `ade4` and `factomineR`.
@@ -1527,11 +1527,13 @@ of the literature including `ade4` and `factomineR`.
 
 The RGCCA framework is constantly evolving and extended. Indeed, we propose 
 RGCCA for multigroup data [@Tenenhaus2014b] and RGCCA for multiway data 
-[@Gloaguen2020, @Girka2023]. In addition, maximizing successive criteria may be 
+[@Gloaguen2020, @Girka2023], RGCCA for (sparse and irregular) functional data [@Sort2023]. In addition, maximizing successive criteria may be 
 seen as suboptimal from an optimization point of view where a single global 
 criterion might be preferred. A global version of RGCCA [@Gloaguen2020b] 
 which allows extracting simultaneously several components per block (no 
-deflation procedure required) has been proposed. Work in progress includes the 
-integration of this novel approaches in the next release of the package. 
+deflation procedure required) has been proposed. At last, it is possible to use 
+RGCCA in structural equation modeling with latent and emergent variables for 
+obtaining consistent and asymptotically normal estimators of the parameters [@Tenenhaus2023]. Work in progress includes the integration of all these novel 
+approaches in the next release of the RGCCA package. 
 
 # References
