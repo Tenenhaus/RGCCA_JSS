@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+RGCCA_vignette_cache/
+RGCCA_vignette_files/
+RGCCA_vignette.pdf
+RGCCA_vignette.tex
