@@ -26,7 +26,7 @@ author:
 title:
   formatted: "The \\pkg{RGCCA} package for Regularized/Sparse Generalized Canonical Correlation Analysis"
   # If you use tex in the formatted title, also supply version without
-  plain:     "A Capitalized Title: Something about a Package foo"
+  plain:     "The RGCCA package for Regularized/Sparse Generalized Canonical Correlation Analysis"
   # For running headers, if needed
   short:     "Regularized/Sparse Generalized Canonical Correlation Analysis"
 abstract: >
@@ -701,8 +701,6 @@ $\X_j$ by $\X_j^{(1)}$ its projection onto either:
 $$\X_j^{(1)} = \left(\mathbf{I} - \mathbf{P}^\perp_{\ma y_j^{(1)}} \right) \X_j = 
 \X_j - \ma y_j^{(1)} \left( {\ma y_j^{(1)}}^\top \ma y_j^{(1)} \right)^{-1}{\ma y_j^{(1)}}^\top \X_j,$$
 
-or 
-
 - the orthogonal subspace of $\ma a_j^{(1)}$ for orthogonal block-weight vectors:
 
 $$\X_j^{(1)} = \X_j \left(\mathbf{I} - \mathbf{P}^\perp_{\ma a_j^{(1)}} \right) = \X_j - \X_j\ma a_j^{(1)} \left( {\ma a_j^{(1)}}^\top \ma a_j^{(1)} \right)^{-1}{\ma {a}_j^{(1)}}^\top.$$
@@ -758,6 +756,64 @@ strategy described in [@Chessel1996] (`ade4:::mcoa()`) for Multiple Co-inertia
 Analysis, which is one of the most popular and established methods of the 
 multiblock literature.
 
+## Average Variance Explained
+
+When performing a Principal Component Analysis (PCA) (@Pearson1901), a way to 
+choose the number of principal components is to look at the Average Variance
+Explained (AVE). This AVE represents the proportion
+of variance captured by the components. This concept can be applied to 
+multiblock methods to evaluate how well the block components summarize
+the individual blocks. In the context of RGCCA, the AVE for a given block 
+component $\mathbf{y}_j$ can be computed using the following formula:
+
+\begin{equation}
+\mathrm{AVE}(\X_j)=  \frac{1}{\Vert \X_j \Vert^2} \sum_{h=1}^{p_j} \text{var}(\mathbf{x}_{jh}) \times \text{cor}^2(\mathbf{x}_{jh},\mathbf{y}_j).
+\label{AVE_X}
+\end{equation}
+
+Since multiple blocks are considered, an indicator of the model quality can 
+be defined as the weighted sum of the AVEs of the individual blocks. This
+outer AVE is:
+
+\begin{equation}
+\displaystyle \mathrm{AVE(outer model)} = \left( 1/\sum_j \Vert \X_j \Vert^2 \right) \sum_j \Vert \X_j \Vert^2 \mathrm{AVE}(\X_j).
+\label{AVE_outer}
+\end{equation}
+
+However, the previous quantities do not take into account the correlations
+between blocks. Therefore, another indicator of the model quality is the inner
+AVE defined as follows:
+
+\begin{equation}
+\displaystyle \mathrm{AVE(inner model)} = \left( 1/\sum_{j<k} c_{jk} \right) \sum_{j<k} c_{jk} \mathrm{cor}^2(\mathbf{y}_j , \mathbf{y}_k).
+\label{AVE_inner}
+\end{equation}
+
+All these quantities vary between 0 and 1 and reflect important properties of
+the model. The formulations (\ref{AVE_X}-\ref{AVE_inner}) give the AVEs for
+a single component per block. The AVEs of the next components can be obtained
+similarly. The quality of a model extracting several components can thus be
+evaluated by summing the outer AVEs of the different components. For this sum
+to be meaningful, the block components must be orthogonal. If they are not, 
+they are orthogonalized using the QR-decomposition to only take into account
+the increase of AVE due to the addition of the new components. This corresponds 
+to the procedure proposed in [@Zou2006].
+
+[@Tenenhaus1998] defines the Variable Importance in Projection
+(VIP) score for the PLS method. This score can be used for variable selection: 
+the higher the score, the more important the variable. We use 
+this idea to propose a procedure for evaluating the stability of the variable
+selection performed using SGCCA. This procedure relies on the following 
+score, based on the AVE:
+
+\begin{equation}
+\displaystyle \mathrm{VIP}(\mathbf{x}_{jh}) = \frac{1}{K} \sum_{k=1}^K \left(\mathbf{a}_{jh}^{(k)2} \mathrm{AVE}\left(\X_j^{(k)}\right)\right).
+\label{VIP}
+\end{equation}
+
+SGCCA is run several times using a bootstrap resampling method. For each model,
+the VIPs are computed and the variables with the higher VIPs, averaged over the
+different models, are kept.
 
 Guidelines describing R/SGCCA in practice are provided in [@Garali2018].
 The usefulness and versatility of the RGCCA package are illustrated in the next 
@@ -891,7 +947,7 @@ the relationships between variables within and between blocks and the amount of 
 The graphical display of the countries obtained by crossing $\X_1 \ma a_1$ = Agricultural Inequality 
 and $\X_2 \ma a_2$ = Industrial Development and marked with their political regime in 1960 is shown below.
 
-```{r, fig.align='center', fig.cap = 'graphical display of the countries obtained by crossing y11 and y21 and labeled according to their political regime', fig.height = 12, fig.width=18}
+```{r, fig.align='center', fig.cap = '\\label{fig:sample}graphical display of the countries obtained by crossing y11 and y21 and labeled according to their political regime', fig.height = 12, fig.width=18}
 plot(fit, type = "sample",
      block = 1:2, comp = 1,
      resp = lab, repel = TRUE, cex = 1.3)
@@ -904,33 +960,12 @@ and its agricultural inequality is above average. It is worth pointing out that
 some unstable democracies located in this quadrant (or close to it) became 
 dictatorships for a period of time after 1960: Greece (1967-1974), Brazil 
 (1964-1985), Chili (1973-1990), and Argentina (1966-1973). 
-The Average Variance Explained (AVE) defined below is also reported in the axes 
-of the Figure.  The AVE of block $\mathbf{X}_j$ for a specific block component 
-$\mathbf{y}_j$ is defined as:
 
-\begin{equation}
-\mathrm{AVE}(\X_j)=  \frac{1}{\Vert \X_j \Vert^2} \sum_{h=1}^{p_j} \text{var}(\mathbf{x}_{jh}) \times \text{cor}^2(\mathbf{x}_{jh},\mathbf{y}_j)
-\end{equation}
-
-AVE($\X_j$) varies between 0 and 1 and reflects the proportion of variance captured by $\mathbf{y}_j$.
-
-Additional indicators of model quality are also proposed:
-
--   For all blocks:
-
-\begin{equation}
-\displaystyle \mathrm{AVE(outer model)} = \left( 1/\sum_j \Vert \X_j \Vert^2 \right) \sum_j \Vert \X_j \Vert^2 \mathrm{AVE}(\X_j)
-\end{equation}
-
--   For the inner model:
-
-\begin{equation}
-\displaystyle \mathrm{AVE(inner model)} = \left( 1/\sum_{j<k} c_{jk} \right) \sum_{j<k} c_{jk} \mathrm{cor}^2(\mathbf{y}_j , \mathbf{y}_k)
-\end{equation}
-
-These indicators of model quality are also available as output of the `rgcca()` 
-function in `fit$AVE`. These AVEs can be visualized using the generic `plot()` 
-function.
+The AVEs of the different blocks are reported in the axes 
+of Figure \ref{fig:sample}.
+All AVEs (defined in \ref{AVE_X}-\ref{AVE_inner}) are available as output of 
+the `rgcca()` function in `fit$AVE`. These indicators of model quality can 
+also be visualized using the generic `plot()` function.
 
 ```{r, fig.align='center', fig.cap = 'Average variance explained of the various blocks', fig.height = 12, fig.width=18, fig.pos = "H"}
 plot(fit, type = "ave", cex = 1.3)
