@@ -925,7 +925,7 @@ fit <- rgcca(blocks = A, connection = C,
              verbose = FALSE)
 ```
 
-the `print()` function allows summarizing the RGCCA analysis.
+The `print()` function allows summarizing the RGCCA analysis.
 
 ```{r}
 print(fit)
@@ -1017,7 +1017,7 @@ package.
 boot_out <- rgcca_bootstrap(fit, n_boot = 500, n_cores = 1)
 ```
 
-The bootstrap results are detailed using the `print()` function.
+The bootstrap results are detailed using the `print()` function,
 
 ```{r, size = "tiny"}
 print(boot_out, block = 1:3, ncomp = 1)
@@ -1049,14 +1049,12 @@ multiblock component methods.
 fit.mcoa <- rgcca(blocks = A, method = "mcoa", ncomp = 2)
 ```
 
-the `print()` function allows summarizing the RGCCA analysis.
+Interestingly, the `print()` function reports the arguments that have been 
+implicitly specified to perform MCOA. 
 
 ```{r}
 print(fit.mcoa)
 ```
-
-Interestingly, this output reports the arguments that has been implicitly 
-specified to reach MCOA. 
 
 It is possible to display specific output as previously using the generic 
 `plot()` function by specifying the argument `type` accordingly. MCOA enables 
@@ -1087,7 +1085,7 @@ analytical formula [@Schafer2005] by setting the `tau` argument of the `rgcca()`
 function to `"optimal"`.
 
 ```{r}
-fit <- rgcca(blocks = A, connection = C, response = 3,
+fit <- rgcca(blocks = A, connection = C,
              tau = "optimal", scheme = "factorial")
 ```
 
@@ -1102,12 +1100,12 @@ to the correlation criterion, even in the case of high multicollinearity or
 when the number of individuals is smaller than the number of variables.
 
 As previously, all the fitted RGCCA object can be visualized/bootstraped using 
-the `print`, `plot()` and `rgcca_bootstrap()` functions.
+the `print()`, `plot()` and `rgcca_bootstrap()` functions.
 
 **Permutation strategy.** A permutation based strategy very similar to the one 
 proposed in [@Witten2009a] has been also integrated within the RGCCA package 
-through the `rgcca_permutation()` function. This function is used to select 
-automatically the regularization parameters for R/SGCCA.
+through the `rgcca_permutation()` function. This function is used to 
+automatically select the regularization parameters for R/SGCCA.
 
 For each set of regularization parameters (generally this will be a 
 $J$-dimensional vector), the following steps are performed:
@@ -1122,7 +1120,7 @@ S/RGCCA is then run on these permuted data sets and we record the value of the o
 function, denoted $t^*$.
 
 - The resulting p-value is given by the fraction of permuted
-$t*$ that exceed the real $t$t obtained from the non-permuted blocks.
+$t^*$ that exceed the real $t$ obtained from the non-permuted blocks.
 
 The best set of tuning parameters is then the set that that yields the smallest
 p-value. This procedure is available though the `rgcca_permutation()` function.
@@ -1136,16 +1134,17 @@ perm_out <- rgcca_permutation(blocks = A, connection = C,
                               n_perms = 10)
 ```
 
-By default, the `rgcca_permutation()` function takes 10 sets of tuning 
-parameters between min values (0 for RGCCA and $1/sqrt(ncol)$ for SGCCA) and 1. 
-Results of the permutation procedure are summarized/displayed using the generic 
-`print()` and `plot()` functions.
+By default, the `rgcca_permutation()` function generates 10 sets of tuning 
+parameters uniformly between some minimal values (0 for RGCCA and 
+$1/\text{sqrt}(\text{ncol})$ for SGCCA) and 1. 
+Results of the permutation procedure are summarized using the generic 
+`print()` function,
 
 ```{r, width=30}
 print(perm_out)
 ```
 
-and displayed using the `plot()` function.
+and displayed using the generic `plot()` function.
 
 ```{r, fig.height = 12, fig.width=18}
 plot(perm_out, cex = 1.3)
@@ -1175,8 +1174,10 @@ fit.perm <- rgcca_permutation(A, connection = C,
                               n_cores = 1, n_perms = 5)
 ```
 
-Alternatively a numeric vector of length $J$ indicating the range of values to 
-be tested: from the minimum values (0 for RGCCA and $1/sqrt(ncol)$ for SGCCA) to 
+Alternatively a numeric vector of length $J$ indicating the maximum values of 
+the range to be tested can be given. The set of parameters is then uniformly
+generated between the minimum values (0 for RGCCA and 
+$1/\text{sqrt}(\text{ncol})$ for SGCCA) and 
 the maximum values specified by the user with `par_value`.
 
 ```{r, cache = TRUE}
@@ -1186,82 +1187,9 @@ fit.perm <- rgcca_permutation(A, connection = C,
                               n_cores = 1, n_perms = 5)
 ```
 
-**Cross-validation strategy.** The 
-optimal tuning parameters can also be determined by cross-validating 
-different indicators of quality, namely:
-
-- For Classification: `Accuracy`, `Kappa`, `F1`, `Sensitivity`, `Specificity`, 
-`Pos_Pred_Value`, `Neg_Pred_Value`, `Precision`, `Recall`, `Detection_Rate`, 
-`Balanced_Accuracy`. 
-
-- For regression: `RMSE` and `MAE`.
-
-This cross-validation protocol is made available through the 
-`rgcca_cv()` function and is used here for predicting the 
-qualitative variable political regime from the two blocks 
-`Agriculture inequality` and `Industrial development`.
-
-```{r, cache = TRUE}
-blocks <- list(
-  agriculture = Russett[, seq(3)],
-  industry = Russett[, 4:5],
-  lab = as.matrix(factor(
-    apply(Russett[, 9:11], 1, which.max),
-    labels = c("Stable", "Unstable", "Dictator")
-  ))
-)
-
-set.seed(27) #my favorite number
-inTraining <- caret::createDataPartition(
-  blocks[[3]], p = .75, list = FALSE
-)
-training <- lapply(blocks, function(x) x[inTraining, , drop = FALSE])
-testing  <- lapply(blocks, function(x) x[-inTraining, , drop = FALSE])
-
-cv_out <- rgcca_cv(blocks = training, response = 3,
-                   par_type = "tau",
-                   prediction_model = "lda",
-                   n_run = 10, k = 3,
-                   validation = "kfold",
-                   ncomp = 1, metric = "Accuracy")
-```
-
-`rgcca_cv()` relies on the `caret` package. As direct consequence an astonishing 
-large number of models are made available (see `caret::modelLookup()`). Results 
-of the cross-validation procedure are reported/displayed using the generic 
-`print()/plot()` function
-
-```{r}
-print(cv_out)
-```
-
-and displayed using the `plot()` function.
-
-```{r, fig.height = 12, fig.width=18}
-plot(cv_out, cex = 1.3)
-```
-
-The fitted cval object can be provided as output of `rgcca()` and 
-the resulting optimal model can be visualized/bootstrapped as usual.
-
-```{r}
-fit <- rgcca(cv_out)
-```
-
-At last, `rgcca_predict()` can be used for predicting new blocks.
-
-```{r}
-perf <- rgcca_predict(fit, blocks_test = testing, prediction_model = "lda")
-```
-
-and a `caret` summary of the performances be reported
-
-```{r}
-perf$confusion$test
-```
-
-All the functions presented previously are designed for sparse analysis. 
-This will be illustrated in the next section.
+**Cross-validation strategy.** The optimal tuning parameters can also be 
+obtained using a cross-validation strategy. We will illustrate this in the next
+section, in the context of a sparse analysis.
 
 # High dimensional case study: Glioma Data
 
@@ -1314,7 +1242,7 @@ prediction of the location. The argument `response=3` of the `rgcca()` function
 encodes this design. 
 
 ```{r}
-fit.rgcca <- rgcca(blocks = blocks, response = 3, ncomp = 2, verbose = TRUE)
+fit.rgcca <- rgcca(blocks = blocks, response = 3, ncomp = 2, verbose = FALSE)
 ```
 
 When the response variable is qualitative, two steps are implicitly performed: 
@@ -1359,14 +1287,14 @@ settings, it is often appropriate to add, within the RGCCA optimization problem,
 penalties promoting sparsity. For that purpose, an $\ell_1$ penalization on 
 the weight vectors $\mathbf{a}_1, \ldots, \mathbf{a}_J$ is applied. the 
 `sparsity` argument of `rgcca()` varies between 1/sqrt(ncol) and 1 (larger 
-values of `sparsity` correspond to less penalization) and control the amount of 
+values of `sparsity` correspond to less penalization) and controls the amount of 
 sparsity of the weight vectors $\mathbf{a}_1, \ldots, \mathbf{a}_J$. If 
 `sparsity` is a vector, $\ell_1$-penalties are the same for all the weights 
 corresponding to the same block but different components:
   
   ```{=tex}
 \begin{equation}
-\forall h, \Vert \mathbf{a}_j^{(h)} \Vert_{\ell_1} \leq c_{1j} \sqrt{p_j},
+\forall h, \Vert \mathbf{a}_j^{(h)} \Vert_{\ell_1} \leq \text{sparsity}_j \sqrt{p_j},
 \end{equation}
 ```
 with $p_j$ the number of variables of $\X_j$.
@@ -1376,7 +1304,7 @@ applied to the weights corresponding to components $h$:
   
   ```{=tex}
 \begin{equation}
-\forall h, \Vert \mathbf{a}_j^{(h)} \Vert_{\ell_1} \leq c_1[h,j] \sqrt{p_j}.
+\forall h, \Vert \mathbf{a}_j^{(h)} \Vert_{\ell_1} \leq \text{sparsity}_{h,j} \sqrt{p_j}.
 \end{equation}
 ```
 
@@ -1389,10 +1317,10 @@ argument `method="sgcca"`.
 ```{r}
 fit.sgcca <- rgcca(blocks = blocks, response = 3, ncomp = 2,
                    sparsity = c(0.0710, 0.2000, 1),
-                   verbose = TRUE)
+                   verbose = FALSE)
 ```
 
-the `print()` function allows summarizing the SGCCA analysis.
+The `print()` function allows summarizing the SGCCA analysis,
 
 ```{r}
 print(fit.sgcca)
@@ -1401,17 +1329,41 @@ print(fit.sgcca)
 and the `plot()` returns the same graphical displays as RGCCA. 
 We skip these representations for sake of brevity.
 
-In this situation, the optimal sparsity parameters is usually chosen by 
-cross-validation using the `rgcca_cv()` function. The goal is to maximize the 
-cross-validated  accuracy (`metric = Accuracy`) in a model where we try to 
+Of course, it is still possible to determine the optimal sparsity parameters by permutation. 
+This is made possible by setting the `par_type` argument to `"sparsity"` (instead of 
+`"tau"`) within the `rgcca_permutation()` function. However, we will use another approach
+in this section.
+
+**Cross-validation strategy.** The 
+optimal tuning parameters can be determined by cross-validating 
+different indicators of quality, namely:
+
+- For Classification: `Accuracy`, `Kappa`, `F1`, `Sensitivity`, `Specificity`, 
+`Pos_Pred_Value`, `Neg_Pred_Value`, `Precision`, `Recall`, `Detection_Rate`, 
+`Balanced_Accuracy`. 
+
+- For regression: `RMSE` and `MAE`.
+
+This cross-validation protocol is made available through the 
+`rgcca_cv()` function and is used here for predicting the 
+location of the tumors.
+
+In this situation, the goal is to maximize the 
+cross-validated  accuracy (`metric = "Accuracy"`) in a model where we try to 
 predict the response block from all the block components with a user-defined 
-classifier (`prediction_model`). also, we decide to upper bound the sparsity 
-parameters for $X_1$ and $X_2$ to $0.2$, to achieve an attractive amount of 
-sparsity. 
+classifier (`prediction_model`). Also, we decide to upper bound the sparsity 
+parameters for $\mathbf X_1$ and $\mathbf X_2$ to $0.2$, to achieve an 
+attractive amount of sparsity. 
 
 ```{r, cache = TRUE}
 set.seed(27) #my favorite number
-cv_out <- rgcca_cv(blocks, response = 3,
+inTraining <- caret::createDataPartition(
+  blocks[[3]], p = .75, list = FALSE
+)
+training <- lapply(blocks, function(x) as.matrix(x)[inTraining, , drop = FALSE])
+testing <- lapply(blocks, function(x) as.matrix(x)[-inTraining, , drop = FALSE])
+
+cv_out <- rgcca_cv(blocks = training, response = 3,
                    par_type = "sparsity",
                    par_value = c(.2, .2, 0),
                    par_length = 10,
@@ -1421,113 +1373,94 @@ cv_out <- rgcca_cv(blocks, response = 3,
                    n_cores = 2)
 ```
 
-We can report the results of this cross-validation using the generic 
-`print()` and `plot()` functions and build the optimal model using the fitted 
-`cval` object as argument of `rgcca()`:
+`rgcca_cv()` relies on the `caret` package. As direct consequence an astonishing 
+large number of models are made available (see `caret::modelLookup()`). Results 
+of the cross-validation procedure are reported using the generic 
+`print()` function,
 
 ```{r}
 print(cv_out)
 ```
 
+and displayed using the generic `plot()` function.
+
 ```{r, fig.height = 12, fig.width=18}
-plot(cv_out)
+plot(cv_out, cex = 1.3)
 ```
+
+AS previously, the optimal sparsity parameters can be used to fit a new model,
+and the resulting optimal model can be visualized/bootstrapped as usual.
 
 ```{r}
 fit <- rgcca(cv_out)
+print(fit)
 ```
 
-Notice that the sparsity parameter associated with $\mathbf{X}_3$ switches 
-automatically to regularization parameter set to $\tau_3 = 0$. This choice is 
+Note that the sparsity parameter associated with $\mathbf{X}_3$ switches 
+automatically to $\tau_3 = 0$. This choice is 
 justified by the fact that we were not looking for a block component 
 $\y_3$ that explained its own block well (since $\mathbf{X}_3$ is a group 
-coding matrix) but one that correlated with its neighboring components. 
+coding matrix) but one that is correlated with its neighboring components. 
 
-Also it is possible to stabilize the selected variables using the 
-`rgcca_stability()` function.  
+At last, `rgcca_predict()` can be used for predicting new blocks,
+
+```{r}
+pred <- rgcca_predict(fit, blocks_test = testing, prediction_model = "lda")
+```
+
+and a `caret` summary of the performances can be reported.
+
+```{r}
+pred$confusion$test
+```
+If for a specific reason, only the projection of the new blocks on the latent
+space is wanted, the function `rgcca_transform` is available.
+
+```{r}
+projection <- rgcca_transform(fit, blocks_test = testing)
+```
+
+**Stability procedure.** As mentioned in Section [Average Variance Explained], 
+it is possible to stabilize the selected variables using the 
+`rgcca_stability()` function.
 
 ```{r, cache = TRUE, message = FALSE}
 fit_stab <- rgcca_stability(fit,
-                            keep = sapply(fit$a,
-                                         function(x) mean(x != 0)),
+                            keep = sapply(fit$a, function(x) mean(x != 0)),
                             n_boot = 100, verbose = TRUE, n_cores = 2)
 ```
-  
-and then apply the bootstrap procedure on the most stable variables.
 
-```{r, cache = TRUE}
-boot_out <- rgcca_bootstrap(fit_stab, n_boot = 500)
-```
-  
-The bootstrap results can be visualized using the generic `plot()` function.
-
-```{r, fig.height = 12, fig.width=18}
-plot(boot_out, block = 1:2,
-     display_order = FALSE,
-     n_mark = 2000, cex = 1.3,
-     show_star = FALSE)
-```
-
-Of course, it is still possible to determine the optimal sparsity parameters by permutation. 
-This is made possible by setting the `par_type` argument to `"sparsity"` (instead of 
-`"tau"`) within the `rgcca_permutation()` function.
-
-```{r, cache = TRUE}
-set.seed(123456) # -> very sparse model
-perm_out <- rgcca_permutation(blocks, connection = C, response = 3,
-                                par_type = "sparsity",
-                                par_value = matrix(c(
-                                          0.1,    0.25,   1,
-                                          0.0710, 0.2000, 1,
-                                          0.0552, 0.1571, 1,
-                                          0.0395, 0.1143, 1,
-                                          0.0237, 0.0714, 1,
-                                          0.0080, 0.029,  1
-                                        ), 6, 3, byrow = TRUE),
-                                n_perms = 5, n_cores = 2)
-```
-
-```{r, fig.height = 12, fig.width=18}
-plot(perm_out, cex = 1.3)
-```
-
-and then directly used the optimal sparsity parameters as previously:
-    
-```{r}
-rgcca_opt <- rgcca(perm_out)
-```
-  
-
-```{r, cache = TRUE}
-fit_stab <- rgcca_stability(rgcca_opt,
-                            keep = sapply(rgcca_opt$a,
-                                          function(x) mean(x != 0)),
-                            n_boot = 100, verbose = TRUE, n_cores = 2)
-```
-  
-and then apply the bootstrap procedure on the most stable variables.
-
-```{r, cache = TRUE}
-boot_out <- rgcca_bootstrap(fit_stab, n_boot = 500)
-```
-  
-The bootstrap results can be visualized using the generic `plot()` function.
-
-```{r, fig.height = 12, fig.width=18}
-plot(boot_out, block = 1:2,
-     display_order = FALSE,
-     n_mark = 2000, cex = 1.3)
-```
-  
 One component per block has been built (GE1 for $\mathbf{X}_1$ and CGH1 
 $\mathbf{X}_2$), and the graphical display of the tumors obtained by crossing 
 GE1 and CGH1 and labeled according to their location is shown below.
   
 ```{r, fig.height = 12, fig.width=18, fig.align='center', fig.cap = 'graphical display of the tumors obtained by crossing GE1 and CGH1 and labeled according to their location.'}
 plot(fit_stab, type = "sample", block = 1:2,
-     comp = 1, resp = as.character(Loc),
+     comp = 1, resp = as.character(Loc)[inTraining],
      cex = 1.3
      )
+```
+
+We can finally apply the bootstrap procedure on the most stable variables.
+
+```{r, cache = TRUE}
+boot_out <- rgcca_bootstrap(fit_stab, n_boot = 500)
+```
+  
+The bootstrap results can be visualized using the generic `plot()` function.
+
+```{r, fig.height = 12, fig.width=18}
+plot(boot_out, block = 1,
+     display_order = FALSE,
+     n_mark = 70, cex = 1.3,
+     show_star = FALSE)
+```
+
+```{r, fig.height = 12, fig.width=18}
+plot(boot_out, block = 2,
+     display_order = FALSE,
+     n_mark = 70, cex = 1.3,
+     show_star = FALSE)
 ```
   
 We observe that `GE` contains much more discriminative information than `CGH`.
