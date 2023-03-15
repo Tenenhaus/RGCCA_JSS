@@ -139,7 +139,7 @@ usefulness is illustrated in this paper.
 This section aims to present the optimization framework under which 
 most of the algorithms proposed in the RGCCA framework were designed. The RGCCA 
 framework gathers several algorithms that have already been presented in 
-[@Tenenhaus2011, @Tenenhaus2014, @Tenenhaus2015, @Tenenhaus2017]. It is recalled 
+\cite{Tenenhaus2011, Tenenhaus2014, Tenenhaus2015, Tenenhaus2017}. It is recalled 
 here for a broader class of constraints.
 
 The RGCCA framework relies on a master algorithm for maximizing a continuously 
@@ -168,7 +168,7 @@ solving optimization problem (\ref{master_optim}). The maximization
 of the function $f$ defined over different parameter vectors 
 ($\ma a_1, \ldots,\ma a_J$), is approached by updating each of the parameter 
 vectors in turn, keeping the others fixed. This update rule was recommended 
-in [@DeLeeuw1994}] and is called Block Relaxation or cyclic Block Coordinate 
+in \cite{DeLeeuw1994} and is called Block Relaxation or cyclic Block Coordinate 
 Ascent (BCA). 
     
 Let $\nabla_j f(\ma a)$ be the partial gradient of $f(\ma a)$ 
@@ -257,13 +257,13 @@ Proposition \ref{cv_prop} gathers all the convergence properties of Algorithm \r
 the behavior of the sequence values $\left\lbrace f(\ma a^s) \right\rbrace$ of 
 the objective function, whereas the three last points are about the behaviour 
 of the sequence $\left\lbrace \ma a^s \right\rbrace$. The full proof of these 
-properties is given @Tenenhaus2017.
+properties is given in \cite{Tenenhaus2017}.
 
 
 # The RGCCA framework 
 
 The theoretical foundations of the Regularized Generalized Canonical Correlation 
-Analysis (RGCCA) framework - that were previously published [@Tenenhaus2011 ; @Tenenhaus2014 ; @Tenenhaus2015 ; @Tenenhaus2017] - are briefly 
+Analysis (RGCCA) framework - that were previously published in \cite{Tenenhaus2011, Tenenhaus2014, Tenenhaus2015, Tenenhaus2017} - are briefly 
 summarized.
 
 ## Optimization problem
@@ -336,8 +336,8 @@ general optimization framework presented in Section \ref{master_algo}.
 
 ## Regularized Generalized Canonical Correlation Analysis (RGCCA) 
 
-Several instantiations of the RGCCA framework were proposed in [@Tenenhaus2011, 
-@Tenenhaus2015, @Tenenhaus2017] with $\Omega_j=\left\lbrace \mathbf a_j \in \mathbb{R}^{p_j}; \mathbf{a}_j^\top \mathbf M_j \mathbf{a}_j = 1 \right\rbrace$ where 
+Several instantiations of the RGCCA framework were proposed in \cite{Tenenhaus2011, 
+Tenenhaus2015, Tenenhaus2017} with $\Omega_j=\left\lbrace \mathbf a_j \in \mathbb{R}^{p_j}; \mathbf{a}_j^\top \mathbf M_j \mathbf{a}_j = 1 \right\rbrace$ where 
 $\mathbf{M}_j$ is a symmetric positive definite matrix of order $p_j$. The optimization 
 problem (\ref{opti_theo}) boils down to: 
 
@@ -372,9 +372,9 @@ In this case, each $n \times p_j$ data matrix $\X_j$ is called a block and
 represents a set of $p_j$ variables observed on $n$ individuals. 
 The variables' number and nature may differ from one block to another, but the 
 individuals must be the same across blocks. We assume that all variables are 
-centered. The most recent formulation of RGCCA [@Tenenhaus2017] subsumes fifty 
+centered. The most recent formulation of RGCCA \citep{Tenenhaus2017} subsumes fifty 
 years of multiblock component methods. It provides improvements to the initial 
-version of RGCCA [@Tenenhaus2011] and is defined as the following optimization 
+version of RGCCA \citep{Tenenhaus2011} and is defined as the following optimization 
 problem:
 
 \begin{equation}
@@ -395,12 +395,12 @@ matrix $\mathbf{S}_{jj} = n^{-1}\ma X_j^\top \ma X_j$.
 We then consider a version of optimization problem (\ref{opti_RGCCA_emp}) with 
 $\widehat{\mathbf{\Sigma}}_{jj} = \tau_j\mathbf{I} + (1-\tau_j)\mathbf{S}_{jj}$ 
 with $\tau_j \in [0,1]$ (shrinkage estimator of $\mathbf{\Sigma}_{jj}$). This 
-plug-in approach leads to the RGCCA optimization problem [@Tenenhaus2011]. 
+plug-in approach leads to the RGCCA optimization problem \citep{Tenenhaus2011}. 
 It is worth pointing out that for each block $j$, an appropriate shrinkage 
-parameter $\tau_j$ can be obtained using various analytical formulae (see, for 
-instance [@Ledoit2004, @Schafer2005, @Chen2011]). As $\mathbf{M}_j$ must be 
-positive definite, $\tau_j = 0$ can only be selected for a full rank data matrix 
-$\mathbf{X}_j$.
+parameter $\tau_j$ can be obtained using various analytical formulae 
+\citep[see][for instance]{Ledoit2004, Schafer2005, Chen2011}. 
+As $\mathbf{M}_j$ must be positive definite, $\tau_j = 0$ can only be selected 
+for a full rank data matrix $\mathbf{X}_j$.
 
 An equivalent formulation of optimization problem (\ref{opti_RGCCA_emp}) is 
 given hereafter and enables a better characterization of the objective of 
@@ -444,14 +444,14 @@ block is rank deficient.
 
 In the RGCCA package, for each block, the determination of the shrinkage 
 parameter can be made fully automatic by using the analytical formula proposed 
-by [@Schafer2005], or guiding by the context of application by cross-validation 
+by \cite{Schafer2005}, or guiding by the context of application by cross-validation 
 or permutation. 
     
 From optimization problem (\ref{optim_RGCCA}), the term "generalized" in the 
 acronym of RGCCA embraces at least four notions. The first one relates to the 
 generalization of two-block methods - including Canonical Correlation Analysis 
-[@Hotelling1936] Interbattery Factor Analysis [@Tucker1958] and Redundancy 
-Analysis [@Wollenberg1977] - to three or more sets of variables. The second one 
+\citep{Hotelling1936}, Interbattery Factor Analysis \citep{Tucker1958}, and Redundancy 
+Analysis \citep{Wollenberg1977} - to three or more sets of variables. The second one 
 relates to the ability to take into account some hypotheses on between-block 
 connections: the user decides which blocks are connected and which ones are not. 
 The third one relies on the choices of the shrinkage parameters allowing to 
@@ -463,31 +463,31 @@ be handled. This triplet of parameters offers flexibility and allows RGCCA
 to encompass a large number of multiblock component methods that have been published 
 for fifty years. Table \ref{twoblock_methods}-\ref{multiblock_hierarchical} 
 gives the correspondences between the triplet (g, $\tau_j, \mathbf C$) and the 
-multiblock component methods. For a complete overview, see [@Tenenhaus2017]. 
+multiblock component methods. For a complete overview, see \cite{Tenenhaus2017}. 
 
 ### Special cases 
 
 Two families of methods have come to the fore in the field of multiblock data 
 analysis. These methods rely on correlation-based or covariance-based criteria. 
-Canonical correlation analysis [@Hotelling1936] is the seminal paper for the 
-first family and Tucker's inter-battery factor analysis [@Tucker1958] for 
+Canonical correlation analysis \citep{Hotelling1936} is the seminal paper for the 
+first family and Tucker's inter-battery factor analysis \citep{Tucker1958} for 
 the second one. These two methods have been extended to more than two
 blocks in many ways: 
 
 - Main contributions for generalized canonical correlation
-analysis (GCCA) are found in [@Horst1961, @Carroll1968a, @Kettenring1971, 
-@Wold1982, @Wold1985, @Hanafi2007].
+analysis (GCCA) are found in \cite{Horst1961, Carroll1968a, Kettenring1971, 
+Wold1982, Wold1985, Hanafi2007}.
 
 - Main contributions for extending Tucker's method to more
-than two blocks come from [@Carroll1968b, @Chessel1996, @Hanafi2006,
-@Hanafi2010, @Hanafi2011, @Hanafi2006, @Kramer2007, @Smilde2003, @TenBerge1988, 
-@VandeGeer1984, @Westerhuis1998, @Wold1982, @Wold1985].
+than two blocks come from \cite{Carroll1968b, Chessel1996, Hanafi2006,
+Hanafi2010, Hanafi2011, Hanafi2006, Kramer2007, Smilde2003, TenBerge1988, 
+VandeGeer1984, Westerhuis1998, Wold1982, Wold1985}.
 
-- [@Carroll1968b] proposed the "mixed" correlation and
-covariance criterion. [@Wollenberg1977] combined
+- \cite{Carroll1968b} proposed the "mixed" correlation and
+covariance criterion. \cite{Wollenberg1977} combined
 correlation and variance for the two-block situation (redundancy
 analysis). This method is extended to the multiblock
-situation in [@Tenenhaus2011, @Tenenhaus2017].
+situation in \cite{Tenenhaus2011, Tenenhaus2017}.
 
 In the two block case, optimization problem (\ref{optim_RGCCA}) reduces to:
 \begin{equation}
@@ -498,23 +498,23 @@ cov}\left(\X_1\ma a_1, \X_2\ma a_2 \right) \mathrm{~s.t.~} \tau_j
 \end{equation} 
 
 This problem has been introduced under the name of Regularized Canonical 
-Correlation Analysis [@Vinod1976; @Leurgans1993; @Shawe2004]. For various 
+Correlation Analysis \citep{Vinod1976, Leurgans1993, Shawe2004}. For various 
 extreme cases $\tau_1 = 0$ or $1$ and $\tau_2 = 0$ or $1$, optimization problem 
-(\ref{rCCA}) covers a  situation which goes from Tucker's interbattery factor 
-analysis \citep{Tucker1958} to Canonical Correlation Analysis 
-\citep{Hotelling1933} while passing through redundancy analysis 
+(\ref{rCCA}) covers a situation which goes from Canonical Correlation Analysis 
+\citep{Hotelling1933} to Tucker's interbattery factor 
+analysis \citep{Tucker1958}, while passing through redundancy analysis 
 \citep{Wollenberg1977}. This framework corresponds exactly to the one proposed 
-by \citep{Borga1997} and \citep{Burnham1996} and is reported in Table 
+by \cite{Borga1997} and \cite{Burnham1996} and is reported in Table 
 \ref{twoblock_methods}. 
 
 
 | **Methods**                              |  $g(x)$   | $\tau_j$                  | $\mathbf{C}$                   |
 |:-----------------------------------------|:---------:|:--------------------------|:------------------------------:|
-| **Canonical Correlation Analysis** [@Hotelling1936] | $x$    | $\tau_1 = \tau_2 = 0$  | $\mathbf{C}_1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$|
-| **Interbattery Factor Analysis** [@Tucker1958] or **PLS Regression** [@Wold1983]      | $x$    | $\tau_1 = \tau_2 = 1$  | $\mathbf{C}_1$|
-| **Redundancy Analysis** [@Wollenberg1977]           | $x$    | $\tau_1 = 1$ ; $\tau_2 = 0$ | $\mathbf{C}_1$|
-| **Regularized Redundancy Analysis** [@Takane2007; @Bougeard2008 ; @Qannari2005]           | $x$    | $0 \le \tau_1 \le 1$ ; $\tau_2 = 0$ | $\mathbf{C}_1$|
-| **Regularized Canonical Correlation Analysis** [@Vinod1976; @Leurgans1993; @Shawe2004]           | $x$    | $0 \le \tau_1 \le 1$ ; $0 \le \tau_2 \le 1$ | $\mathbf{C}_1$|
+| **Canonical Correlation Analysis** \citep{Hotelling1936} | $x$    | $\tau_1 = \tau_2 = 0$  | $\mathbf{C}_1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$|
+| **Interbattery Factor Analysis** \citep{Tucker1958} or **PLS Regression** \citep{Wold1983}      | $x$    | $\tau_1 = \tau_2 = 1$  | $\mathbf{C}_1$|
+| **Redundancy Analysis** \citep{Wollenberg1977}           | $x$    | $\tau_1 = 1$ ; $\tau_2 = 0$ | $\mathbf{C}_1$|
+| **Regularized Redundancy Analysis** \citep{Takane2007, Bougeard2008, Qannari2005}           | $x$    | $0 \le \tau_1 \le 1$ ; $\tau_2 = 0$ | $\mathbf{C}_1$|
+| **Regularized Canonical Correlation Analysis** \citep{Vinod1976, Leurgans1993, Shawe2004}           | $x$    | $0 \le \tau_1 \le 1$ ; $0 \le \tau_2 \le 1$ | $\mathbf{C}_1$|
 
 Table: two-block component methods. \label{twoblock_methods}
 
@@ -530,15 +530,15 @@ researcher decides which blocks are connected and which are not.
 
 | **Methods**                         |  $g(x)$   | $\tau_j$                       | $\mathbf{C}$                   |
 |:------------------------------------|:---------:|:-------------------------------|:------------------------------:|
-| **SUMCOR** [@Horst1961]                             | $x$    | $\tau_j = 0, j=1, \ldots, J$ | $\mathbf{C}_2 = \begin{pmatrix} 1 & 1 & \cdots & 1 \\ 1 & 1 & \ddots & \vdots \\ \vdots & \ddots& \ddots & 1\\ 1 & \cdots & 1 & 1 \end{pmatrix}$ | 
-| **SSQCOR** [@Kettenring1971]                        | $x^2$  | $\tau_j = 0, j=1, \ldots, J$ | $\mathbf{C}_2$ |
-| **SABSCOR** [@Hanafi2007]                           | $|x|$  | $\tau_j = 0, j=1, \ldots, J$ | $\mathbf{C}_2$ |
-| **SUMCOV-1** [@VandeGeer1984]                       | $x$    | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_2$ |
-| **SSQCOV-1** [@Hanafi2006]                          | $x^2$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_2$ |
-| **SABSCOV-1** [@Tenenhaus2011 ; @Kramer2007]        | $|x|$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_2$ |
-| **SUMCOV-2** [@VandeGeer1984]                       | $x$    | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_3 = \begin{pmatrix} 0 & 1 & \cdots & 1 \\ 1 & 0 & \ddots & \vdots\\ \vdots & \ddots& \ddots& 1\\ 1 & \cdots & 1 & 0 \end{pmatrix}$ |
-| **SSQCOV-2** [@Hanafi2006]                          | $x^2$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_3$ |
-| **PLS path modeling - mode B** [@Wold1982, @Tenenhaus2005]          | $|x|$  | $\tau_j = 0, j=1, \ldots, J$ | $c_{jk}=1$ for two connected block and $c_{jk} = 0$ otherwise |
+| **SUMCOR** \citep{Horst1961}                             | $x$    | $\tau_j = 0, j=1, \ldots, J$ | $\mathbf{C}_2 = \begin{pmatrix} 1 & 1 & \cdots & 1 \\ 1 & 1 & \ddots & \vdots \\ \vdots & \ddots& \ddots & 1\\ 1 & \cdots & 1 & 1 \end{pmatrix}$ | 
+| **SSQCOR** \citep{Kettenring1971}                        | $x^2$  | $\tau_j = 0, j=1, \ldots, J$ | $\mathbf{C}_2$ |
+| **SABSCOR** \citep{Hanafi2007}                           | $|x|$  | $\tau_j = 0, j=1, \ldots, J$ | $\mathbf{C}_2$ |
+| **SUMCOV-1** \citep{VandeGeer1984}                       | $x$    | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_2$ |
+| **SSQCOV-1** \citep{Hanafi2006}                          | $x^2$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_2$ |
+| **SABSCOV-1** \citep{Tenenhaus2011, Kramer2007}        | $|x|$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_2$ |
+| **SUMCOV-2** \citep{VandeGeer1984}                       | $x$    | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_3 = \begin{pmatrix} 0 & 1 & \cdots & 1 \\ 1 & 0 & \ddots & \vdots\\ \vdots & \ddots& \ddots& 1\\ 1 & \cdots & 1 & 0 \end{pmatrix}$ |
+| **SSQCOV-2** \citep{Hanafi2006}                          | $x^2$  | $\tau_j = 1, j=1, \ldots, J$ | $\mathbf{C}_3$ |
+| **PLS path modeling - mode B** \citep{Wold1982, Tenenhaus2005}          | $|x|$  | $\tau_j = 0, j=1, \ldots, J$ | $c_{jk}=1$ for two connected block and $c_{jk} = 0$ otherwise |
 
 Table: Multiblock component methods as special cases of RGCCA.\label{multiblock_methods}
 
@@ -553,11 +553,11 @@ are listed below.
 
 | **Methods**                         |  $g(x)$   | $\tau_j$                       | $\mathbf{C}$                   |
 |:------------------------------------|:---------:|:-------------------------------|:------------------------------:|
-| **Generalized CCA** [@Carroll1968a]                 | $x^2$  | $\tau_j = 0, j=1, \ldots, J+1$ | $\mathbf{C}_4 = \begin{pmatrix} 0 & \cdots & 0 & 1 \\ \vdots & \ddots & \vdots & \vdots\\ 0 & \cdots & 0 & 1\\ 1 & \cdots & 1 & 0 \end{pmatrix}$ |
-| **Generalized CCA** [@Carroll1968b]                 | $x^2$  | $\tau_j=0, j=1, \ldots, J_1$ ; $\tau_j = 1, j=J_1+1, \ldots, J$ |  $\mathbf{C}_4$ |
-| **Hierarchical PCA** [@Wold1996]                    | $x^4$  | $\tau_j = 1, j=1, \ldots, J$ ; $\tau_{J+1} = 0$ | $\mathbf{C}_4$ |
-| **Multiple Co-Inertia Analysis** [@Chessel1996, @Westerhuis1998, @Smilde2003]     | $x^2$  | $\tau_j = 1, j=1, \ldots, J$ ; $\tau_{J+1} = 0$ | $\mathbf{C}_4$ |
-| **Multiple Factor Analysis** [@Escofier1994]     | $x^2$  | $\tau_j = 1, j=1, \ldots, J+1$ | $\mathbf{C}_4$ |
+| **Generalized CCA** \citep{Carroll1968a}                 | $x^2$  | $\tau_j = 0, j=1, \ldots, J+1$ | $\mathbf{C}_4 = \begin{pmatrix} 0 & \cdots & 0 & 1 \\ \vdots & \ddots & \vdots & \vdots\\ 0 & \cdots & 0 & 1\\ 1 & \cdots & 1 & 0 \end{pmatrix}$ |
+| **Generalized CCA** \citep{Carroll1968b}                 | $x^2$  | $\tau_j=0, j=1, \ldots, J_1$ ; $\tau_j = 1, j=J_1+1, \ldots, J$ |  $\mathbf{C}_4$ |
+| **Hierarchical PCA** \citep{Wold1996}                    | $x^4$  | $\tau_j = 1, j=1, \ldots, J$ ; $\tau_{J+1} = 0$ | $\mathbf{C}_4$ |
+| **Multiple Co-Inertia Analysis** \citep{Chessel1996, Westerhuis1998, Smilde2003}     | $x^2$  | $\tau_j = 1, j=1, \ldots, J$ ; $\tau_{J+1} = 0$ | $\mathbf{C}_4$ |
+| **Multiple Factor Analysis** \citep{Escofier1994}     | $x^2$  | $\tau_j = 1, j=1, \ldots, J+1$ | $\mathbf{C}_4$ |
 Table: Multiblock component methods in a situation of $J$ blocks, $\ma X_1, \ldots, \ma X_J$ connected to a $(J + 1)$th block defined as the concatenation of the blocks, $\ma X_{J+1} = [\ma X_1 , \ma X_2, \ldots, \ma X_J]$.\label{multiblock_hierarchical}
 
 The list of pre-specified multiblock component methods than can be used within 
@@ -576,8 +576,8 @@ implementation strategy. The very simple gradient-based Algorithm
 \ref{master_algo} is monotonically convergent and hits at convergence a 
 stationary point. Two numerically equivalent approaches for solving 
 the RGCCA optimization problem are available. A primal formulation described in 
-[@Tenenhaus2011, @Tenenhaus2017] requires the handling of matrices of dimension 
-$p_j \times p_j$. A dual formulation described in [@Tenenhaus2015] requires the 
+\cite{Tenenhaus2011, Tenenhaus2017} requires the handling of matrices of dimension 
+$p_j \times p_j$. A dual formulation described in \cite{Tenenhaus2015} requires the 
 handling of matrices of dimension $n \times n$ . Therefore, the primal 
 formulation of the RGCCA algorithm will be preferred when $n>p_j$, and the dual 
 form will be used when $n \le p_j$.  The `rgcca()` function of the RGCCA package 
@@ -594,7 +594,7 @@ the variables in each block.  Therefore, it is an important issue to identify
 within each block which subsets of significant variables are active in the
 relationships between blocks. For instance, biomedical data are known to be 
 measurements of intrinsically parsimonious processes. 
-SGCCA extends RGCCA to address this issue of variable selection [@Tenenhaus2014b]. 
+SGCCA extends RGCCA to address this issue of variable selection \citep{Tenenhaus2014b}. 
 The SGCCA optimization problem is defined as follows:
 
 \begin{equation}
@@ -623,7 +623,7 @@ following update for SGCCA:
 \label{update_SGCCA}
 \end{equation}
 
-According to [@Witten2009a], solution of (\ref{update_SGCCA}) satisfies:
+According to \cite{Witten2009a}, the solution of (\ref{update_SGCCA}) satisfies:
 
 \begin{equation}
 	r_j(\ma a) = \hat{\ma a}_j = \frac{\mathcal{S}(\nabla_j f(\ma a), \lambda_j)}{\Vert \mathcal{S}(\nabla_j f(\ma a), \lambda_j)\Vert_2}, ~\text{where}~ \lambda_j = \left\lbrace\begin{array}{ccc}
@@ -664,9 +664,9 @@ for consistency with the value of $\tau_j \in [0, 1]$, the level of sparsity for
 $\ma a_j$ is controlled with $s_j/p_j \in [1/\sqrt{p_j}, 1]$.
 
 Several strategies, such as Binary Search or the Projection On Convex Set algorithm 
-(POCS), also known as the alternating projection method [@Boyd2003], can be 
+(POCS), also known as the alternating projection method \citep{Boyd2003}, can be 
 used to determine the optimal $\lambda_j$ verifying the $\ell_1$-norm constraint. 
-Here, a much faster approach described in [@Gloaguen2017] is implemented within 
+Here, a much faster approach described in \cite{Gloaguen2017} is implemented within 
 the RGCCA package.
 
 The SGCCA algorithm is similar to the RGCCA algorithm and keeps the same 
@@ -749,13 +749,13 @@ superblock. This strategy enables recovering Multiple Factor Analysis
 that there exists ${\ma a_j^{(k)}}^\star \in \text{span}(\mathbf X_j)$ for 
 $j < J + 1$ and $k > 1$, but we can always find ${\ma a_{J + 1}^{(k)}}^\star$.  
 On the contrary, we follow the deflation 
-strategy described in [@Chessel1996] (`ade4::mcoa()`) for Multiple Co-inertia 
+strategy described in \cite{Chessel1996} (`ade4::mcoa()`) for Multiple Co-inertia 
 Analysis, which is one of the most popular and established methods of the 
 multiblock literature.
 
 ## Average Variance Explained
 
-When performing a Principal Component Analysis (PCA) (@Pearson1901), a way to 
+When performing a Principal Component Analysis \citep[PCA, ][]{Pearson1901}, a way to 
 choose the number of principal components is to look at the Average Variance
 Explained (AVE). This AVE represents the proportion
 of variance captured by the components. This concept can be applied to 
@@ -794,9 +794,9 @@ evaluated by summing the outer AVEs of the different components. For this sum
 to be meaningful, the block components must be orthogonal. If they are not, 
 they are orthogonalized using the QR-decomposition to only take into account
 the increase of AVE due to the addition of the new components. This corresponds 
-to the procedure proposed in [@Zou2006].
+to the procedure proposed in \cite{Zou2006}.
 
-[@Tenenhaus1998] defines the Variable Importance in Projection
+\cite{Tenenhaus1998} defines the Variable Importance in Projection
 (VIP) score for the PLS method. This score can be used for variable selection: 
 the higher the score, the more important the variable. We use 
 this idea to propose a procedure for evaluating the stability of the variable
@@ -812,7 +812,7 @@ SGCCA is run several times using a bootstrap resampling method. For each model,
 the VIPs are computed and the variables with the higher VIPs, averaged over the
 different models, are kept.
 
-Guidelines describing R/SGCCA in practice are provided in [@Garali2018].
+Guidelines describing R/SGCCA in practice are provided in \cite{Garali2018}.
 The usefulness and versatility of the RGCCA package are illustrated in the next 
 section. 
 
@@ -837,8 +837,8 @@ Table: Functions implemented in the RGCCA package. \label{exported_functions}
 ## RGCCA for the Russett dataset.
 
 In this section, we reproduce some of the results presented in 
-[@Tenenhaus2011] from the Russett data. The Russett dataset is available within 
-the RGCCA package. The Russett dataset [@Russett1964] is studied in [@Gifi1990]. 
+\cite{Tenenhaus2011} from the Russett data. The Russett dataset is available within 
+the RGCCA package. The Russett dataset \citep{Russett1964} is studied in \cite{Gifi1990}. 
 Russett collected this data to study relationships between Agricultural 
 Inequality, Industrial Development, and Political Instability.
 
@@ -889,7 +889,7 @@ variables, standardization is applied (zero mean and unit variance). Such a
 preprocessing is reached by setting the `scale` argument to `TRUE` (default 
 value) in the `rgcca()` function. To make blocks comparable, a possible 
 strategy is to standardize the variables and then to divide each block by 
-the square root of its number of variables [@Westerhuis1998]. This two-step 
+the square root of its number of variables \citep{Westerhuis1998}. This two-step 
 procedure leads to $\mathrm{tr}(\X_j^\top \X_j )=n$ for each block (i.e. the 
 sum of the eigenvalues of the covariance matrix of $\X_j$ is equal to $1$ 
 whatever the block). Such a preprocessing is reached by 
@@ -919,7 +919,7 @@ C <- matrix(c(0, 0, 1,
 C
 ```
 
-**Choice of the scheme function g**. Typical choices of scheme functions are $g(x) = x, x^2$, or $\vert x \vert$.  According to [@VandeGeer1984], a fair model is a model where all blocks contribute equally to the solution in opposition to a model dominated by only a few of the $J$ sets. If fairness is a major objective, the user must choose $m=1$. $m>1$ is preferable if the user wants to discriminate between blocks. In practice, $m$ is equal to $1$, $2$ or $4$. The higher the value of $m$ the more the method acts as block selector [@Tenenhaus2017].
+**Choice of the scheme function g**. Typical choices of scheme functions are $g(x) = x, x^2$, or $\vert x \vert$.  According to \cite{VandeGeer1984}, a fair model is a model where all blocks contribute equally to the solution in opposition to a model dominated by only a few of the $J$ sets. If fairness is a major objective, the user must choose $m=1$. $m>1$ is preferable if the user wants to discriminate between blocks. In practice, $m$ is equal to $1$, $2$ or $4$. The higher the value of $m$ the more the method acts as block selector \citep{Tenenhaus2017}.
 
 RGCCA using the pre-defined design matrix $\mathbf{C}$, 
 the factorial scheme ($g(x) = x^2$), $\tau = 1$ for all blocks (full covariance criterion) 
@@ -945,7 +945,8 @@ print(fit)
 ```
 
 The block-weight vectors solution of the optimization problem (\ref{optim_RGCCA}) 
-are available as output of the `rgcca()` function in `fit$a` and correspond exactly to the weight vectors reported in [@Tenenhaus2011, see Figure 5]. It is possible to display specific block-weight vector(s) (`type = "weight"`) block-loadings vector(s) (`type = "loadings"`) using the generic `plot()` function and specifying the arguments `block` and `component` accordingly. The
+are available as output of the `rgcca()` function in `fit$a` and correspond exactly to the weight vectors reported in the Figure 5 of \cite{Tenenhaus2011}. 
+It is possible to display specific block-weight vector(s) (`type = "weight"`) block-loadings vector(s) (`type = "loadings"`) using the generic `plot()` function and specifying the arguments `block` and `component` accordingly. The
 ${\ma a_j^{(k)}}^\star$, mentioned in Section [Higher level RGCCA algorithm], 
 are available in `fit$astar`.
 
@@ -1054,8 +1055,8 @@ positive or negative weight to this variable.
 
 ## RGCCA with superblock
 
-In this section, we consider Multiple Co-Inertia Analysis  [@Chessel1996] (MCOA, 
-also called MCIA in [@Cantini2021]) with $2$ components per block. 
+In this section, we consider Multiple Co-Inertia Analysis \citep{Chessel1996} 
+\citep[MCOA, also called MCIA in][]{Cantini2021} with $2$ components per block. 
 
 See `available_methods()` for a list of pre-specified 
 multiblock component methods. 
@@ -1096,7 +1097,7 @@ parameters:
 
 **The Schafer and Strimmer analytical formula.** For each block $j$, an "optimal" 
 shrinkage parameter $\tau_j$ can be obtained using the Schafer and Strimmer 
-analytical formula [@Schafer2005] by setting the `tau` argument of the `rgcca()` 
+analytical formula \citep{Schafer2005} by setting the `tau` argument of the `rgcca()` 
 function to `"optimal"`.
 
 ```{r}
@@ -1118,7 +1119,7 @@ As previously, all the fitted RGCCA object can be visualized/bootstraped using
 the `print()`, `plot()` and `rgcca_bootstrap()` functions.
 
 **Permutation strategy.** A permutation based strategy very similar to the one 
-proposed in [@Witten2009a] has been also integrated within the RGCCA package 
+proposed in \cite{Witten2009a} has been also integrated within the RGCCA package 
 through the `rgcca_permutation()` function. This function is used to 
 automatically select the regularization parameters for R/SGCCA.
 
@@ -1220,8 +1221,8 @@ the tumor may be different from one location to another, as it has been
 frequently suggested.
 
 **Description of the data.** Pretreatment frozen tumor samples were obtained 
-from 53 children with newly diagnosed pHGG from Necker Enfants Malades (Paris, 
-France) [@Puget2012]. The 53 tumors are divided into 3 locations: supratentorial 
+from 53 children with newly diagnosed pHGG from Necker Enfants Malades 
+\citep[Paris, France, ][]{Puget2012}. The 53 tumors are divided into 3 locations: supratentorial 
 (HEMI), central nuclei (MIDL), and brain stem (DIPG). The final dataset is 
 organized in 3 blocks of variables defined for the 53 tumors: the first block 
 $\mathbf{X}_1$ provides the expression of $15702$ genes (GE). The second block 
@@ -1502,21 +1503,22 @@ parameters estimates of S/RGCCA.
 observation $i$ has missing values on a whole block j and (ii) if an 
 observation i has some missing values on a block j (but not all). For these two 
 situations, it is possible to exploit the algorithmic solution proposed for PLS 
-path modeling to deal with missing data (see [@Tenenhaus2005]).
+path modeling to deal with missing data \citep[see][]{Tenenhaus2005}.
 
 \item Special attention has been paid to recover the results of other R packages 
 of the literature including `ade4` and `factomineR`.
 \end{itemize}
 
 The RGCCA framework is constantly evolving and extended. Indeed, we propose 
-RGCCA for multigroup data [@Tenenhaus2014b] and RGCCA for multiway data 
-[@Gloaguen2020, @Girka2023], RGCCA for (sparse and irregular) functional data [@Sort2023]. In addition, maximizing successive criteria may be 
+RGCCA for multigroup data \citep{Tenenhaus2014b} and RGCCA for multiway data 
+\citep{Gloaguen2020, Girka2023}, RGCCA for (sparse and irregular) functional data \citep{Sort2023}. In addition, maximizing successive criteria may be 
 seen as suboptimal from an optimization point of view where a single global 
-criterion might be preferred. A global version of RGCCA [@Gloaguen2020b] 
+criterion might be preferred. A global version of RGCCA \citep{Gloaguen2020b} 
 which allows extracting simultaneously several components per block (no 
 deflation procedure required) has been proposed. At last, it is possible to use 
 RGCCA in structural equation modeling with latent and emergent variables for 
-obtaining consistent and asymptotically normal estimators of the parameters [@Tenenhaus2023]. Work in progress includes the integration of all these novel 
+obtaining consistent and asymptotically normal estimators of the parameters 
+\citep{Tenenhaus2023}. Work in progress includes the integration of all these novel 
 approaches in the next release of the RGCCA package. 
 
 # References
