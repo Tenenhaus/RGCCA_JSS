@@ -751,8 +751,11 @@ to its global components:
 $$\X_{J+1}^{(1)} = \left(\mathbf{I} - \mathbf{P}^\perp_{\ma y_{J+1}^{(1)}} \right) \X_{J+1} = \left[ \X_1^{(1)}, \ldots, \X_J^{(1)} \right]$$
 The individual blocks $\X_j^{(1)}$s are then retrieved from the deflated 
 superblock. This strategy enables recovering Multiple Factor Analysis 
-(`ade4:::mfa()/FactoMineR::MFA`). We follow the deflation 
-strategy described in [@Chessel1996] (`ade4:::mcoa()`) for Multiple Co-inertia 
+(`ade4::mfa()/FactoMineR::MFA`). Note that, in this case, there is no guarantee
+that there exists ${\ma a_j^{(k)}}^\star \in \text{span}(\mathbf X_j)$ for 
+$j < J + 1$ and $k > 1$, but we can always find ${\ma a_{J + 1}^{(k)}}^\star$.  
+On the contrary, we follow the deflation 
+strategy described in [@Chessel1996] (`ade4::mcoa()`) for Multiple Co-inertia 
 Analysis, which is one of the most popular and established methods of the 
 multiblock literature.
 
@@ -948,7 +951,9 @@ print(fit)
 ```
 
 The block-weight vectors solution of the optimization problem (\ref{optim_RGCCA}) 
-are available as output of the `rgcca()` function in `fit$a` and correspond exactly to the weight vectors reported in [@Tenenhaus2011, see Figure 5]. It is possible to display specific block-weight vector(s) (`type = "weight"`) block-loadings vector(s) (`type = "loadings"`) using the generic `plot()` function and specifying the arguments `block` and `component` accordingly. 
+are available as output of the `rgcca()` function in `fit$a` and correspond exactly to the weight vectors reported in [@Tenenhaus2011, see Figure 5]. It is possible to display specific block-weight vector(s) (`type = "weight"`) block-loadings vector(s) (`type = "loadings"`) using the generic `plot()` function and specifying the arguments `block` and `component` accordingly. The
+${\ma a_j^{(k)}}^\star$, mentioned in Section [Higher level RGCCA algorithm], 
+are available in `fit$astar`.
 
 ```{r, fig.height = 12, fig.width=18, fig.cap = 'block weight vectors', fig.pos = "H"}
 plot(fit, type = "weight", block = 1:3, comp = 1,
