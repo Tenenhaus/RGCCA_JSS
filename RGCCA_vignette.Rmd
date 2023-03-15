@@ -982,8 +982,6 @@ By default all the variables are displayed on the correlation circle. However,
 it is possible to choose the block(s) to display (`display_blocks`) in the 
 correlation_circle. 
 
-
-
 ```{r, fig.align='center', fig.cap = 'biplot associated with the two first components of Agriculture', fig.height = 12, fig.width=18, fig.pos = "H"}
 plot(fit, type = "biplot", block = 1, 
      comp = 1:2, repel = TRUE, 
@@ -1499,9 +1497,11 @@ RGCCA for multigroup data [@Tenenhaus2014b] and RGCCA for multiway data
 seen as suboptimal from an optimization point of view where a single global 
 criterion might be preferred. A global version of RGCCA [@Gloaguen2020b] 
 which allows extracting simultaneously several components per block (no 
-deflation procedure required) has been proposed. At last, it is possible to use 
+deflation procedure required) has been proposed. Also, it is possible to use 
 RGCCA in structural equation modeling with latent and emergent variables for 
-obtaining consistent and asymptotically normal estimators of the parameters [@Tenenhaus2023]. Work in progress includes the integration of all these novel 
+obtaining consistent and asymptotically normal estimators of the parameters [@Tenenhaus2023].
+At last several alternatives for handling missing values are discussed in [@Peltier2022]. 
+Work in progress includes the integration of all these novel 
 approaches in the next release of the RGCCA package. 
 
 # References
