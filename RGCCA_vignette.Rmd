@@ -309,7 +309,7 @@ The horst scheme penalizes structural negative correlation between block
 components, while both the centroid scheme and the m-scheme enable two 
 components to be negatively correlated. 
 
-\item The design matrix $\ma C = \lbrace c_{jk}\rbrace$ is a symmetric 
+\item the design matrix $\ma C = \lbrace c_{jk}\rbrace$ is a symmetric 
 $J \times J$ matrix of non-negative elements describing the network of 
 connections between blocks that the user wants to take into account. 
 Usually, $c_{jk} = 1$ to two connected blocks and $0$ otherwise. 
@@ -362,7 +362,7 @@ $f(\ma a)$ with respect to $\ma a_j$ is a $p_j$-dimensional
 column vector is given by:
 
 \begin{equation}
-\ma \nabla_j f(\ma a)=2\sum_{k=1}^{J}c_{jk}g'\left(\ma a_j^\top \ma \Sigma_{jk} \ma a_k \right) \ma \Sigma_{jk} \ma a_k
+\ma \nabla_j f(\ma a)=2\sum_{k=1}^{J}c_{jk}g'\left(\ma a_j^\top \ma \Sigma_{jk} \ma a_k \right) \ma \Sigma_{jk} \ma a_k.
 \label{grad_obj_function}
 \end{equation}
 
@@ -380,7 +380,7 @@ problem:
 \begin{equation}
 \underset{\ma a_1, \ldots, \ma a_J}{\text{maximize~}}
 \sum_{j, k = 1}^J c_{jk} g\left(\ma a_j^\top
-\widehat{\mathbf{\Sigma}}_{jk}\ma a_k \right)\\ \mathrm{~s.t.~}\ma a_j^\top\widehat{\mathbf{\Sigma}}_{jj}\ma a_j=1, j =1, \ldots, J
+\widehat{\mathbf{\Sigma}}_{jk}\ma a_k \right)\\ \mathrm{~s.t.~}\ma a_j^\top\widehat{\mathbf{\Sigma}}_{jj}\ma a_j=1, j =1, \ldots, J,
 \label{opti_RGCCA_emp}
 \end{equation} 
 
@@ -406,7 +406,7 @@ An equivalent formulation of optimization problem (\ref{opti_RGCCA_emp}) is
 given hereafter and enables a better characterization of the objective of 
 RGCCA. 
 \begin{equation}
-\displaystyle \underset{\mathbf{a}_1,\mathbf{a}_2, \ldots,\mathbf{a}_J}{\text{maximize~}} \sum_{j, k = 1}^J c_{jk}g(\mathrm{cov}(\mathbf{X}_j\mathbf{a}_j, \mathbf{X}_k\mathbf{a}_k)) \mathrm{~~s.t.~~} (1-\tau_j)\mathrm{var}(\mathbf{X}_j\mathbf{a}_j) + \tau_j\Vert \mathbf{a}_j \Vert^2 = 1, j=1, \ldots,J
+\displaystyle \underset{\mathbf{a}_1,\mathbf{a}_2, \ldots,\mathbf{a}_J}{\text{maximize~}} \sum_{j, k = 1}^J c_{jk}g(\mathrm{cov}(\mathbf{X}_j\mathbf{a}_j, \mathbf{X}_k\mathbf{a}_k)) \mathrm{~~s.t.~~} (1-\tau_j)\mathrm{var}(\mathbf{X}_j\mathbf{a}_j) + \tau_j\Vert \mathbf{a}_j \Vert^2 = 1, j=1, \ldots,J.
 \label{optim_RGCCA}
 \end{equation}
 Hence, the objective of RGCCA is to find block components 
@@ -493,7 +493,7 @@ In the two block case, optimization problem (\ref{optim_RGCCA}) reduces to:
 \begin{equation}
 \underset{\ma a_1, \ma a_2}{\text{maximize}} \text{
 cov}\left(\X_1\ma a_1, \X_2\ma a_2 \right) \mathrm{~s.t.~} \tau_j
-\Vert \ma a_j \Vert^2 + (1-\tau_j)\text{var}(\X_j\ma a_j) = 1, j =1,2 
+\Vert \ma a_j \Vert^2 + (1-\tau_j)\text{var}(\X_j\ma a_j) = 1, j =1,2.
 \label{rCCA} 
 \end{equation} 
 
@@ -598,7 +598,7 @@ SGCCA extends RGCCA to address this issue of variable selection \citep{Tenenhaus
 The SGCCA optimization problem is defined as follows:
 
 \begin{equation}
-\displaystyle \underset{\mathbf{a}_1,\mathbf{a}_2, \ldots,\mathbf{a}_J}{\text{maximize~}} \sum_{j, k = 1}^J c_{jk}g(\mathrm{cov}(\mathbf{X}_j\mathbf{a}_j, \mathbf{X}_k\mathbf{a}_k)) \mathrm{~~s.t.~~} \Vert \mathbf{a}_j \Vert_2 \le 1 \text{~and~} \Vert \mathbf{a}_j \Vert_1 \le s_j, j=1,\ldots,J
+\displaystyle \underset{\mathbf{a}_1,\mathbf{a}_2, \ldots,\mathbf{a}_J}{\text{maximize~}} \sum_{j, k = 1}^J c_{jk}g(\mathrm{cov}(\mathbf{X}_j\mathbf{a}_j, \mathbf{X}_k\mathbf{a}_k)) \mathrm{~~s.t.~~} \Vert \mathbf{a}_j \Vert_2 \le 1 \text{~and~} \Vert \mathbf{a}_j \Vert_1 \le s_j, j=1,\ldots,J.
 \label{optim_SGCCA}
 \end{equation}
 
@@ -619,7 +619,7 @@ compact sets. Hence, $\Omega_j$ is a compact set. Therefore, we can consider the
 following update for SGCCA:
 
 \begin{equation}
-	\hat{\ma a}_j = \underset{\Vert \tilde{\ma a}_j \Vert_2 \leq 1 ; \Vert \tilde{\ma a}_j \Vert_1 \leq s_j}{\mathrm{argmax~}} \nabla_j f(\ma a)^\top \tilde{\ma a}_j := r_j(\ma a) 
+	\hat{\ma a}_j = \underset{\Vert \tilde{\ma a}_j \Vert_2 \leq 1 ; \Vert \tilde{\ma a}_j \Vert_1 \leq s_j}{\mathrm{argmax~}} \nabla_j f(\ma a)^\top \tilde{\ma a}_j := r_j(\ma a).
 \label{update_SGCCA}
 \end{equation}
 
@@ -742,7 +742,7 @@ strategies (what to deflate and how) have been proposed in the literature.
 We propose, as the default option, to deflate only the superblock with respect 
 to its global components: 
 
-$$\X_{J+1}^{(1)} = \left(\mathbf{I} - \mathbf{P}^\perp_{\ma y_{J+1}^{(1)}} \right) \X_{J+1} = \left[ \X_1^{(1)}, \ldots, \X_J^{(1)} \right]$$
+$$\X_{J+1}^{(1)} = \left(\mathbf{I} - \mathbf{P}^\perp_{\ma y_{J+1}^{(1)}} \right) \X_{J+1} = \left[ \X_1^{(1)}, \ldots, \X_J^{(1)} \right].$$
 The individual blocks $\X_j^{(1)}$s are then retrieved from the deflated 
 superblock. This strategy enables recovering Multiple Factor Analysis 
 (`ade4::mfa()/FactoMineR::MFA`). Note that, in this case, there is no guarantee
@@ -1352,8 +1352,8 @@ in this section.
 optimal tuning parameters can be determined by cross-validating 
 different indicators of quality, namely:
 
-- For Classification: `Accuracy`, `Kappa`, `F1`, `Sensitivity`, `Specificity`, 
-`Pos_Pred_Value`, `Neg_Pred_Value`, `Precision`, `Recall`, `Detection_Rate`, 
+- For classification: `Accuracy`, `Kappa`, `F1`, `Sensitivity`, `Specificity`, 
+`Pos_Pred_Value`, `Neg_Pred_Value`, `Precision`, `Recall`, `Detection_Rate`, and
 `Balanced_Accuracy`. 
 
 - For regression: `RMSE` and `MAE`.
@@ -1402,7 +1402,7 @@ and displayed using the generic `plot()` function.
 plot(cv_out, cex = 1.3)
 ```
 
-AS previously, the optimal sparsity parameters can be used to fit a new model,
+As previously, the optimal sparsity parameters can be used to fit a new model,
 and the resulting optimal model can be visualized/bootstrapped as usual.
 
 ```{r}
