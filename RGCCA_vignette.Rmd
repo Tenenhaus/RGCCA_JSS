@@ -43,16 +43,10 @@ preamble: >
   \usepackage{soul}
   \usepackage{epsfig}
   \usepackage{amssymb}
-  \usepackage{natbib}
   \usepackage{lscape}
-  \usepackage{graphicx}
-  \usepackage{amsmath}
-  \usepackage{color}
   \usepackage{float}
-  \usepackage{amsfonts}
   \usepackage{latexsym}
   \usepackage{graphicx,psfrag,color}
-  \usepackage{amssymb}
   \usepackage{multirow} 
   \usepackage[space]{grffile}
   \usepackage{amsthm}
