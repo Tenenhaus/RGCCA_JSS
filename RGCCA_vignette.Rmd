@@ -821,6 +821,22 @@ section.
 
 # Practical session
 
+We now present the functions implemented in the RGCCA package, and give examples
+on how they can be used. The list of functions can be found in Table 
+\ref{exported_functions}.
+
+| Function                |  Description                   |
+|:------------------------|:-------------------------------|
+| `rgcca`                 | Main entry point of the package, this function allows fitting a R/SGCCA model on a multiblock dataset           |
+| `rgcca_transform`       | Use a fitted R/SGCCA model to compute the block components of unseen individuals                                |
+| `rgcca_predict`         | Train a caret model on the block components of a fitted R/SGCCA model and predict values for unseen individuals |
+| `rgcca_cv`              | Find the best set of parameters for a R/SGCCA model using cross-validation                                      |
+| `rgcca_permutation`     | Find the best set of parameters for a R/SGCCA model using a permutation strategy                                |
+| `rgcca_bootstrap`       | Evaluate the significance of the block-weight vectors produced by a R/SGCCA model using bootstrap               |
+| `rgcca_stability`       | Select the most stable variables of a R/SGCCA model using their VIPs                                            |
+| `print/plot`            | Print and plot methods for outputs of functions `rgcca`, `rgcca_cv`, `rgcca_permutation`, `rgcca_bootstrap`, and `rgcca_stability` |
+Table: Functions implemented in the RGCCA package. \label{exported_functions}
+
 ## RGCCA for the Russett dataset.
 
 In this section, we reproduce some of the results presented in 
@@ -1413,8 +1429,8 @@ and a `caret` summary of the performances can be reported.
 ```{r}
 pred$confusion$test
 ```
-If for a specific reason, only the projection of the new blocks on the latent
-space is wanted, the function `rgcca_transform` is available.
+If for a specific reason, only the block components are wanted for the test 
+individuals, the function `rgcca_transform` is available.
 
 ```{r}
 projection <- rgcca_transform(fit, blocks_test = testing)
