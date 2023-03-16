@@ -952,7 +952,7 @@ are available in `fit$astar`.
 
 ```{r, fig.height = 12, fig.width=18, fig.cap = 'Block-weight vectors of a fitted RGCCA model.', fig.pos = "H"}
 plot(fit, type = "weight", block = 1:3, comp = 1,
-     display_order = FALSE, cex = 1.3)
+     display_order = FALSE, cex = 2)
 ```
 
 As component-based method, the RGCCA package provides block components as output 
@@ -966,7 +966,7 @@ and $\X_2 \ma a_2$ = Industrial Development and marked with their political regi
 ```{r, fig.align='center', fig.cap = '\\label{fig:sample}Graphical display of the countries by drawing the block component of the first block against the block component of the second block, colored according to their political regime.', fig.height = 12, fig.width=18, fig.pos = "H"}
 plot(fit, type = "sample",
      block = 1:2, comp = 1,
-     resp = lab, repel = TRUE, cex = 1.3)
+     resp = lab, repel = TRUE, cex = 2)
 ```
 
 Countries aggregate together when they share similarities. It may be noted that 
@@ -984,14 +984,15 @@ the `rgcca()` function in `fit$AVE`. These indicators of model quality can
 also be visualized using the generic `plot()` function.
 
 ```{r, fig.align='center', fig.cap = 'Average Variance Explained of the different blocks.', fig.height = 12, fig.width=18, fig.pos = "H"}
-plot(fit, type = "ave", cex = 1.3)
+plot(fit, type = "ave", cex = 2)
 ```
 
 The strength of the relations between each block component and each variable 
 can be visualized using correlation circle or biplot representations.
 
 ```{r, fig.align='center', fig.cap = 'Correlation circle associated with the first two components of the Agriculture block.', fig.height = 12, fig.width=18, fig.pos = "H"}
-plot(fit, type = "cor_circle", block = 1, comp = 1:2, display_blocks = 1:3)
+plot(fit, type = "cor_circle", block = 1, comp = 1:2, 
+     display_blocks = 1:3, cex = 2)
 ```
 
 By default all the variables are displayed on the correlation circle. However, 
@@ -1001,7 +1002,7 @@ correlation_circle.
 ```{r, fig.align='center', fig.cap = 'Biplot associated with the first two components ofthe Agriculture block.', fig.height = 12, fig.width=18, fig.pos = "H"}
 plot(fit, type = "biplot", block = 1, 
      comp = 1:2, repel = TRUE, 
-     resp = lab, 
+     resp = lab, cex = 2,
      show_arrow = TRUE)
 ```
 
@@ -1043,7 +1044,7 @@ and displayed using the `plot()`function.
 ```{r, fig.cap = 'Bootstrap confidence intervals for the block-weight vectors.', fig.height = 12, fig.width=18, fig.pos = "H"}
 plot(boot_out, type = "weight", 
      block = 1:3, comp = 1, 
-     display_order = FALSE, cex = 1.3,
+     display_order = FALSE, cex = 2,
      show_stars = TRUE)
 ```
 
@@ -1081,7 +1082,7 @@ is given below.
 plot(fit.mcoa, type = "biplot", 
      block = 4, comp = 1:2, 
      response = lab, 
-     repel = TRUE, cex = 1.3)
+     repel = TRUE, cex = 2)
 ```
 
 As previously, this model can be easily bootstrapped using the 
@@ -1161,7 +1162,7 @@ print(perm_out)
 and displayed using the generic `plot()` function.
 
 ```{r, fig.height = 12, fig.width=18, fig.pos = "H", fig.cap = "Values of the objective function of RGCCA against the sets of tuning parameters, triangles correspond to evaluations on non-permuted datasets."}
-plot(perm_out, cex = 1.3)
+plot(perm_out, cex = 2)
 ```
 
 The fitted permutation object, `perm_out`, can be directly provided as output 
@@ -1293,7 +1294,7 @@ information.
 
 ```{r, fig.align='center', fig.height = 12, fig.width=18, fig.pos = "H", fig.cap = "Graphical display of the tumors obtained by crossing the block components, and colored according to their location."}
 plot(fit.rgcca, type = "sample", block = 1:2,
-     comp = 1, response = Loc)
+     comp = 1, response = Loc, cex = 2)
 ```
 
 For easier interpretation of the results, especially in high-dimensional 
@@ -1399,7 +1400,7 @@ print(cv_out)
 and displayed using the generic `plot()` function.
 
 ```{r, fig.height = 12, fig.width=18, fig.pos = "H", fig.cap = "Accuracies of the models on the different validation folds against the sets of tuning parameters."}
-plot(cv_out, cex = 1.3)
+plot(cv_out, cex = 2)
 ```
 
 As previously, the optimal sparsity parameters can be used to fit a new model,
@@ -1451,7 +1452,7 @@ GE1 and CGH1 and labeled according to their location is shown below.
 ```{r, fig.height = 12, fig.width=18, fig.align='center', fig.cap = 'Graphical display of the tumors obtained by crossing the components of GE1 and CGH1, and colored according to their location.', fig.pos = "H"}
 plot(fit_stab, type = "sample", block = 1:2,
      comp = 1, resp = as.character(Loc)[inTraining],
-     cex = 1.3
+     cex = 2
      )
 ```
 
@@ -1462,20 +1463,20 @@ boot_out <- rgcca_bootstrap(fit_stab, n_boot = 500)
 ```
   
 The bootstrap results can be visualized using the generic `plot()` function.
-We use here the `n_mark` parameter to display the 70 variables with the higher
+We use here the `n_mark` parameter to display the 50 variables with the higher
 absolute values.
 
 ```{r, fig.height = 12, fig.width=18, fig.pos = "H", fig.cap = "Bootstrap confidence intervals for the block-weight vectors associated to block GE."}
 plot(boot_out, block = 1,
      display_order = FALSE,
-     n_mark = 70, cex = 1.3,
+     n_mark = 50, cex = 2, cex_sub = 17,
      show_star = FALSE)
 ```
 
 ```{r, fig.height = 12, fig.width=18, fig.pos = "H", fig.cap = "Bootstrap confidence intervals for the block-weight vectors associated to block CGH."}
 plot(boot_out, block = 2,
      display_order = FALSE,
-     n_mark = 70, cex = 1.3,
+     n_mark = 50, cex = 2, cex_sub = 17,
      show_star = FALSE)
 ```
   
