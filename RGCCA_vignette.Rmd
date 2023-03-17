@@ -1449,27 +1449,20 @@ boot_out <- rgcca_bootstrap(fit_stab, n_boot = 500)
 ```
   
 The bootstrap results can be visualized using the generic `plot()` function.
-We use here the `n_mark` parameter to display the 50 variables with the higher
-absolute values.
+We use here the `n_mark` parameter to display the top 50 variables of GE.
+
 
 ```{r, fig.height = 12, fig.width=18, fig.pos = "H", fig.cap = "Bootstrap confidence intervals for the block-weight vectors associated to block GE."}
 plot(boot_out, block = 1,
      display_order = FALSE,
-     n_mark = 50, cex = 2, cex_sub = 17,
+     n_mark = 50, cex = 1.5, cex_sub = 17,
      show_star = FALSE)
 ```
 
-```{r, fig.height = 12, fig.width=18, fig.pos = "H", fig.cap = "Bootstrap confidence intervals for the block-weight vectors associated to block CGH."}
-plot(boot_out, block = 2,
-     display_order = FALSE,
-     n_mark = 50, cex = 2, cex_sub = 17,
-     show_star = FALSE)
-```
-  
-We observe that `GE` contains much more discriminative information than `CGH`.
 
 # Conclusion
-The RGCCA framework gathers sixty years of multiblock component methods and
+
+The RGCCA framework gathers fifty years of multiblock component methods and
 offers a unified implementation strategy for these methods. The RGCCA package 
 is available on the Comprehensive R Archive Network (CRAN) and on github 
 https://github.com/rgcca-factory/RGCCA. This release of the RGCCA package 
