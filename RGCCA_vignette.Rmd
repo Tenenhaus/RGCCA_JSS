@@ -688,16 +688,12 @@ presented. The first one yields orthogonal block components, and the second one
 yields orthogonal weight vectors. Deflation is the most straightforward way to 
 add orthogonality constraints. This deflation procedure is sequential and 
 consists in replacing within the RGCCA optimization problem the data matrix 
-$\X_j$ by $\X_j^{(1)}$ its projection onto either:
+$\X_j$ by $\X_j^{(1)}$ its projection onto either: (i) the orthogonal subspace 
+of $\ma y_j^{(1)}$ if orthogonal components are desired: 
+$\X_j^{(1)} = \X_j - \ma y_j^{(1)} \left( {\ma y_j^{(1)}}^\top \ma y_j^{(1)} \right)^{-1}{\ma y_j^{(1)}}^\top \X_j$, 
+or (ii) the orthogonal subspace of $\ma a_j^{(1)}$ for orthogonal weight vectors 
+$\X_j^{(1)} = \X_j - \X_j\ma a_j^{(1)} \left( {\ma a_j^{(1)}}^\top \ma a_j^{(1)} \right)^{-1}{\ma {a}_j^{(1)}}^\top$.
 
-- the orthogonal subspace of $\ma y_j^{(1)}$ for orthogonal block-components:
-
-$$\X_j^{(1)} = \left(\mathbf{I} - \mathbf{P}^\perp_{\ma y_j^{(1)}} \right) \X_j = 
-\X_j - \ma y_j^{(1)} \left( {\ma y_j^{(1)}}^\top \ma y_j^{(1)} \right)^{-1}{\ma y_j^{(1)}}^\top \X_j,$$
-
-- the orthogonal subspace of $\ma a_j^{(1)}$ for orthogonal block-weight vectors:
-
-$$\X_j^{(1)} = \X_j \left(\mathbf{I} - \mathbf{P}^\perp_{\ma a_j^{(1)}} \right) = \X_j - \X_j\ma a_j^{(1)} \left( {\ma a_j^{(1)}}^\top \ma a_j^{(1)} \right)^{-1}{\ma {a}_j^{(1)}}^\top.$$
 The second level RGCCA optimization problem boils down to:
 
 \begin{equation}
@@ -707,51 +703,42 @@ The second level RGCCA optimization problem boils down to:
 \end{equation} 
 
 The optimization problem (\ref{optim_RGCCA_orth_comp}) is solved using 
-Algorithm \ref{master_algo} and returns a set of optimal block weight vectors 
+Algorithm \ref{master_algo} and returns a set of optimal block-weight vectors
 $\ma a_j^{(2)}$ and block components $\ma y_j^{(2)} = \X_j^{(1)}\ma a_j^{(2)}$, 
-for $j = 1\ldots, J$. According to the mode of deflation, either the block 
-weight vectors or the block components will be orthogonal.
+for $j = 1\ldots, J$. 
 
 For orthogonal block weight vectors, 
-$\ma y_j^{(2)} = \X_j^{(1)}\ma a_j^{(2)} = \X_j \left(\mathbf{I} - \mathbf{P}^\perp_{\ma a_j^{(1)}} \right)\ma a_j^{(2)} = \X_j \ma a_j^{(2)}$ 
+$\ma y_j^{(2)} = \X_j^{(1)}\ma a_j^{(2)} = \X_j \ma a_j^{(2)}$ 
 naturally expresses as a linear combination of the original variables. 
 For orthogonal block component, as $\y_j^{(1)} = \X_j\ma a_j^{(1)}$, 
-the range space of $\X_j^{(1)}$ is included in the range space of $\X_j$, 
-meaning that any block component $\y_j^{(2)}$ belonging to the range space of 
+the range space of $\X_j^{(1)}$ is included in the range space of $\X_j$. , 
+Therefore any block component $\y_j^{(2)}$ belonging to the range space of 
 $\X_j^{(1)}$ can also be expressed in term of the original block $\X_j$: that 
-is, it exists ${\ma a_j^{(2)}}^\star$ such that 
-$\y_j^{(2)} = \X_j^{(1)}\ma a_j^{(2)} = \X_j{\ma a_j^{(2)}}^\star$.
-It implies that whatever the choice of the mode of deflation, the block component
-can always be expressed in terms of the original variable.
-
+is, it exists $\ma a_j^{(2)^\star}$ such that $\y_j^{(2)} = \X_j^{(1)}\ma a_j^{(2)} = \X_j\ma a_j^{(2)^\star}$. 
+It implies that whatever the mode of deflation, the block components can always 
+be expressed in terms of the original data matrix.
 
 This deflation procedure can be iterated in a very flexible way. For instance, 
 it is not necessary to keep all the blocks in the procedure at all stages: the 
-number of components summarizing a block can vary from one block to another. 
-This might be desired in a supervised setting where we want to 
+number of components per block can vary from one block to another. 
+This might be interesting in a supervised setting where we want to 
 predict a univariate block from other blocks. In that case, the deflation 
 procedure applies to all blocks except the one to predict. 
-
-<!-- Orthogonality at the level of the block components is interesting for  -->
-<!-- interpreting components in terms of correlations with the original blocks.  -->
-<!-- This deflation strategy appears to be useful for displaying the variables  -->
-<!-- in a correlation circle.  -->
 
 To conclude this section, when the superblock option is used, various deflation 
 strategies (what to deflate and how) have been proposed in the literature.
 We propose, as the default option, to deflate only the superblock with respect 
 to its global components: 
 
-$$\X_{J+1}^{(1)} = \left(\mathbf{I} - \mathbf{P}^\perp_{\ma y_{J+1}^{(1)}} \right) \X_{J+1} = \left[ \X_1^{(1)}, \ldots, \X_J^{(1)} \right].$$
+$$\X_{J+1}^{(1)} = \left(\mathbf{I} - \ma y_{J+1}^{(1)} \left( {\ma y_{J+1}^{(1)}}^\top \ma y_{J+1}^{(1)} \right)^{-1}{\ma y_{J+1}^{(1)}}^\top \right) \X_{J+1} = \left[ \X_1^{(1)}, \ldots, \X_J^{(1)} \right].$$
+
 The individual blocks $\X_j^{(1)}$s are then retrieved from the deflated 
 superblock. This strategy enables recovering Multiple Factor Analysis 
-(`ade4::mfa()/FactoMineR::MFA`). Note that, in this case, there is no guarantee
-that there exists ${\ma a_j^{(k)}}^\star \in \text{span}(\mathbf X_j)$ for 
-$j < J + 1$ and $k > 1$, but we can always find ${\ma a_{J + 1}^{(k)}}^\star$.  
-On the contrary, we follow the deflation 
-strategy described in \cite{Chessel1996} (`ade4::mcoa()`) for Multiple Co-inertia 
-Analysis, which is one of the most popular and established methods of the 
-multiblock literature.
+(`ade4::mfa()/FactoMineR::MFA`). Note that, in this case, block components do not 
+belong to their block space and are correlated. On the contrary, we follow the 
+deflation strategy described in \cite{Chessel1996} (`ade4::mcoa()`) for Multiple 
+Co-inertia Analysis, which is one of the most popular and established methods of 
+the multiblock literature.
 
 ## Average Variance Explained
 
