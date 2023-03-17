@@ -742,22 +742,19 @@ the multiblock literature.
 
 ## Average Variance Explained
 
-When performing a Principal Component Analysis \citep[PCA, ][]{Pearson1901}, a way to 
-choose the number of principal components is to look at the Average Variance
-Explained (AVE). This AVE represents the proportion
-of variance captured by the components. This concept can be applied to 
-multiblock methods to evaluate how well the block components summarize
-the individual blocks. In the context of RGCCA, the AVE for a given block 
-component $\mathbf{y}_j$ can be computed using the following formula:
+In this section, using the idea of average variance explained (AVE), the following 
+indicators of model quality are defined:
+
+- the AVE for a given block component $\mathbf{y}_j$ can be computed using the 
+following formula:
 
 \begin{equation}
 \mathrm{AVE}(\X_j)=  \frac{1}{\Vert \X_j \Vert^2} \sum_{h=1}^{p_j} \text{var}(\mathbf{x}_{jh}) \times \text{cor}^2(\mathbf{x}_{jh},\mathbf{y}_j).
 \label{AVE_X}
 \end{equation}
 
-Since multiple blocks are considered, an indicator of the model quality can 
-be defined as the weighted sum of the AVEs of the individual blocks. This
-outer AVE is:
+- A global indicator of model quality can be obtained by considering  a weighted 
+sum of these individual AVEs. This outer AVE is defined as:
 
 \begin{equation}
 \displaystyle \mathrm{AVE(outer model)} = \left( 1/\sum_j \Vert \X_j \Vert^2 \right) \sum_j \Vert \X_j \Vert^2 \mathrm{AVE}(\X_j).
@@ -765,7 +762,7 @@ outer AVE is:
 \end{equation}
 
 However, the previous quantities do not take into account the correlations
-between blocks. Therefore, another indicator of the model quality is the inner
+between blocks. Therefore, another indicator of model quality is the inner
 AVE defined as follows:
 
 \begin{equation}
@@ -774,30 +771,15 @@ AVE defined as follows:
 \end{equation}
 
 All these quantities vary between 0 and 1 and reflect important properties of
-the model. The formulations (\ref{AVE_X}-\ref{AVE_inner}) give the AVEs for
-a single component per block. The AVEs of the next components can be obtained
-similarly. The quality of a model extracting several components can thus be
-evaluated by summing the outer AVEs of the different components. For this sum
-to be meaningful, the block components must be orthogonal. If they are not, 
-they are orthogonalized using the QR-decomposition to only take into account
-the increase of AVE due to the addition of the new components. This corresponds 
-to the procedure proposed in \cite{Zou2006}.
+the model.  
 
-\cite{Tenenhaus1998} defines the Variable Importance in Projection
-(VIP) score for the PLS method. This score can be used for variable selection: 
-the higher the score, the more important the variable. We use 
-this idea to propose a procedure for evaluating the stability of the variable
-selection performed using SGCCA. This procedure relies on the following 
-score, based on the AVE:
-
-\begin{equation}
-\displaystyle \mathrm{VIP}(\mathbf{x}_{jh}) = \frac{1}{K} \sum_{k=1}^K \left(\mathbf{a}_{jh}^{(k)2} \mathrm{AVE}\left(\X_j^{(k)}\right)\right).
-\label{VIP}
-\end{equation}
-
-SGCCA is run several times using a bootstrap resampling method. For each model,
-the VIPs are computed and the variables with the higher VIPs, averaged over the
-different models, are kept.
+Equations (\ref{AVE_X}) is defined for a specific block component. The cumulative 
+AVE el quality When several components are obtained, the cumulative AVE is 
+obtained by summing these individual AVEs over the different components. 
+However, this sum applies only for orthogonal block components.  For correlated 
+components, we follow the QR-orthogonalization procedure described in \cite{Zou2006} 
+to take into account only the increase of AVE due to the addition of the new 
+components. 
 
 Guidelines describing R/SGCCA in practice are provided in \cite{Garali2018}.
 The usefulness and versatility of the RGCCA package are illustrated in the next 
@@ -1415,6 +1397,7 @@ and a `caret` summary of the performances can be reported.
 ```{r}
 pred$confusion$test
 ```
+
 If for a specific reason, only the block components are wanted for the test 
 individuals, the function `rgcca_transform` is available.
 
@@ -1422,8 +1405,24 @@ individuals, the function `rgcca_transform` is available.
 projection <- rgcca_transform(fit, blocks_test = testing)
 ```
 
-**Stability procedure.** As mentioned in Section [Average Variance Explained], 
-it is possible to stabilize the selected variables using the 
+**Stability procedure.** it is possible to stabilize the selected variables using 
+the the following procedure.
+
+\cite{Tenenhaus1998} defines the Variable Importance in Projection
+(VIP) score for the PLS method. This score is used for variable selection: 
+the higher the score, the more important the variable. We use 
+this idea to propose a procedure for evaluating the stability of the variable
+selection procedure of SGCCA. This procedure relies on the following 
+score:
+
+\begin{equation}
+\displaystyle \mathrm{VIP}(\mathbf{x}_{jh}) = \frac{1}{K} \sum_{k=1}^K \left(\mathbf{a}_{jh}^{(k)2} \mathrm{AVE}\left(\X_j^{(k)}\right)\right).
+\label{VIP}
+\end{equation}
+
+SGCCA is run several times using a bootstrap resampling procedure. For each model,
+the VIPs are computed and the variables with the higher VIPs, averaged over the
+different models, are kept. This procedure is available  through the 
 `rgcca_stability()` function.
 
 ```{r, cache = TRUE, message = FALSE}
