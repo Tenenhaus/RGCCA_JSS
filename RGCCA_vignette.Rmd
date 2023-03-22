@@ -773,8 +773,7 @@ AVE defined as follows:
 All these quantities vary between 0 and 1 and reflect important properties of
 the model.  
 
-Equations (\ref{AVE_X}) is defined for a specific block component. The cumulative 
-AVE el quality When several components are obtained, the cumulative AVE is 
+Equations (\ref{AVE_X}) is defined for a specific block component. The cumulative AVE is 
 obtained by summing these individual AVEs over the different components. 
 However, this sum applies only for orthogonal block components.  For correlated 
 components, we follow the QR-orthogonalization procedure described in \cite{Zou2006} 
@@ -1144,36 +1143,15 @@ fit <- rgcca(perm_out)
 Of course, it is  possible to define explicitly the combination of 
 regularization parameters to be tested. In that case a matrix of dimension 
 $K \times J$ is required. Each row of this matrix corresponds to one set of 
-tuning parameters.
-
-```{r, cache = TRUE}
-fit.perm <- rgcca_permutation(A, connection = C,
-                              par_type = "tau",
-                              par_value = rbind(
-                                rep(1, 3),
-                                seq(0, 1, l = 3),
-                                rep(0, 3),
-                                sapply(A, RGCCA:::tau.estimate)
-                              ),
-                              n_cores = 1, n_perms = 5)
-```
-
-Alternatively a numeric vector of length $J$ indicating the maximum values of 
-the range to be tested can be given. The set of parameters is then uniformly
-generated between the minimum values (0 for RGCCA and 
-$1/\text{sqrt}(\text{ncol})$ for SGCCA) and 
-the maximum values specified by the user with `par_value`.
-
-```{r, cache = TRUE}
-fit.perm <- rgcca_permutation(A, connection = C,
-                              par_type = "tau",
-                              par_value = seq(0, 1, l = 3),
-                              n_cores = 1, n_perms = 5)
-```
+tuning parameters. Alternatively a numeric vector of length $J$ indicating 
+the maximum values of the range to be tested can be given. The set of parameters 
+is then uniformly generated between the minimum values (0 for RGCCA and 
+$1/\text{sqrt}(\text{ncol})$ for SGCCA) and the maximum values specified by 
+the user with `par_value`.
 
 **Cross-validation strategy.** The optimal tuning parameters can also be 
-obtained using a cross-validation strategy. We will illustrate this in the next
-section, in the context of a sparse analysis.
+obtained by cross-validation. We will illustrate this in the next
+section, in the context of SGCCA.
 
 # High dimensional case study: Glioma Data
 
@@ -1335,7 +1313,7 @@ location of the tumors.
 In this situation, the goal is to maximize the 
 cross-validated  accuracy (`metric = "Accuracy"`) in a model where we try to 
 predict the response block from all the block components with a user-defined 
-classifier (`prediction_model`). Also, we decide to upper bound the sparsity 
+classifier (`prediction_model = "lda"`). Also, we decide to upper bound the sparsity 
 parameters for $\mathbf X_1$ and $\mathbf X_2$ to $0.2$, to achieve an 
 attractive amount of sparsity. 
 
@@ -1441,6 +1419,9 @@ plot(fit_stab, type = "sample", block = 1:2,
      cex = 2
      )
 ```
+
+the fitted `rgcca_stability` object contains can be visualized using 
+`print()/plot()`function and return the same graphical representations as for RGCCA.
 
 We can finally apply the bootstrap procedure on the most stable variables.
 
