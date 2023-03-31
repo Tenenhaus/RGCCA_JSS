@@ -1,38 +1,53 @@
 ---
 documentclass: jss
 author:
-  - name: FirstName LastName
-    orcid: 0000-0000-0000-0000
-    affiliation: University/Company
-    # use this syntax to add text on several lines
-    address: |
-      | First line
-      | Second line
-    email: \email{name@company.com}
-    url: http://rstudio.com
-  - name: Second Author
-    affiliation: 'Affiliation \AND'
-    # To add another line, use \AND at the end of the previous one as above
-  - name: Third Author
-    address: |
-      | Department of Statistics and Mathematics,
-      | Faculty of Biosciences,
-      | Universitat Autònoma de Barcelona
+  - name: Fabien Girka
     affiliation: |
-      | Universitat Autònoma 
-      | de Barcelona
+      | Laboratoire des Signaux et systèmes
+      | Université Paris-Saclay
+      | CentraleSupelec
+    affiliation2: Paris Brain Institute  
+  - name: Etienne Camenen
+    affiliation: | 
+      | INSERM
+      | Paris Brain Institute  
+  - name: Caroline Peltier
+    affiliation: |
+      | INRAE
+      | Paris Brain Institute \AND
+  - name: Arnaud Gloaguen
+    affiliation: |
+      | CEA 
+  - name: Vincent Guillemot
+    affiliation: 'Pasteur \AND'
+  - name: Laurent Le Brusquet
+    affiliation: |
+      | Laboratoire des Signaux et systèmes
+      | Université Paris-Saclay
+      | CentraleSupelec
+  - name: Arthur Tenenhaus
+    orcid: 0000-0000-0000-0000
+    affiliation: |
+      | Laboratoire des Signaux et systèmes
+      | Université Paris-Saclay
+      | CentraleSupelec
+    email: \email{arthur.tenenhause@centralesupelec.fr}
     # use a different affiliation in adress field (differently formated here)
-    affiliation2: Universitat Autònoma de Barcelona
 title:
   formatted: "The \\pkg{RGCCA} package for Regularized/Sparse Generalized Canonical Correlation Analysis"
-  # If you use tex in the formatted title, also supply version without
-  plain:     "The RGCCA package for Regularized/Sparse Generalized Canonical Correlation Analysis"
-  # For running headers, if needed
-  short:     "Regularized/Sparse Generalized Canonical Correlation Analysis"
-abstract: >
-  The RGCCA package aims to propose a unified and flexible framework for multiblock component methods.  The RGCCA package aims to propose a unified and flexible framework for multiblock component methods.  The RGCCA package aims to propose a unified and flexible framework for multiblock component methods.  The RGCCA package aims to propose a unified and flexible framework for multiblock component methods.  The RGCCA package aims to propose a unified and flexible framework for multiblock component methods.  The RGCCA package aims to propose a unified and flexible framework for multiblock component methods.  The RGCCA package aims to propose a unified and flexible framework for multiblock component methods.
+  plain:  "The RGCCA package for Regularized/Sparse Generalized Canonical Correlation Analysis"
+  short:  "Regularized/Sparse Generalized Canonical Correlation Analysis"
+abstract: 
+    Multiblock component methods concern the analysis of several sets of variables 
+    (blocks) observed on the same group of individuals. The Regularized Generalized
+    Canonical Correlation Analysis (RGCCA) framework gathers fifty years of 
+    multiblock component methods and offers a unified implementation strategy 
+    for these methods. The RGCCA package implement this framework. 
+    The software also produces graphical ouptuts and statistics to assess the 
+    robustness/significance of the analysis. The RGCCA package is freely available 
+    on the ComprehensiveR Archive Network (CRAN) http://www.r-project.org/ and on 
+    GitHub https://github.com/rgcca-factory/RGCCA.
 keywords:
-  # at least one keyword must be supplied
   formatted: [Multiblock component methods, RGCCA, data integration]
   plain:     [Multiblock component methods, RGCCA, data integration]
 preamble: >
