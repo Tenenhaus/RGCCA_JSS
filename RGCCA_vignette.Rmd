@@ -35,18 +35,10 @@ author:
     # use a different affiliation in adress field (differently formated here)
 title:
   formatted: "The \\pkg{RGCCA} package for Regularized/Sparse Generalized Canonical Correlation Analysis"
-  plain:  "The RGCCA package for Regularized/Sparse Generalized Canonical Correlation Analysis"
+  plain:  "Multiblock data analysis with the RGCCA package"
   short:  "Regularized/Sparse Generalized Canonical Correlation Analysis"
 abstract: 
-    Multiblock component methods concern the analysis of several sets of variables 
-    (blocks) observed on the same group of individuals. The Regularized Generalized
-    Canonical Correlation Analysis (RGCCA) framework gathers fifty years of 
-    multiblock component methods and offers a unified implementation strategy 
-    for these methods. The RGCCA package implement this framework. 
-    The software also produces graphical ouptuts and statistics to assess the 
-    robustness/significance of the analysis. The RGCCA package is freely available 
-    on the ComprehensiveR Archive Network (CRAN) http://www.r-project.org/ and on 
-    GitHub https://github.com/rgcca-factory/RGCCA.
+    Multiblock component methods aim to study the relationships between several sets of variables. Regularized Generalized Canonical Correlation Analysis (RGCCA) is a unified and flexible framework that gathers fifty years of multiblock component methods. RGCCA offers a unified implementation strategy for all these methods. This implementation is made available within the RGCCA package. In addition, the RGCCA package produces graphical outputs and statistics to assess the robustness/significance of the analysis. The usefulness of the RGCCA package is illustrated in this paper on two real datasets. The RGCCA package is freely available on the ComprehensiveR Archive Network (CRAN) http://www.r-project.org/ and GitHub https://github.com/rgcca-factory/RGCCA.
 keywords:
   formatted: [Multiblock component methods, RGCCA, data integration]
   plain:     [Multiblock component methods, RGCCA, data integration]
@@ -1129,7 +1121,7 @@ $t^*$ that exceeds the $t$ obtained from the non-permuted blocks.
 The best set of tuning parameters is then the set that yields the smallest
 p-value. This procedure is available through the $\small{\texttt{rgcca\_permutation}}$ function.
 
-```{r, cache = TRUE}
+```{r}
 set.seed(123)
 perm_out <- rgcca_permutation(blocks = A, connection = C,
                               par_type = "tau",
@@ -1138,9 +1130,9 @@ perm_out <- rgcca_permutation(blocks = A, connection = C,
                               n_perms = 10)
 ```
 
-By default, the $\small{\texttt{rgcca\_permutation}}$ function generates 10 sets of tuning 
-parameters uniformly between some minimal values (0 for RGCCA and 
-$1/\text{sqrt}(\text{ncol})$ for SGCCA) and 1. 
+By default, the $\small{\texttt{rgcca\_permutation}}$ function generates 
+10 sets of tuning parameters uniformly between some minimal values (0 for 
+RGCCA and $1/\text{sqrt}(\text{ncol})$ for SGCCA) and 1. 
 Results of the permutation procedure are summarized using the generic 
 $\small{\texttt{print()}}$ function,
 
@@ -1154,8 +1146,7 @@ and displayed using the generic $\small{\texttt{plot()}}$ function.
 plot(perm_out, cex = 2)
 ```
 
-The fitted permutation object, $\small{\texttt{perm\_out}}$, can be directly provided as the output 
-of $\small{\texttt{rgcca()}}$ and visualized/bootstrapped as usual.
+The fitted permutation object, $\small{\texttt{perm\_out}}$, can be directly provided as the output of $\small{\texttt{rgcca()}}$ and visualized/bootstrapped as usual.
 
 ```{r}
 fit <- rgcca(perm_out)
@@ -1338,7 +1329,7 @@ classifier ($\small{\texttt{prediction\_model = "lda"}}$). Also, we decide to up
 parameters for $\mathbf X_1$ and $\mathbf X_2$ to $0.2$ to achieve an 
 attractive amount of sparsity. 
 
-```{r, cache = TRUE}
+```{r}
 set.seed(27) #my favorite number
 inTraining <- caret::createDataPartition(
   blocks[[3]], p = .75, list = FALSE
@@ -1398,7 +1389,7 @@ pred$confusion$test
 ```
 
 If, for a specific reason, only the block components are wanted for the test 
-individuals, the function $\small{\texttt{rgcca\_transform}}$ is available.
+set, the function $\small{\texttt{rgcca\_transform}}$ can be used.
 
 ```{r}
 projection <- rgcca_transform(fit, blocks_test = testing)
@@ -1485,14 +1476,15 @@ situations, it is possible to exploit the algorithmic solution proposed for PLS
 path modeling to deal with missing data \citep[see][]{Tenenhaus2005}.
 
 \item Special attention has been paid to recovering the results of other R packages 
-of the literature, including $\small{\texttt{ade4}}$ and $\small{\texttt{factomineR}}$.
+of the literature, including $\small{\texttt{ade4}}$ and 
+$\small{\texttt{factomineR}}$.
 \end{itemize}
 
 The RGCCA framework is constantly evolving and extending. Indeed, we
-propose RGCCA for multigroup data \citep{Tenenhaus2014b} and RGCCA for
-multiway data \citep{Gloaguen2020, Girka2023}, RGCCA for (sparse and
+proposed RGCCA for multigroup data \citep{Tenenhaus2014b}, RGCCA for
+multiway data \citep{Gloaguen2020, Girka2023} and RGCCA for (sparse and
 irregular) functional data \citep{Sort2023}. In addition, maximizing
-successive criteria may be seen as suboptimal from an optimization point
+successive criteria may be seen as sub-optimal from an optimization point
 of view, where a single global criterion might be preferred. A global
 version of RGCCA \citep{Gloaguen2020b}, which allows simultaneously extracting
 several components per block (no deflation procedure
