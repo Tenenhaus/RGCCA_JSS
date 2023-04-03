@@ -34,9 +34,9 @@ author:
     email: \email{arthur.tenenhause@centralesupelec.fr}
     # use a different affiliation in adress field (differently formated here)
 title:
-  formatted: "The \\pkg{RGCCA} package for Regularized/Sparse Generalized Canonical Correlation Analysis"
+  formatted: "Multiblock data analysis with the RGCCA package"
   plain:  "Multiblock data analysis with the RGCCA package"
-  short:  "Regularized/Sparse Generalized Canonical Correlation Analysis"
+  short:  "Regularized Generalized Canonical Correlation Analysis"
 abstract: 
     Multiblock component methods aim to study the relationships between several sets of variables. Regularized Generalized Canonical Correlation Analysis (RGCCA) is a unified and flexible framework that gathers fifty years of multiblock component methods. RGCCA offers a unified implementation strategy for all these methods. This implementation is made available within the RGCCA package. In addition, the RGCCA package produces graphical outputs and statistics to assess the robustness/significance of the analysis. The usefulness of the RGCCA package is illustrated in this paper on two real datasets. The RGCCA package is freely available on the ComprehensiveR Archive Network (CRAN) http://www.r-project.org/ and GitHub https://github.com/rgcca-factory/RGCCA.
 keywords:
@@ -135,11 +135,38 @@ In the scientific literature, this paradigm can be stated under several names
 such as "learning from multimodal data", "data integration", "multiview data", 
 "multisource data", "data fusion" or "multiblock data analysis". Appropriate 
 statistical methods and dedicated software able to cope with these multiple 
-highly multivariate datasets constitute key issues for effective analysis 
-leading to valuable knowledge. Regularized Generalized Canonical Correlation 
-Analysis is a unified and flexible framework for multiblock 
-component methods. The RGCCA package implements this framework, and its 
-usefulness is illustrated in this paper.
+highly multivariate datasets constitute critical issues for effective analysis 
+leading to valuable knowledge. For the statistical computing environment 
+R \cite{R2022}, various R packages are available for multiblock data analysis.
+Four mainstream references are $\small{\texttt{mixOmics}}$ \cite{Rohart2017}, 
+$\small{\texttt{multiblock}}$ \cite{Liland2022}, $\small{\texttt{ade4}}$ 
+(\cite{Dray2007}), and $\small{\texttt{FactoMineR}}$ \cite{Le2008}. Each 
+package uses its way of specifying multiblock models and storing the results.
+Regularized Generalized Canonical Correlation Analysis is a unified statistical 
+framework for an astonishinggly large number of multiblock component methods. 
+The RGCCA package (Girka et al, 2023) implements this framework, and its 
+usefulness and versatility are illustrated in this paper.
+
+Within the $\small{\texttt{RGCCA}}$ package , all implemented methods share the 
+same function interface and a clear class structure. In addition, 
+$\small{\texttt{RGCCA}}$ package relies on the single $\small{\texttt{rgcca()}}$ 
+function for specifying the multiblock models. It also provides several plots 
+for diagnostics or visualization of the results from multiblock analysis.
+Package $\small{\texttt{RGCCA}}$  is available from the 
+Comprehensive R Archive Network (CRAN), at https://CRAN.R-project.org/package=RGCCA 
+and can be installed from the R console with the following command:
+
+```{r, eval = FALSE}
+install.packages("RGCCA")
+```
+
+The rest of the paper is organized as follows. 
+Section 2 presents the optimization problem under which all the algorithms 
+proposed in the RGCCA framework were designed. The theoretical foundations of 
+the RGCCA framework \cite{Tenenhaus2011, Tenenhaus2014, Tenenhaus2015, 
+Tenenhaus2017}, are briefly summarized in Section 3, while Section 4 and 5 
+illustrates the use of package RGCCA with code examples. The final Section 6 
+concludes the paper.
 
 # Optimization background
 
@@ -1329,7 +1356,7 @@ classifier ($\small{\texttt{prediction\_model = "lda"}}$). Also, we decide to up
 parameters for $\mathbf X_1$ and $\mathbf X_2$ to $0.2$ to achieve an 
 attractive amount of sparsity. 
 
-```{r}
+```{r, cache = TRUE}
 set.seed(27) #my favorite number
 inTraining <- caret::createDataPartition(
   blocks[[3]], p = .75, list = FALSE
@@ -1347,9 +1374,10 @@ cv_out <- rgcca_cv(blocks = training, response = 3,
                    n_cores = 2)
 ```
 
-$\small{\texttt{rgcca\_cv()}}$ relies on the $\small{\texttt{caret}}$ package. As a direct consequence, an astonishingly 
-large number of models are made available (see $\small{\texttt{caret::modelLookup()}}$). Results 
-of the cross-validation procedure are reported using the generic 
+$\small{\texttt{rgcca\_cv()}}$ relies on the $\small{\texttt{caret}}$ package. 
+As a direct consequence, an astonishingly large number of models are made 
+available (see $\small{\texttt{caret::modelLookup()}}$). Results of the 
+cross-validation procedure are reported using the generic 
 $\small{\texttt{print()}}$ function,
 
 ```{r}
