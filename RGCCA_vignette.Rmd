@@ -141,11 +141,15 @@ R \cite{R2022}, various R packages are available for multiblock data analysis.
 Four mainstream references are $\small{\texttt{mixOmics}}$ \cite{Rohart2017}, 
 $\small{\texttt{multiblock}}$ \cite{Liland2022}, $\small{\texttt{ade4}}$ 
 (\cite{Dray2007}), and $\small{\texttt{FactoMineR}}$ \cite{Le2008}. Each 
-package uses its way of specifying multiblock models and storing the results.
-Regularized Generalized Canonical Correlation Analysis is a unified statistical 
-framework for an astonishinggly large number of multiblock component methods. 
-The RGCCA package (Girka et al, 2023) implements this framework, and its 
-usefulness and versatility are illustrated in this paper.
+package uses its own way of specifying multiblock models and storing the results.
+Regularized Generalized Canonical Correlation Analysis (RGCCA) is a unified 
+statistical framework that subsumes as special cases an astonishinggly large 
+number of multiblock component methods. 
+In this paper, we present an R package called RGCCA (Girka et al, 2023)
+that implements the RGCCA framework. Its usefulness and versatility are 
+illustrated in this paper. The package includes several utility functions for 
+data preprocessing and visualization. In addition, the package includes several 
+built-in datasets and examples to help users get started quickly.
 
 Within the $\small{\texttt{RGCCA}}$ package , all implemented methods share the 
 same function interface and a clear class structure. In addition, 
@@ -171,7 +175,7 @@ concludes the paper.
 # Optimization background
 
 This section presents the optimization framework under which 
-most algorithms proposed in the RGCCA framework were designed. The RGCCA 
+all the algorithms proposed in the RGCCA framework were designed. The RGCCA 
 framework gathers several algorithms already presented in 
 \cite{Tenenhaus2011, Tenenhaus2014, Tenenhaus2015, Tenenhaus2017}. It is recalled 
 here for a broader class of constraints.
@@ -1507,6 +1511,10 @@ path modeling to deal with missing data \citep[see][]{Tenenhaus2005}.
 of the literature, including $\small{\texttt{ade4}}$ and 
 $\small{\texttt{factomineR}}$.
 \end{itemize}
+
+We believe that the RGCCA package will be a valuable resource for researchers 
+and practitioners who are interested in multiblock data analysis to gain 
+new insights and improve decision-making.
 
 The RGCCA framework is constantly evolving and extending. Indeed, we
 proposed RGCCA for multigroup data \citep{Tenenhaus2014b}, RGCCA for
