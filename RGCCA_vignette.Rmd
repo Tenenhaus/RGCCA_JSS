@@ -143,7 +143,7 @@ $\small{\texttt{multiblock}}$ \cite{Liland2022}, $\small{\texttt{ade4}}$
 (\cite{Dray2007}), and $\small{\texttt{FactoMineR}}$ \cite{Le2008}. Each 
 package uses its own way of specifying multiblock models and storing the results.
 Regularized Generalized Canonical Correlation Analysis (RGCCA) is a unified 
-statistical framework that subsumes as special cases an astonishinggly large 
+statistical framework that subsumes as special cases an astonishingly large 
 number of multiblock component methods. 
 In this paper, we present an R package called RGCCA (Girka et al, 2023)
 that implements the RGCCA framework. Its usefulness and versatility are 
@@ -168,7 +168,7 @@ The rest of the paper is organized as follows.
 Section 2 presents the optimization problem under which all the algorithms 
 proposed in the RGCCA framework were designed. The theoretical foundations of 
 the RGCCA framework \cite{Tenenhaus2011, Tenenhaus2014, Tenenhaus2015, 
-Tenenhaus2017}, are briefly summarized in Section 3, while Section 4 and 5 
+Tenenhaus2017}, are briefly summarized in Section 3, while Sections 4 and 5 
 illustrates the use of package RGCCA with code examples. The final Section 6 
 concludes the paper.
 
@@ -176,7 +176,7 @@ concludes the paper.
 
 This section presents the optimization framework under which 
 all the algorithms proposed in the RGCCA framework were designed. The RGCCA 
-framework gathers several algorithms already presented in 
+framework gathers several methods already presented in 
 \cite{Tenenhaus2011, Tenenhaus2014, Tenenhaus2015, Tenenhaus2017}. It is recalled 
 here for a broader class of constraints.
 
